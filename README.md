@@ -1,7 +1,7 @@
 Databases, HTML, CSS and script-based PHP-programmering - htmlphp
 ===================
 
-Course material for htmlphp-course, aimed at a swedish target audience as an introduction to web programmering for c mputer science students at University level. 
+Course material for htmlphp-course, aimed at a swedish target audience as an introduction to web programmering for computer science students at University level. 
 
 Relased as part of a University course presented at:
 
