@@ -10,11 +10,8 @@
         Custom rule set for htmlphp course.
     </description>
 
-    <rule ref="PSR1">
-        <exclude name="PSR1.Classes.ClassDeclaration" />
-    </rule>
-    
     <rule ref="PSR2">
+        <exclude name="PSR1.Classes.ClassDeclaration" />
     </rule>
     
 </ruleset>
