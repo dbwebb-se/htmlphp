@@ -10,7 +10,10 @@
         Custom rule set for htmlphp course.
     </description>
 
-    <rule ref="rulesets/cleancode.xml" />
+    <rule ref="rulesets/cleancode.xml">
+        <exclude name="ElseExpression" />
+    </rule>
+    
     <rule ref="rulesets/codesize.xml" />
     <rule ref="rulesets/controversial.xml" />
     <rule ref="rulesets/design.xml" />
