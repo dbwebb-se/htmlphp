@@ -11,6 +11,7 @@
     </description>
 
     <rule ref="rulesets/cleancode.xml">
+        <exclude name="BooleanArgumentFlag" />
         <exclude name="ElseExpression" />
     </rule>
     
