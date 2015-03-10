@@ -14,8 +14,4 @@
         <exclude name="PSR1.Classes.ClassDeclarationSniff" />
     </rule>
     
-    <rule ref="PSR1">
-        <exclude name="PSR1.Classes.ClassDeclarationSniff" />
-    </rule>
-    
 </ruleset>
