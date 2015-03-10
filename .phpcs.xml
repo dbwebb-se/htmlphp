@@ -11,7 +11,7 @@
     </description>
 
     <rule ref="PSR2">
-        <exclude name="PSR2.Classes/ClassDeclarationSniff" />
+        <exclude name="PSR2.Classes.ClassDeclarationSniff" />
     </rule>
     
 </ruleset>
