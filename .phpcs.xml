@@ -10,10 +10,8 @@
         Custom rule set for htmlphp course.
     </description>
 
-    <rule ref="PSR2" />
-
-    <rule ref="PSR1">
-        <exclude name="PSR1.Classes.ClassDeclarationSniff" />
+    <rule ref="PSR2">
+        <exclude name="PSR1.Sniffs.Classes.ClassDeclarationSniff" />
     </rule>
     
 </ruleset>
