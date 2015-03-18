@@ -10,7 +10,7 @@
         Custom rule set for htmlphp course.
     </description>
 
-    <arg name="config-set" value="utf-8"/>
+    <arg name="encoding" value="utf-8"/>
 
     <rule ref="PSR2">
         <exclude name="PSR1.Classes.ClassDeclaration" />
