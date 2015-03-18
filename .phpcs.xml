@@ -14,6 +14,7 @@
 
     <rule ref="PSR2">
         <exclude name="PSR1.Classes.ClassDeclaration" />
+        <exclude name="Squiz.ControlStructures.ControlSignature.NewlineAfterOpenBrace" />
     </rule>
     
 </ruleset>
