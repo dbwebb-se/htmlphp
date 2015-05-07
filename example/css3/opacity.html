@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="sv">
+<head>
+    <meta charset="utf-8">
+    <title>Exempel box-shadow</title>
+
+    <style>
+    html {
+        background-color: #fff;
+    }
+    
+    body {
+        margin: 10px auto;
+        padding: 10px;
+        width: 600px;
+        height: 500px;
+        background-color: #eee;
+    }
+    
+    div {
+        margin: 10px;
+        width: 200px;
+        height: 100px;
+        color: black;
+
+    }
+    
+    .opaque1 { background-color: hsla(0,50%,80%,1);} 
+    .opaque2 { background-color: hsla(0,50%,80%,0.66);} 
+    .opaque3 { background-color: hsla(0,50%,80%,0.33);} 
+    .opaque4 { background-color: hsla(0,50%,80%,0.10);} 
+
+    </style>
+</head>
+
+<body>
+    <p>Source: <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/opacity">MDN: opacity</a></p>
+    <div class="opaque1">Inte genomskinlig alls</div>
+    <div class="opaque2">33% genomskinlig</div>
+    <div class="opaque3">66% genomskinlig</div>
+    <div class="opaque4">90% genomskinlig</div>
+</body>
+</html>

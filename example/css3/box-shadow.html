@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="sv">
+<head>
+    <meta charset="utf-8">
+    <title>Exempel box-shadow</title>
+
+    <style>
+    html {
+        background-color: #fff;
+    }
+    
+    body {
+        margin: 10px auto;
+        padding: 10px;
+        width: 600px;
+        height: 400px;
+        background-color: #eee;
+    }
+    
+    div {
+        margin: 10px;
+        width: 300px;
+        height: 100px;
+        background-color: blue;
+        color: white;
+    }
+    
+    .shadow {
+        box-shadow: 10px 10px 5px #888;
+    }
+    
+    </style>
+</head>
+
+<body>
+    <p>Source: <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow">MDN: box-shadow</a></p>
+    <div>Utan skugga</div>
+    <div class="shadow">Med skugga</div>
+</body>
+</html>
