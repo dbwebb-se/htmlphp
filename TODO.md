@@ -26,13 +26,7 @@ dbwebb.se
 
 ###Coachen
 
-Styla länkar.
-
-Felsöka genom att visa källkod.
-
 Hur PHP skapar HTML-sidan på servern.
-
-Firebug (html, css).
 
 
 
@@ -45,3 +39,10 @@ Filezilla och dbwebb publish för uppladdning av filer.
 SQLite 20
 
 Felmeddelande i PHP-kod.
+
+
+
+###Lab
+
+Gå igenom lab2
+
