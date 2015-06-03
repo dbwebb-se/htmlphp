@@ -42,6 +42,8 @@ $multipage = [
     "current"  => "current-value.php",
     "get"      => "change-get.php",
     "dropdown" => "change-dropdown.php",
+    "post-dropdown" => "post-dropdown.php",
+    "postform" => "postform.php",
 ];
 
 
