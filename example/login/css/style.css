@@ -1,0 +1,18 @@
+body {
+    margin: 8px auto;
+    width: 980px;
+}
+
+main {
+    width: 70%;
+    float: left;
+}
+
+article {
+    padding: 1em;
+}
+
+aside {
+    width: 30%;
+    float: left;
+}

@@ -58,10 +58,10 @@ if (isset($multipage[$page])) {
 
 
 ?><!doctype html>
-<html lang="sv">
+<html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Exempel multisida</title>
+    <title>Example stylechooser</title>
     <link href="<?=$stylesheet?>" rel="stylesheet">
 </head>
 
