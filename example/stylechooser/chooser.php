@@ -17,7 +17,7 @@ $key = isset($_SESSION['stylesheet'])
     ? $_SESSION['stylesheet']
     : "default";
 
-// See it the key actually matches a stylesheet
+// See if the key actually matches a stylesheet
 if (isset($stylesheets[$key])) {
     $stylesheet = $stylesheets[$key];
 } else {
