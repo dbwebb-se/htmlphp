@@ -1,0 +1,15 @@
+table {
+    border: 1px solid #666;
+}
+
+th {
+    background-color: #999;
+}
+
+tr:hover {
+    background-color: #eee;
+}
+
+input[type=search] {
+    width: 30em;
+}
