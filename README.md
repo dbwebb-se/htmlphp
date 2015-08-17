@@ -29,7 +29,7 @@ Feel free to help builing up the repository with more content suited for trainin
 History
 -------------------
 
-v1.0.x (latest)
+v1.0.0 (2015-08-17)
 
 * Started work in oktober 2014, planned release end of august 2015.
 
