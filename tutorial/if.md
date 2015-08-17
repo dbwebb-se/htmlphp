@@ -10,7 +10,7 @@ Examples in php
 $myValue = 50;
 
 if ($myValue > 30) {
-    echo "large number";
+    echo "larger than 30";
 }
 
 $myString = "word";
