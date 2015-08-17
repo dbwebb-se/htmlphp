@@ -23,7 +23,9 @@
 
     <rule ref="rulesets/design.xml" />
     
-    <rule ref="rulesets/naming.xml">
+    <rule ref="rulesets/naming.xml" />
+
+    <rule ref="rulesets/naming.xml/ShortVariable">
         <properties>
             <property name="exceptions" value="i,j,db,id" />
         </properties>

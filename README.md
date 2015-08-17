@@ -31,7 +31,7 @@ History
 
 v1.0.0x (latest)
 
-* Exclude variable names frpn phpmd short variable size.
+* Exclude variable names from phpmd short variable size.
 
 
 v1.0.0 (2015-08-17)
