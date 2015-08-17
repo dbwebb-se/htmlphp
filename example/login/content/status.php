@@ -9,7 +9,7 @@ $hashDetails = password_get_info($details['password']);
 
 <p>Användaren <?=$isLoggedIn?> inloggad.</p>
 
-<?php if ($details): ?>
+<?php if ($details) : ?>
 
 <p>Här följer detaljer om användaren.</p>
 
@@ -19,4 +19,6 @@ $hashDetails = password_get_info($details['password']);
 
 <pre><?=var_dump($hashDetails)?></pre>
 
-<?php endif; ?>
+<?php
+endif;
+?>
