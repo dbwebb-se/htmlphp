@@ -22,7 +22,13 @@
     </rule>
 
     <rule ref="rulesets/design.xml" />
-    <rule ref="rulesets/naming.xml" />
-    <rule ref="rulesets/unusedcode.xml" />
     
+    <rule ref="rulesets/naming.xml">
+        <properties>
+            <property name="exceptions" value="i,j,db,id" />
+        </properties>
+    </rule>
+
+    <rule ref="rulesets/unusedcode.xml" />
+
 </ruleset>
