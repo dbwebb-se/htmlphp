@@ -29,10 +29,15 @@ Feel free to help builing up the repository with more content suited for trainin
 History
 -------------------
 
+v1.0.0x (2015-08-27)
+
+* Add `me6` in kmom06.
+
+
 v1.0.0 (2015-08-17)
 
 * Exclude variable names from phpmd short variable size.
-* Started work in oktober 2014, planned release end of august 2015.
+* Started work in october 2014, planned release end of august 2015.
 
 
 
