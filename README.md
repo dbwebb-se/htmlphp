@@ -29,8 +29,9 @@ Feel free to help builing up the repository with more content suited for trainin
 History
 -------------------
 
-v1.0.0x (2015-08-27)
+v1.0.0x (2015-09-01)
 
+* Disable warning for csslint unique-headings.
 * Add `me6` in kmom06.
 
 
