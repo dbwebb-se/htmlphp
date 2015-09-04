@@ -29,8 +29,9 @@ Feel free to help builing up the repository with more content suited for trainin
 History
 -------------------
 
-v1.0.0x (2015-09-01)
+v1.0.0x (2015-09-04)
 
+* Disable warning for csslint box-sizing.
 * Disable warning for csslint unique-headings.
 * Add `me6` in kmom06.
 
