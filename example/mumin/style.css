@@ -16,5 +16,5 @@ h1 {
 }
 
 p {
-    border: 2px dashed silver;
+    border: 2px dashed silver !important;
 }
