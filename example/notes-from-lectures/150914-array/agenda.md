@@ -32,6 +32,8 @@ echo "This is {$name}'s moped."
 
 
 Arrayer
+-------------------------------
+
  implode, explode
  var_dump, print_r
  basics
