@@ -31,6 +31,7 @@ History
 
 v1.0.0x (2015-09-04)
 
+* Adding example for bmo.
 * Disable warning for csslint box-sizing.
 * Disable warning for csslint unique-headings.
 * Add `me6` in kmom06.
