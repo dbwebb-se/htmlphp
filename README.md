@@ -29,9 +29,10 @@ Feel free to help builing up the repository with more content suited for trainin
 History
 -------------------
 
-v1.0.0x (2015-09-04)
+v1.0.0x (2015-10-11)
 
 * Adding example for bmo.
+* Disable warning for csslint universal-selector.
 * Disable warning for csslint box-sizing.
 * Disable warning for csslint unique-headings.
 * Add `me6` in kmom06.
