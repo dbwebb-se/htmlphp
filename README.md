@@ -31,6 +31,7 @@ History
 
 v1.0.0x (2015-10-15)
 
+* Adding new version of bmo database with other path for images.
 * Disable csslint font-sizes.
 * Disable csslint bulletproof-font-face.
 * Adding example for bmo.
