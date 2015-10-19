@@ -20,6 +20,7 @@ https://gist.github.com/
 GitHub and git.
 Install: http://dbwebb.se/kunskap/installera-versionshanteringssystemet-git
 Get going: http://dbwebb.se/kunskap/kom-igang-med-git-och-github
+Make a repo on GitHub.
 
 About responsive development:
 ctrl-shift-m Firefox, Google Chrome
