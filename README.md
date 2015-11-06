@@ -29,8 +29,9 @@ Feel free to help builing up the repository with more content suited for trainin
 History
 -------------------
 
-v1.0.0x (2015-10-15)
+v1.0.0x (2015-11-06)
 
+* Ignore csslint overqualified-elements.
 * Adding new version of bmo database with other path for images.
 * Disable csslint font-sizes.
 * Disable csslint bulletproof-font-face.
