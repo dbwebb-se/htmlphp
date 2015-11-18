@@ -1,0 +1,43 @@
+language: php
+php:
+    - 5.4
+    - 5.5
+    - 5.6
+    - hhvm
+    - nightly
+    - "7.0"
+
+
+
+git:
+    submodules: false
+
+
+
+before_install:
+
+    # Install validation tools
+    - npm install -g htmlhint csslint jshint jscs jsonlint js-yaml html-minifier cleancss uglifyjs
+    
+    # Install phpcs
+    - curl -OL https://squizlabs.github.io/PHP_CodeSniffer/phpcs.phar
+    - install phpcs.phar /usr/local/bin/phpcs
+
+    # Install phpmd
+    - wget -c http://static.phpmd.org/php/latest/phpmd.phar
+    - install phpmd.phar /usr/local/bin/phpmd
+    
+    # Download dbwebb-validate
+    - wget -O dbwebb-validate https://raw.githubusercontent.com/mosbth/dbwebb-cli/master/dbwebb2-validate
+    - chmod 755 dbwebb-validate
+
+    # Create a build directory for output
+    - mkdir build
+
+
+
+script:
+    # Run validation & publish
+    - ./dbwebb-validate --version
+    - ./dbwebb-validate --check
+    - ./dbwebb-validate --publish --publish-to build/ example/

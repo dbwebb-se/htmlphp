@@ -22,15 +22,18 @@ This is a co-effort of several people using freely available documentation and t
 
 For contributors, see the commit history and the issues.
 
-Feel free to help builing up the repository with more content suited for training and education.
+Feel free to help building up the repository with more content suited for training and education.
 
 
 
 History
 -------------------
 
-v1.0.0x (2015-11-06)
+v1.1.0 (2015-11-18)
 
+* Added to Travis.
+* Cleaned up validation errors in `example/`.
+* Moved notes from lectures to `slide/`.
 * Ignore csslint overqualified-elements.
 * Adding new version of bmo database with other path for images.
 * Disable csslint font-sizes.
