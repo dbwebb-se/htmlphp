@@ -50,7 +50,7 @@ before_script:
     
     # Download dbwebb-validate
     - wget -O dbwebb-validate https://raw.githubusercontent.com/mosbth/dbwebb-cli/master/dbwebb2-validate
-    - install dbwebb-validate $PWD/bin/dbwebb-validate
+    - install --mode 755 dbwebb-validate $PWD/bin/dbwebb-validate
 
     # Create a build directory for output
     - mkdir build
@@ -66,16 +66,17 @@ script:
     - csslint --version
     - jscs --version
     - jshint --version
-    - jsonlint --version
     - phpcs --version
     - phpmd --version
-    - jsonlint --version
-    
+    #- jsonlint --version
     - js-yaml --version
+    - shellcheck --version
+    
+    - html-minifier --version
     - cleancss --version
     - uglifyjs --version
     
     # Run validation & publish
-    - ./dbwebb-validate --version
-    - ./dbwebb-validate --check
-    - ./dbwebb-validate --publish --publish-to build/ example/
+    - dbwebb-validate --version
+    - dbwebb-validate --check
+    - dbwebb-validate --publish --publish-to build/ example/
