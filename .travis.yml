@@ -22,11 +22,11 @@ git:
 addons:
     apt:
         sources:
-            - nodejs
-            - npm
-            - php-codesniffer
-            - phpmd
-            - shellcheck
+            #- nodejs
+            #- npm
+            #- php-codesniffer
+            #- phpmd
+            #- shellcheck
 
 
 
@@ -41,16 +41,16 @@ before_script:
     - npm install -g htmlhint csslint jshint jscs jsonlint js-yaml html-minifier clean-css uglify-js
     
     # Install phpcs
-    #- curl -OL https://squizlabs.github.io/PHP_CodeSniffer/phpcs.phar
-    #- install phpcs.phar $PWD/bin/phpcs
+    - curl -OL https://squizlabs.github.io/PHP_CodeSniffer/phpcs.phar
+    - install --mode 0755 phpcs.phar $PWD/bin/phpcs
 
     # Install phpmd
-    #- wget -c http://static.phpmd.org/php/latest/phpmd.phar
-    #- install phpmd.phar $PWD/bin/phpmd
+    - wget -c http://static.phpmd.org/php/latest/phpmd.phar
+    - install --mode 0755 phpmd.phar $PWD/bin/phpmd
     
     # Download dbwebb-validate
     - wget -O dbwebb-validate https://raw.githubusercontent.com/mosbth/dbwebb-cli/master/dbwebb2-validate
-    - install --mode 755 dbwebb-validate $PWD/bin/dbwebb-validate
+    - install --mode 0755 dbwebb-validate $PWD/bin/dbwebb-validate
 
     # Create a build directory for output
     - mkdir build
@@ -58,7 +58,7 @@ before_script:
 
 
 script:
-    # Check some versions
+    # Check versions of validation tools
     - node --version
     - npm --version
     
@@ -70,7 +70,7 @@ script:
     - phpmd --version
     #- jsonlint --version
     - js-yaml --version
-    - shellcheck --version
+    #- shellcheck --version
     
     - html-minifier --version
     - cleancss --version
