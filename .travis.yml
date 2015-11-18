@@ -21,12 +21,12 @@ git:
 
 addons:
     apt:
-        sources:
+        packages:
             #- nodejs
             #- npm
-            #- php-codesniffer
-            #- phpmd
-            #- shellcheck
+            - php-codesniffer
+            - phpmd
+            - shellcheck
 
 
 
