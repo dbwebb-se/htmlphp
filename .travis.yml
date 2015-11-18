@@ -26,10 +26,11 @@ addons:
             - npm
             - php-codesniffer
             - phpmd
+            - shellcheck
 
 
 
-before_install:
+before_script:
 
     # Store all files in your own bin
     - mkdir bin
@@ -37,7 +38,7 @@ before_install:
 
 
     # Install validation tools
-    - npm install -g htmlhint csslint jshint jscs jsonlint js-yaml html-minifier cleancss uglifyjs
+    - npm install -g htmlhint csslint jshint jscs jsonlint js-yaml html-minifier clean-css uglify-js
     
     # Install phpcs
     #- curl -OL https://squizlabs.github.io/PHP_CodeSniffer/phpcs.phar
@@ -57,6 +58,23 @@ before_install:
 
 
 script:
+    # Check some versions
+    - node --version
+    - npm --version
+    
+    - htmlhint --version
+    - csslint --version
+    - jscs --version
+    - jshint --version
+    - jsonlint --version
+    - phpcs --version
+    - phpmd --version
+    - jsonlint --version
+    
+    - js-yaml --version
+    - cleancss --version
+    - uglifyjs --version
+    
     # Run validation & publish
     - ./dbwebb-validate --version
     - ./dbwebb-validate --check
