@@ -1,15 +1,21 @@
 language: php
+
 php:
-    - 5.4
-    - 5.5
+    #- 5.4
+    #- 5.5
     - 5.6
-    - hhvm
-    - nightly
-    - "7.0"
+    #- hhvm
+    #- nightly
+    #- "7.0"
 
 
 
 sudo: false
+
+
+
+git:
+    submodules: false
 
 
 
@@ -20,11 +26,6 @@ addons:
             - npm
             - php-codesniffer
             - phpmd
-
-
-
-git:
-    submodules: false
 
 
 
