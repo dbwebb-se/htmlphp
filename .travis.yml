@@ -9,6 +9,20 @@ php:
 
 
 
+sudo: false
+
+
+
+addons:
+    apt:
+        sources:
+            - nodejs
+            - npm
+            - php-codesniffer
+            - phpmd
+
+
+
 git:
     submodules: false
 
@@ -16,20 +30,25 @@ git:
 
 before_install:
 
+    # Store all files in your own bin
+    - mkdir bin
+    - export PATH=$PATH:$PWD/bin/
+
+
     # Install validation tools
     - npm install -g htmlhint csslint jshint jscs jsonlint js-yaml html-minifier cleancss uglifyjs
     
     # Install phpcs
-    - curl -OL https://squizlabs.github.io/PHP_CodeSniffer/phpcs.phar
-    - install phpcs.phar /usr/local/bin/phpcs
+    #- curl -OL https://squizlabs.github.io/PHP_CodeSniffer/phpcs.phar
+    #- install phpcs.phar $PWD/bin/phpcs
 
     # Install phpmd
-    - wget -c http://static.phpmd.org/php/latest/phpmd.phar
-    - install phpmd.phar /usr/local/bin/phpmd
+    #- wget -c http://static.phpmd.org/php/latest/phpmd.phar
+    #- install phpmd.phar $PWD/bin/phpmd
     
     # Download dbwebb-validate
     - wget -O dbwebb-validate https://raw.githubusercontent.com/mosbth/dbwebb-cli/master/dbwebb2-validate
-    - chmod 755 dbwebb-validate
+    - install dbwebb-validate $PWD/bin/dbwebb-validate
 
     # Create a build directory for output
     - mkdir build
