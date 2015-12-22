@@ -32,6 +32,11 @@ Feel free to help building up the repository with more content suited for traini
 History
 -------------------
 
+v1.1.0* (2015-12-22)
+
+* Add gitattributes to always use LF.
+
+
 v1.1.0 (2015-11-18)
 
 * Added to Travis.
