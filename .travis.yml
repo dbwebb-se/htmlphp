@@ -78,3 +78,17 @@ script:
     - dbwebb-validate --version
     - dbwebb-validate --check
     - dbwebb-validate --publish --publish-to build/ example/
+
+
+
+notifications:
+    irc: "irc.freenode.org#dbwebb"
+
+    webhooks:
+        urls:
+            - https://webhooks.gitter.im/e/3d08ec83ce1552019f1e
+
+        # options: [always|never|change] default: always
+        on_success: change
+        on_failure: always
+        on_start: never
