@@ -39,12 +39,12 @@ before_script:
     #- npm install -g htmlhint csslint jshint jscs jsonlint js-yaml html-minifier@0.8.0 clean-css uglify-js
     
     # Install phpcs
-    - curl -OL https://squizlabs.github.io/PHP_CodeSniffer/phpcs.phar
-    - install --mode 0755 phpcs.phar $PWD/bin/phpcs
+    #- curl -OL https://squizlabs.github.io/PHP_CodeSniffer/phpcs.phar
+    #- install --mode 0755 phpcs.phar $PWD/bin/phpcs
 
     # Install phpmd
-    - wget --no-check-certificate -c http://static.phpmd.org/php/latest/phpmd.phar
-    - install --mode 0755 phpmd.phar $PWD/bin/phpmd
+    #- wget --no-check-certificate -c http://static.phpmd.org/php/latest/phpmd.phar
+    #- install --mode 0755 phpmd.phar $PWD/bin/phpmd
     
     # Download dbwebb-validate
     - wget -O dbwebb-validate https://raw.githubusercontent.com/mosbth/dbwebb-cli/master/dbwebb2-validate
