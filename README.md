@@ -32,6 +32,11 @@ Feel free to help building up the repository with more content suited for traini
 History
 -------------------
 
+v1.2.0* (2016-05-13)
+
+* Adding example/video-learn-php with files used in video serie.
+
+
 v1.2.0 (2016-05-13)
 
 * Tag before adding testcases as `dbwebb.tests`.

@@ -43,7 +43,7 @@ before_script:
     - install --mode 0755 phpcs.phar $PWD/bin/phpcs
 
     # Install phpmd
-    - wget -c http://static.phpmd.org/php/latest/phpmd.phar
+    - wget --no-check-certificate -c http://static.phpmd.org/php/latest/phpmd.phar
     - install --mode 0755 phpmd.phar $PWD/bin/phpmd
     
     # Download dbwebb-validate
