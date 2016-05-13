@@ -36,7 +36,7 @@ before_script:
 
 
     # Install validation tools
-    - npm install -g htmlhint csslint jshint jscs jsonlint js-yaml html-minifier@0.8.0 clean-css uglify-js
+    #- npm install -g htmlhint csslint jshint jscs jsonlint js-yaml html-minifier@0.8.0 clean-css uglify-js
     
     # Install phpcs
     - curl -OL https://squizlabs.github.io/PHP_CodeSniffer/phpcs.phar
@@ -49,6 +49,9 @@ before_script:
     # Download dbwebb-validate
     - wget -O dbwebb-validate https://raw.githubusercontent.com/mosbth/dbwebb-cli/master/dbwebb2-validate
     - install --mode 0755 dbwebb-validate $PWD/bin/dbwebb-validate
+
+    # Install validation tools
+    - dbwebb-validate --install-npm
 
     # Create a build directory for output
     - mkdir build
