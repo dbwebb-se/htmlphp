@@ -50,7 +50,7 @@ before_script:
     - wget -O dbwebb-validate https://raw.githubusercontent.com/mosbth/dbwebb-cli/master/dbwebb2-validate
     - install --mode 0755 dbwebb-validate $PWD/bin/dbwebb-validate
 
-    # Install validation tools
+    # Install compatible validation tools
     - dbwebb-validate --install-npm
 
     # Create a build directory for output
