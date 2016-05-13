@@ -12,12 +12,12 @@ $url = "http://dbwebb.se/htmlphp/studieplan";
 $str1 = "Mumintroll";
 $str2 = "Mumintrollet";
 
-var_dump( $str1 == $str1 );
-var_dump( $str1 == $str2 );
+var_dump($str1 == $str1);
+var_dump($str1 == $str2);
 
-var_dump( strcmp($str1, $str1) );
-var_dump( strcmp($str1, $str2) );
-var_dump( strcmp($str2, $str1) );
+var_dump(strcmp($str1, $str1));
+var_dump(strcmp($str1, $str2));
+var_dump(strcmp($str2, $str1));
 
 
 /*
