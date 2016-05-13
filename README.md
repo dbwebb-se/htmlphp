@@ -32,7 +32,12 @@ Feel free to help building up the repository with more content suited for traini
 History
 -------------------
 
-v1.1.0* (2015-12-22)
+v1.2.0 (2016-05-13)
+
+* Tag before adding testcases as `dbwebb.tests`.
+
+
+v1.1.0 (2015-12-22)
 
 * Add gitattributes to always use LF.
 
