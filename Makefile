@@ -45,6 +45,14 @@ clean:
 
 
 
+# target: clean-me      - Remove me-directory.
+.PHONY:  clean-me
+clean-me:
+	@echo "$(ACTION)Remove me-directory$(NO_COLOR)"
+	rm -rf me
+
+
+
 # target: clean-all     - Remove all installed files.
 .PHONY:  clean-all
 clean-all: clean
@@ -58,7 +66,6 @@ clean-all: clean
 # target: dbwebb-install          - Download and install dbwebb-cli.
 .PHONY: dbwebb-install
 dbwebb-install: build-prepare
-	echo $(shell hash dbwebb; echo $?)
 ifeq (, $(shell hash dbwebb 2> /dev/null))
 	@echo "$(ACTION)dbwebb already installed, using it$(NO_COLOR)"
 	dbwebb --version
@@ -70,7 +77,7 @@ else
 endif
 
 
-# target: dbwebb-testrepo        - Test course repo.
+# target: dbwebb-testrepo         - Test course repo.
 .PHONY: dbwebb-testrepo
 dbwebb-testrepo: dbwebb-install
 	@echo "$(ACTION)Test course repo$(NO_COLOR)"
@@ -84,6 +91,7 @@ dbwebb-validate-install: build-prepare
 	@echo "$(ACTION)Download and install dbwebb-validate$(NO_COLOR)"
 	wget --quiet -O bin/dbwebb-validate https://raw.githubusercontent.com/mosbth/dbwebb-cli/master/dbwebb2-validate
 	chmod 755 bin/dbwebb-validate
+	export PATH=$(PATH) && dbwebb-validate --version
 
 
 
