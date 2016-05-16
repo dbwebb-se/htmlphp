@@ -66,15 +66,11 @@ clean-all: clean
 # target: dbwebb-install          - Download and install dbwebb-cli.
 .PHONY: dbwebb-install
 dbwebb-install: build-prepare
-ifeq (, $(shell hash dbwebb 2> /dev/null))
-	@echo "$(ACTION)dbwebb already installed, using it$(NO_COLOR)"
-	dbwebb --version
-else
 	@echo "$(ACTION)Download and install dbwebb$(NO_COLOR)"
 	wget --quiet -O bin/dbwebb https://raw.githubusercontent.com/mosbth/dbwebb-cli/master/dbwebb2
 	chmod 755 bin/dbwebb
 	export PATH=$(PATH) && dbwebb config create noinput && dbwebb --version
-endif
+
 
 
 # target: dbwebb-testrepo         - Test course repo.
