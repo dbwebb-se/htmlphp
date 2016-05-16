@@ -1,4 +1,5 @@
-__pycache__
-.dbwebb.config
 me/
 build/
+bin/
+node_modules/
+vendor/
