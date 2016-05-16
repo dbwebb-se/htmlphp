@@ -60,7 +60,7 @@ clean-all: clean
 dbwebb-validate-install: build-prepare
 	@echo "$(ACTION)Download and install dbwebb-validate$(NO_COLOR)"
 	wget --quiet -O bin/dbwebb-validate https://raw.githubusercontent.com/mosbth/dbwebb-cli/master/dbwebb2-validate
-	chmod 755 build/bin/dbwebb-validate
+	chmod 755 bin/dbwebb-validate
 
 
 
@@ -100,7 +100,7 @@ npm-update-dev:
 .PHONY: composer-install-dev
 composer-install-dev: build-prepare
 	@echo "$(ACTION)Install composer packages for development$(NO_COLOR)"
-	composer install
+	if [ -f composer.json ]; then composer install; fi
 
 
 
@@ -108,7 +108,7 @@ composer-install-dev: build-prepare
 .PHONY: composer-update-dev
 composer-update-dev:
 	@echo "$(ACTION)Update composer packages for development$(NO_COLOR)"
-	composer update
+	if [ -f composer.json ]; composer update; fi
 
 
 
