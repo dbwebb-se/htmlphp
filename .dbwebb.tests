@@ -1,29 +1,51 @@
+# --------------------------------------------------------------------------
+#
 # Init
+#
 dbwebb init-me
 
 
 
-#### Kmom01
-# me
-cd $HOME/dbwebb-kurser/htmlphp/me/kmom01 # added $HOME/
-mkdir me/img me/css me/incl
-touch me/me.php me/about.php me/report.php me/css/style.css
-touch me/incl/header.php me/incl/footer.php me/incl/byline.php
-wget -O me/img/me-small.jpg http://dbwebb.se/img/mikael-roos/me-happy.jpg
-wget -O me/img/me.jpg http://dbwebb.se/img/mikael-roos/me-2.jpg
-wget -O me/img/favicon.ico http://dbwebb.se/favicon.ico
-dbwebb validate kmom01
-wget -O me/img/logo.jpg http://dbwebb.se/image/tema/trad/4.jpg?w=200 # added me/
+# --------------------------------------------------------------------------
+#
+# Kmom01
+#
 
-# me1
+#
+# me http://dbwebb.se/kunskap/skapa-en-webbsida-med-html-css-och-php
+#
+#cd $HOME/dbwebb-kurser/htmlphp/me/kmom01 
+# changed mkdir to install -d to support re-running tests
+# mkdir me/img me/css me/incl
+cd me/kmom01 && install -d me/img me/css me/incl
+cd me/kmom01 && touch me/me.php me/about.php me/report.php me/css/style.css
+cd me/kmom01 && touch me/incl/header.php me/incl/footer.php me/incl/byline.php
+cd me/kmom01 && wget -O me/img/me-small.jpg http://dbwebb.se/img/mikael-roos/me-happy.jpg
+cd me/kmom01 && wget -O me/img/me.jpg http://dbwebb.se/img/mikael-roos/me-2.jpg
+cd me/kmom01 && wget -O me/img/favicon.ico http://dbwebb.se/favicon.ico
+
+#dbwebb validate kmom01 BORT EJ EN DEL AV INSTRUKTIONEN, LÖSES I me1
+
+# added me/
+cd me/kmom01 && wget -O me/img/logo.jpg http://dbwebb.se/image/tema/trad/4.jpg?w=200
+
+
+
+#
+# me1 http://dbwebb.se/uppgift/skapa-en-me-sida-i-kursen-htmlphp
+#
 cd $HOME/dbwebb-kurser/htmlphp/me/kmom01 # added $HOME/dbwebb-kurser/htmlphp/
-mv -i me/* me1/
-rmdir me
+cd me/kmom01 && mv -i me/* me1/
+cd me/kmom01 && rmdir me
 dbwebb validate me1
 
 
 
-#### Kmom02
+# --------------------------------------------------------------------------
+#
+# Kmom02
+#
+
 # lab1
 dbwebb recreate lab1
 cd me/kmom02/lab1 && php answer.php
@@ -58,4 +80,3 @@ dbwebb validate me3
 dbwebb recreate lab3
 cd me/kmom04/lab3 && php answer.php
 dbwebb validate lab3
-
