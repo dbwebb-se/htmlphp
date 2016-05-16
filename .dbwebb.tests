@@ -29,7 +29,7 @@ cd me/kmom01 && wget -O me/img/logo.jpg http://dbwebb.se/image/tema/trad/4.jpg?w
 #
 # me1 http://dbwebb.se/uppgift/skapa-en-me-sida-i-kursen-htmlphp
 #
-cd me/kmom01 && mv -i me/* me1/
+cd me/kmom01 && mv me/* me1/
 cd me/kmom01 && rmdir me
 dbwebb validate me1
 
@@ -46,7 +46,7 @@ cd me/kmom02/lab1 && php answer.php; [[ $? = 1 ]]
 dbwebb validate lab1
 
 # me2
-cd me && cp -ri kmom01/me1/* kmom02/me2/
+cd me && cp -r kmom01/me1/* kmom02/me2/
 dbwebb validate me2
 
 
@@ -58,11 +58,11 @@ cd me/kmom03/lab2 && php answer.php; [[ $? = 1 ]]
 dbwebb validate lab2
 
 # multi
-cp -ri example/multipage/* me/kmom03/multi/
+cp -r example/multipage/* me/kmom03/multi/
 dbwebb validate multi
 
 # me3
-cd me && cp -ri kmom02/me2/* kmom03/me3/
+cd me && cp -r kmom02/me2/* kmom03/me3/
 dbwebb validate me3
 
 
