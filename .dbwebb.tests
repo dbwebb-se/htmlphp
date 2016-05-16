@@ -29,8 +29,8 @@ cd me/kmom01 && wget -O me/img/logo.jpg http://dbwebb.se/image/tema/trad/4.jpg?w
 #
 # me1 http://dbwebb.se/uppgift/skapa-en-me-sida-i-kursen-htmlphp
 #
-cd me/kmom01 && mv me/* me1/
-cd me/kmom01 && rmdir me
+cd me/kmom01 && rsync -a me/ me1/
+cd me/kmom01 && rm -rf me
 dbwebb validate me1
 
 
