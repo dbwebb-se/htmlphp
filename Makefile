@@ -61,6 +61,7 @@ dbwebb-install: build-prepare
 	@echo "$(ACTION)Download and install dbwebb$(NO_COLOR)"
 	wget --quiet -O bin/dbwebb https://raw.githubusercontent.com/mosbth/dbwebb-cli/master/dbwebb2
 	chmod 755 bin/dbwebb
+	export PATH=$(PATH) && dbwebb config
 
 
 
