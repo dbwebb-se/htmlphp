@@ -145,7 +145,7 @@ tools-update-dev: composer-update-dev npm-update-dev
 
 # target: automated-tests-prepare - Prepare for automated tests.
 .PHONY: automated-tests-prepare
-automated-tests-prepare: build-prepare dbwebb-validate-install npm-install-dev composer-install-dev
+automated-tests-prepare: build-prepare dbwebb-validate-install dbwebb-install npm-install-dev composer-install-dev
 	@echo "$(ACTION)Prepared for automated tests$(NO_COLOR)"
 
 
@@ -159,15 +159,15 @@ automated-tests-check: dbwebb-validate-check
 
 # target: automated-tests-run     - Run all automated tests.
 .PHONY: automated-tests-run
-automated-tests-run: dbwebb-validate-run
+automated-tests-run: dbwebb-validate-run dbwebb-testrepo
 	@echo "$(ACTION)Executed all automated tests$(NO_COLOR)"
 
 
 
 # target: test                    - Install test tools & run tests.
 .PHONY: test
-test: automated-tests-prepare automated-tests-check automated-tests-run dbwebb-install dbwebb-testrepo
-	@echo "$(ACTION)Install test tools & run tests$(NO_COLOR)"
+test: automated-tests-prepare automated-tests-check automated-tests-run dbwebb-testrepo
+	@echo "$(ACTION)Installed test tools & executed tests$(NO_COLOR)"
 
 
 
