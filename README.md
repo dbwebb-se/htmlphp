@@ -32,8 +32,12 @@ Feel free to help building up the repository with more content suited for traini
 History
 -------------------
 
-v1.2.0* (2016-05-13)
+v1.3.0 (2016-05-16)
 
+* Added testsuite in .dbwebb.tests.
+* Automated tests on travis.
+* Requires minimum version of dbwebb-cli.
+* Supports working with local development environment.
 * Adding example/video-learn-php with files used in video serie.
 
 
