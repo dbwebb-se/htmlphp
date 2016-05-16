@@ -21,3 +21,41 @@ mv -i me/* me1/
 rmdir me
 dbwebb validate me1
 
+
+
+#### Kmom02
+# lab1
+dbwebb recreate lab1
+cd me/kmom02/lab1 && php answer.php
+dbwebb validate lab1
+
+# me2
+cd me
+cp -ri kmom01/me1/* kmom02/me2/
+dbwebb validate me2
+
+
+
+#### Kmom03
+# lab2
+dbwebb recreate lab2
+cd me/kmom03/lab2 && php answer.php
+dbwebb validate lab2
+
+# multi
+cp -ri example/multipage/* me/kmom03/multi/
+dbwebb validate multi
+
+# me3
+cd me
+cp -ri kmom02/me2/* kmom03/me3/
+dbwebb validate me3
+
+
+
+#### Kmom04
+# lab3
+dbwebb recreate lab3
+cd me/kmom04/lab3 && php answer.php
+dbwebb validate lab3
+
