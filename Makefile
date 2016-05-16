@@ -32,7 +32,7 @@ help:
 build-prepare:
 	@echo "$(ACTION)Prepare the build directory$(NO_COLOR)"
 	install -d build
-	install -d bin
+	install -d bin/pip
 
 
 
@@ -52,6 +52,23 @@ clean-all: clean
 	rm -rf bin
 	rm -rf node_modules
 	rm -rf vendor
+
+
+
+# target: dbwebb-install          - Download and install dbwebb-cli.
+.PHONY: dbwebb-install
+dbwebb-install: build-prepare
+	@echo "$(ACTION)Download and install dbwebb$(NO_COLOR)"
+	wget --quiet -O bin/dbwebb https://raw.githubusercontent.com/mosbth/dbwebb-cli/master/dbwebb2
+	chmod 755 bin/dbwebb
+
+
+
+# target: dbwebb-testrepo        - Test course repo.
+.PHONY: dbwebb-testrepo
+dbwebb-testrepo: dbwebb-install
+	@echo "$(ACTION)Test course repo$(NO_COLOR)"
+	export PATH=$(PATH) && dbwebb --silent testrepo
 
 
 
@@ -147,7 +164,14 @@ automated-tests-run: dbwebb-validate-run
 
 
 
-# target: dbwebb-validate     - Execute this tool.
+# target: test                    - Install test tools & run tests.
+.PHONY: test
+test: automated-tests-prepare automated-tests-check automated-tests-run dbwebb-install dbwebb-testrepo
+	@echo "$(ACTION)Install test tools & run tests$(NO_COLOR)"
+
+
+
+# target: dbwebb-validate     - Execute command with arg1=what.
 .PHONY: dbwebb-validate
 dbwebb-validate:
 	@echo "$(ACTION)Executed all automated tests$(NO_COLOR)"
