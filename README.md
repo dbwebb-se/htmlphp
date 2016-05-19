@@ -3,6 +3,7 @@ Databases, HTML, CSS and script-based PHP-programmering - htmlphp
 
 [![Join the chat at https://gitter.im/mosbth/htmlphp](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/mosbth/htmlphp?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 [![Build Status](https://travis-ci.org/mosbth/htmlphp.svg?branch=master)](https://travis-ci.org/mosbth/htmlphp)
+[![CircleCI](https://circleci.com/gh/dbwebb-se/htmlphp.svg?style=svg)](https://circleci.com/gh/dbwebb-se/htmlphp)
 
 Course material for htmlphp-course, aimed at a swedish target audience as an introduction to web programmering for computer science students at University level. 
 
@@ -31,6 +32,11 @@ Feel free to help building up the repository with more content suited for traini
 
 History
 -------------------
+
+v1.3.0* (2016-05-19)
+
+* Added testsuite to be executed on circleci.com.
+
 
 v1.3.0 (2016-05-16)
 
