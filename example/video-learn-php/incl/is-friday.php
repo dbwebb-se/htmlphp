@@ -1,11 +1,68 @@
 <?php 
 
-$day = date("w");
-$day = 8;
+/**
+ * Check what day it is and return dayname together with a 
+ * day feeling.
+ *
+ * @param int $day Use this as a day, or check current day.
+ *
+ * @return array with dayname and dayfeeling.
+ */
+function isFriday($day = null)
+{
+    if ($day < 1 || $day > 7) {
+        $day = date("w");
+    }
 
+    if (is_null($day)) {
+        $day = date("w");
+    }
+
+    $dayDetails = [
+        1 => ["name" => "måndag",    "feeling" => "..."],
+        2 => ["name" => "tisdag",    "feeling" => null],
+        3 => ["name" => "onsdag",    "feeling" => "*nice*"],
+        4 => ["name" => "torsdag",   "feeling" => null],
+        5 => ["name" => "fredag",    "feeling" => "!!!"],
+        6 => ["name" => "lördag",    "feeling" => null],
+        7 => ["name" => "söndag",    "feeling" => "*vila*"],
+    ];
+
+    return [
+        $dayDetails[$day]["name"],
+        $dayDetails[$day]["feeling"],
+    ];
+}
+
+
+
+
+
+
+/*
+$dayName    = $res["name"];
+$dayFeeling = $res["feeling"];
+
+
+
+
+/*
+$dayFeelings = [
+    
+    null,
+    "*nice*",
+    null,
+    "!!!",
+    null,
+    "*vila*",
+];
+
+
+/*
 switch ($day) {
     case 1:
         $dayName = "måndag";
+        $dayFeeling = "...";
         break;
     
     case 2:

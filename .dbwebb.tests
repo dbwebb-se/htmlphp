@@ -103,6 +103,20 @@ dbwebb validate lab3
 # Kmom05
 #
 
+#
+# lab4
+#
+cd me/kmom05 && dbwebb recreate lab4
+cd me/kmom05/lab4 && php answer.php; [[ $? = 42 ]]
+dbwebb validate lab4
+
+#
+# sql1
+#
+cd me/kmom05 && dbwebb recreate sql1
+cd me/kmom05/sql1 && ./answer.bash; [[ $? = 42 ]]
+dbwebb validate sql1
+
 
 
 # --------------------------------------------------------------------------

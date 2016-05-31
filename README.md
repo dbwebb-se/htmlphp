@@ -33,9 +33,10 @@ Feel free to help building up the repository with more content suited for traini
 History
 -------------------
 
-v1.3.0* (2016-05-19)
+v1.3.0* (2016-05-31)
 
 * Added testsuite to be executed on circleci.com.
+* Added lab for sql1.
 
 
 v1.3.0 (2016-05-16)
