@@ -4,29 +4,33 @@
 #
 
 # Colors
-NO_COLOR		= \033[0m
-TARGET_COLOR	= \033[32;01m
-OK_COLOR		= \033[32;01m
-ERROR_COLOR		= \033[31;01m
-WARN_COLOR		= \033[33;01m
-ACTION			= $(TARGET_COLOR)--> 
+NO_COLOR=\033[0m
+TARGET_COLOR=\033[32;01m
+OK_COLOR=\033[32;01m
+ERROR_COLOR=\033[31;01m
+WARN_COLOR=\033[33;01m
+ACTION=$(TARGET_COLOR)--> 
 
 # Add local bin path for test tools
-BIN 		= bin
-VENDORBIN 	= vendor/bin
-NPMBIN		= node_modules/.bin
-PATH		:= $(BIN):$(VENDORBIN):$(NPMBIN):$(PATH)
+PATH := "$(PWD)/bin:$(PWD)/vendor/bin:$(PWD)/node_modules/.bin:$(PATH)"
 
 
 
 # target: help          - Displays help.
 .PHONY:  help
 help:
-	@echo "$(ACTION)Displaying help for this Makefile.$(NO_COLOR)"
+	@echo "Displaying help for this Makefile."
 	@echo "Usage:"
 	@echo " make [target] ..."
 	@echo "target:"
 	@egrep "^# target:" Makefile | sed 's/# target: / /g'
+
+
+
+# target: test          - Install test tools & run tests.
+.PHONY: test
+test: automated-tests-prepare automated-tests-check automated-tests-run dbwebb-testrepo
+	@echo "$(ACTION)Installed test tools & executed tests$(NO_COLOR)"
 
 
 
@@ -70,9 +74,9 @@ clean-all: clean
 .PHONY: dbwebb-install
 dbwebb-install: build-prepare
 	@echo "$(ACTION)Download and install dbwebb$(NO_COLOR)"
-	wget --quiet -O $(BIN)/dbwebb https://raw.githubusercontent.com/mosbth/dbwebb-cli/master/dbwebb2
-	chmod 755 $(BIN)/dbwebb
-	$(BIN)/dbwebb config create noinput && $(BIN)/dbwebb --version
+	wget --quiet -O bin/dbwebb https://raw.githubusercontent.com/mosbth/dbwebb-cli/master/dbwebb2
+	chmod 755 bin/dbwebb
+	export PATH=$(PATH) && dbwebb config create noinput && dbwebb --version
 
 
 
@@ -80,7 +84,7 @@ dbwebb-install: build-prepare
 .PHONY: dbwebb-testrepo
 dbwebb-testrepo: dbwebb-install
 	@echo "$(ACTION)Test course repo$(NO_COLOR)"
-	PATH=$(PATH); $(BIN)/dbwebb --silent --local testrepo
+	export PATH=$(PATH) && dbwebb --silent --local testrepo
 
 
 
@@ -88,9 +92,9 @@ dbwebb-testrepo: dbwebb-install
 .PHONY: dbwebb-validate-install
 dbwebb-validate-install: build-prepare
 	@echo "$(ACTION)Download and install dbwebb-validate$(NO_COLOR)"
-	wget --quiet -O $(BIN)/dbwebb-validate https://raw.githubusercontent.com/mosbth/dbwebb-cli/master/dbwebb2-validate
-	chmod 755 $(BIN)/dbwebb-validate
-	$(BIN)/dbwebb-validate --version
+	wget --quiet -O bin/dbwebb-validate https://raw.githubusercontent.com/mosbth/dbwebb-cli/master/dbwebb2-validate
+	chmod 755 bin/dbwebb-validate
+	export PATH=$(PATH) && dbwebb-validate --version
 
 
 
@@ -98,7 +102,7 @@ dbwebb-validate-install: build-prepare
 .PHONY: dbwebb-validate-check
 dbwebb-validate-check:
 	@echo "$(ACTION)Check version and environment for dbwebb-validate$(NO_COLOR)"
-	$(BIN)/dbwebb-validate --version && $(BIN)/dbwebb-validate --check
+	export PATH=$(PATH) && dbwebb-validate --version && dbwebb-validate --check
 
 
 
@@ -106,7 +110,7 @@ dbwebb-validate-check:
 .PHONY: dbwebb-validate-run
 dbwebb-validate-run:
 	@echo "$(ACTION)Run tests with dbwebb-validate$(NO_COLOR)"
-	$(BIN)/dbwebb-validate --publish --publish-to build/webroot/ example
+	export PATH=$(PATH) && dbwebb-validate --publish --publish-to build/webroot/ example
 
 
 
@@ -114,7 +118,7 @@ dbwebb-validate-run:
 .PHONY: npm-install-dev
 npm-install-dev: build-prepare
 	@echo "$(ACTION)Install npm packages for development$(NO_COLOR)"
-	if [ -f package.json ]; then npm install --only=dev; fi
+	npm install --only=dev
 
 
 
@@ -122,7 +126,7 @@ npm-install-dev: build-prepare
 .PHONY: npm-update-dev
 npm-update-dev:
 	@echo "$(ACTION)Update npm packages for development$(NO_COLOR)"
-	if [ -f package.json ]; then npm update --only=dev; fi
+	npm update --only=dev
 
 
 
@@ -163,7 +167,7 @@ automated-tests-prepare: build-prepare dbwebb-validate-install dbwebb-install np
 
 
 
-# target: automated-tests-check   - Check version and enviroment for automated tests.
+# target: automated-tests-check   - Check version and environment for automated tests.
 .PHONY: automated-tests-check
 automated-tests-check: dbwebb-validate-check
 	@echo "$(ACTION)Checked version and environment for automated tests$(NO_COLOR)"
@@ -177,15 +181,8 @@ automated-tests-run: dbwebb-validate-run dbwebb-testrepo
 
 
 
-# target: test                    - Install test tools & run tests.
-.PHONY: test
-test: automated-tests-prepare automated-tests-check automated-tests-run dbwebb-testrepo
-	@echo "$(ACTION)Installed test tools & executed tests$(NO_COLOR)"
-
-
-
 # target: dbwebb-validate     - Execute command with arg1=what.
 .PHONY: dbwebb-validate
 dbwebb-validate:
 	@echo "$(ACTION)Executed all automated tests$(NO_COLOR)"
-	$(BIN)/dbwebb-validate --publish --publish-to build/webroot/ $(arg1)
+	export PATH=$(PATH) && dbwebb-validate --publish --publish-to build/webroot/ $(arg1)
