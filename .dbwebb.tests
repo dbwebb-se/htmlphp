@@ -18,10 +18,10 @@ dbwebb init-me
 cd me/kmom01 && install -d me/img me/css me/incl
 cd me/kmom01 && touch me/me.php me/about.php me/report.php me/css/style.css
 cd me/kmom01 && touch me/incl/header.php me/incl/footer.php me/incl/byline.php
-cd me/kmom01 && wget -O me/img/me-small.jpg http://dbwebb.se/img/mikael-roos/me-happy.jpg
-cd me/kmom01 && wget -O me/img/me.jpg https://dbwebb.se/img/mikael-roos/me-2.jpg
-cd me/kmom01 && wget -O me/img/favicon.ico https://dbwebb.se/favicon.ico
-cd me/kmom01 && wget -O me/img/logo.jpg https://dbwebb.se/image/tema/trad/4.jpg?w=200
+cd me/kmom01 && wget --no-check-certificate -O me/img/me-small.jpg https://dbwebb.se/img/mikael-roos/me-happy.jpg
+cd me/kmom01 && wget --no-check-certificate -O me/img/me.jpg https://dbwebb.se/img/mikael-roos/me-2.jpg
+cd me/kmom01 && wget --no-check-certificate -O me/img/favicon.ico https://dbwebb.se/favicon.ico
+cd me/kmom01 && wget --no-check-certificate -O me/img/logo.jpg https://dbwebb.se/image/tema/trad/4.jpg?w=200
 
 
 
