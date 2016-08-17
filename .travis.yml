@@ -39,7 +39,8 @@ script:
     - make automated-tests-check
 
     # Run tests
-    - make automated-tests-run
+    - bin/dbwebb testrepo
+    - make clean-me automated-tests-run
 
 
 
