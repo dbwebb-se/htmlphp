@@ -84,7 +84,7 @@ dbwebb-install: build-prepare
 .PHONY: dbwebb-testrepo
 dbwebb-testrepo: dbwebb-install
 	@echo "$(ACTION)Test course repo$(NO_COLOR)"
-	export PATH=$(PATH) && dbwebb --silent --local testrepo
+	export PATH=$(PATH) && dbwebb  --local testrepo #--silent
 
 
 
