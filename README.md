@@ -33,7 +33,7 @@ Feel free to help building up the repository with more content suited for traini
 History
 -------------------
 
-v1.3.1 (2016-09-13)
+v1.3.2 (2016-09-13)
 
 * Ignore csslint `floats`.
 * Made tests pass on travis and circleci.
