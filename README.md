@@ -33,8 +33,9 @@ Feel free to help building up the repository with more content suited for traini
 History
 -------------------
 
-v1.3.0* (2016-08-17)
+v1.3.1 (2016-09-13)
 
+* Ignore csslint `floats`.
 * Made tests pass on travis and circleci.
 * Added testsuite to be executed on circleci.com.
 * Added lab for sql1.
@@ -84,5 +85,5 @@ v1.0.0 (2015-08-17)
 
 ```                                                            
  .                                                             
-..:  Copyright (c) 2014-15 Mikael Roos, me@mikaelroos.se   
+..:  Copyright (c) 2014-2016 Mikael Roos, me@mikaelroos.se   
 ```                                                            
