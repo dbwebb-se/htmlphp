@@ -33,6 +33,11 @@ Feel free to help building up the repository with more content suited for traini
 History
 -------------------
 
+v1.3.3 (2016-09-25)
+
+* Ignore phpmd `ExitExpression`.
+
+
 v1.3.2 (2016-09-13)
 
 * Ignore csslint `floats`.
