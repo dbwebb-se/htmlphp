@@ -33,6 +33,11 @@ Feel free to help building up the repository with more content suited for traini
 History
 -------------------
 
+v1.3.3* (2016-10-07)
+
+* Adding `example/bmo/db/bildtexter.md`.
+
+
 v1.3.3 (2016-09-25)
 
 * Ignore phpmd `ExitExpression`.
