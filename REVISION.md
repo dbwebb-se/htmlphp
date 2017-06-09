@@ -1,11 +1,12 @@
 Revision history
 ===================
 
-v1.4.* (2017-06-09)
+v1.4.0 (2017-06-09)
 -------------------
 
 * Prepare to upgrade course repo before autumn 2017 and using dbwebb-cli v2.
 * Split README.md to REVISION.md.
+* Add versioning of labs.
 
 
 v1.3.5 (2017-06-09)

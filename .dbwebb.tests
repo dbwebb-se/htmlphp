@@ -11,6 +11,11 @@ dbwebb init-me
 # Kmom01
 #
 
+# lab1
+cd me/kmom01 && dbwebb recreate lab1
+cd me/kmom01/lab1 && php answer.php; [[ $? = 42 ]]
+dbwebb validate lab1
+
 #
 # me http://dbwebb.se/kunskap/skapa-en-webbsida-med-html-css-och-php
 #
@@ -43,10 +48,10 @@ dbwebb validate me1
 # Kmom02
 #
 
-# lab1
-cd me/kmom02 && dbwebb recreate lab1
-cd me/kmom02/lab1 && php answer.php; [[ $? = 42 ]]
-dbwebb validate lab1
+# lab2
+cd me/kmom02 && dbwebb recreate lab2
+cd me/kmom02/lab2 && php answer.php; [[ $? = 42 ]]
+dbwebb validate lab2
 
 # me2
 cd me && cp -r kmom01/me1/* kmom02/me2/
@@ -59,11 +64,11 @@ dbwebb validate me2
 # Kmom03
 
 #
-# lab2
+# lab3
 #
-cd me/kmom03 && dbwebb recreate lab2
-cd me/kmom03/lab2 && php answer.php; [[ $? = 42 ]]
-dbwebb validate lab2
+cd me/kmom03 && dbwebb recreate lab3
+cd me/kmom03/lab3 && php answer.php; [[ $? = 42 ]]
+dbwebb validate lab3
 
 
 
@@ -90,11 +95,11 @@ dbwebb validate me3
 #
 
 #
-# lab3
+# lab4
 #
-cd me/kmom04 && dbwebb recreate lab3
-cd me/kmom04/lab3 && php answer.php; [[ $? = 42 ]]
-dbwebb validate lab3
+cd me/kmom04 && dbwebb recreate lab4
+cd me/kmom04/lab4 && php answer.php; [[ $? = 42 ]]
+dbwebb validate lab4
 
 
 
@@ -104,11 +109,11 @@ dbwebb validate lab3
 #
 
 #
-# lab4
+# lab5
 #
-cd me/kmom05 && dbwebb recreate lab4
-cd me/kmom05/lab4 && php answer.php; [[ $? = 42 ]]
-dbwebb validate lab4
+cd me/kmom05 && dbwebb recreate lab5
+cd me/kmom05/lab5 && php answer.php; [[ $? = 42 ]]
+dbwebb validate lab5
 
 #
 # sql1
@@ -123,6 +128,13 @@ dbwebb validate sql1
 #
 # Kmom06
 #
+
+#
+# lab6
+#
+cd me/kmom05 && dbwebb recreate lab6
+cd me/kmom05/lab6 && php answer.php; [[ $? = 42 ]]
+dbwebb validate lab6
 
 
 
