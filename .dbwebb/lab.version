@@ -1,0 +1,5 @@
+#
+# If this file exists it brings a default version number for all labs
+# created using dbwebb create lab
+#
+DBW_LAB_VERSION="v2"
