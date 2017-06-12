@@ -132,8 +132,8 @@ dbwebb validate sql1
 #
 # lab6
 #
-cd me/kmom05 && dbwebb recreate lab6
-cd me/kmom05/lab6 && php answer.php; [[ $? = 42 ]]
+cd me/kmom06 && dbwebb recreate lab6
+cd me/kmom06/lab6 && php answer.php; [[ $? = 42 ]]
 dbwebb validate lab6
 
 
