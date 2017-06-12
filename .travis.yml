@@ -29,6 +29,12 @@ addons:
 
 
 
+matrix:
+    allow_failures:
+        - php: "nightly"
+
+
+
 before_script:
     - make install
 
