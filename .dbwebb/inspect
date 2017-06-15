@@ -4,7 +4,7 @@
 # Usage: dbwebb inspect kmom01
 #
 # Sequence executed:
-# python(), pythonkmom01(), pythonlast()
+# htmlphp(), htmlphpkmom01(), htmlphplast()
 #
 
 
@@ -40,7 +40,7 @@ htmlphplast()
 #
 htmlphpkmom01()
 {
-    inspectLab "uppgift/php-lab-1-grundkonstruktioner" "lab1" "answer.php" "php answer.php"
+    inspectLab "uppgift/php-lab1-uttryck-datatyper-och-variabler" "lab1" "answer.php" "php answer.php"
 
     inspectMe "$METARGET" "me.php" "report.php" "uppgift/skapa-en-me-sida-i-kursen-htmlphp"
 }
@@ -52,9 +52,9 @@ htmlphpkmom01()
 #
 htmlphpkmom02()
 {
+    inspectLab "uppgift/php-lab2-villkor-loopar-och-inbyggda-funktioner" "lab2" "answer.php" "php answer.php"
+    
     inspectMe "$METARGET" "me.php" "report.php" "uppgift/bygg-ut-din-htmlphp-me-sida-till-version-2"
-
-    htmlphplab "lab1"
 }
 
 
@@ -64,13 +64,13 @@ htmlphpkmom02()
 #
 htmlphpkmom03()
 {
-    inspectMe "$METARGET" "me.php" "report.php" "uppgift/bygg-ut-din-htmlphp-me-sida-till-version-3"
-
+    inspectLab "uppgift/php-lab3-arrayer" "lab3" "answer.php" "php answer.php"
+    
     viewFileContent "multipage.php" "$METARGET"
-
-    htmlphplab "lab2"
     
     inspectExercise "multi" "uppgift/bygg-en-multisida-och-testa-arrayer"
+    
+    inspectMe "$METARGET" "me.php" "report.php" "uppgift/bygg-ut-din-htmlphp-me-sida-till-version-3"
 }
 
 
@@ -80,15 +80,17 @@ htmlphpkmom03()
 #
 htmlphpkmom04()
 {
+    inspectLab "uppgift/php-lab4-skapa-egna-funktioner" "lab4" "answer.php" "php answer.php"
+    
     TREE_OPTIONS="-d"
-    inspectMe "$METARGET" "me.php" "report.php" "uppgift/bygg-ut-din-me-sida-till-version-4"
+    
+    inspectExercise "stylechooser" "uppgift/bygg-en-stylevaljare-till-din-webbplats"
 
     viewFileContent "config.php" "$METARGET" "incl/config.php"
+
     viewFileContent "stylechooser.php" "$METARGET"
 
-    htmlphplab "lab3"
-
-    inspectExercise "stylechooser" "uppgift/bygg-en-stylevaljare-till-din-webbplats"
+    inspectMe "$METARGET" "me.php" "report.php" "uppgift/bygg-ut-din-me-sida-till-version-4"
 }
 
 
@@ -98,17 +100,19 @@ htmlphpkmom04()
 #
 htmlphpkmom05()
 {
+    inspectLab "uppgift/php-lab5-utforska-inbyggda-funktioner" "lab5" "answer.php" "php answer.php"
+    
     TREE_OPTIONS="-d"
-    inspectMe "$METARGET" "me.php" "report.php" "htmlphp/proj5"
 
     viewFileContent "jetty.php" "$METARGET"
     viewFileContent "search.php" "$METARGET"
     viewFileContent "config.php" "$METARGET"
 
-    htmlphplab "lab4"
-    htmlphpsqllab "sql1"
+    # htmlphpsqllab "sql1"
 
     inspectExercise "jetty" "uppgift/bygg-en-multisida-for-att-soka-i-en-databas"
+
+    inspectMe "$METARGET" "me.php" "report.php" "uppgift/htmlphp-projekt-5"
 }
 
 
@@ -118,12 +122,13 @@ htmlphpkmom05()
 #
 htmlphpkmom06()
 {
+    inspectLab "uppgift/php-lab6-php-pdo-och-databasen-sqlite" "lab6" "answer.php" "php answer.php"
+    
     TREE_OPTIONS="-d"
-    inspectMe "$METARGET" "me.php" "report.php" "htmlphp/proj6"
     
     viewFileContent "admin.php" "$METARGET"
     
-    htmlphplab "lab5"
+    inspectMe "$METARGET" "me.php" "report.php" "uppgift/bygg-ut-din-htmlphp-me-sida-till-version-6"
 }
 
 
@@ -134,10 +139,10 @@ htmlphpkmom06()
 htmlphpkmom10()
 {
     TREE_OPTIONS="-d"
-    inspectMe "me/kmom06/me6" "me.php" "report.php" ""
-
-    TREE_OPTIONS="-d"
     inspectExercise "bmo" "htmlphp/kmom10" "" "" "-"
+    
+    TREE_OPTIONS="-d"
+    inspectMe "me/kmom06/me6" "me.php" "report.php" ""
 }
 
 
