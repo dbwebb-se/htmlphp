@@ -165,7 +165,7 @@ inspect: dbwebb-inspect
 .PHONY: python-install
 python-install: prepare
 	@$(call HELPTEXT,$@)
-	python3 -m pip install --requirement .requirements.txt 
+	[ ! -f .requirements.txt ] || python3 -m pip install --requirement .requirements.txt 
 
 
 
@@ -173,7 +173,7 @@ python-install: prepare
 .PHONY: python-upgrade
 python-upgrade: prepare
 	@$(call HELPTEXT,$@)
-	python3 -m pip install --upgrade --requirement .requirements.txt 
+	[ ! -f .requirements.txt ] || python3 -m pip install --upgrade --requirement .requirements.txt 
 
 
 
