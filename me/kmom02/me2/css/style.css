@@ -1,0 +1,101 @@
+html {
+    background-color: #9c9;
+}
+
+.me {
+    width: 200px;
+}
+
+body {
+    margin: 8px auto;
+    padding: 8px;
+    width: 980px;
+    background-color: #eee;
+    border-radius: 10px;
+    min-height: 500px;
+}
+
+/**
+ * HEADER
+ **/
+
+.site-header {
+    background-color: #fff;
+    overflow: auto; /* clear fix to make div span all elements */
+}
+
+.site-header img {
+    float: left;
+}
+
+.site-title {
+    display: block;
+    padding-top: 1em;
+    padding-left: 50px;
+    font-size: 32px;
+    overflow: auto;
+}
+
+.site-slogan {
+    display: block;
+    padding-left: 50px;
+    font-style: italic;
+    overflow: auto;
+}
+
+/**
+ * NAVBAR
+ **/
+
+.navbar {
+    padding: 1em;
+    background-color: #fff;
+    border-top: 1px solid #9c9;
+}
+
+.navbar a {
+    display: inline-block;
+    padding: 0.5em 1em;
+    border: 1px solid #999;
+    text-decoration: none;
+}
+
+.navbar a:hover {
+    background-color: #eee;
+    text-decoration: underline;
+}
+
+/**
+ * FLOAT
+ **/
+
+
+.float-wrapper div {
+    text-align: center;
+    height: 50px;
+    font-size: 38px;
+}
+
+.red {
+    background-color: red;
+}
+
+.blue {
+    background-color: blue;
+}
+
+.green {
+    background-color: green;
+}
+
+.yellow {
+    background-color: yellow;
+}
+
+.purple {
+    background-color: purple;
+}
+
+/**
+ * ARTICLE
+ **/
