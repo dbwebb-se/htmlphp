@@ -21,7 +21,8 @@ $key = isset($_SESSION['stylesheet'])
 if (isset($stylesheets[$key])) {
     $stylesheet = $stylesheets[$key];
 } else {
-    die("The value of key='$key' does not match a valid stylesheet.");
+    $safekey = htmlentities($key);
+    die("The value of key='$safekey' does not match a valid stylesheet.");
 }
 
 
