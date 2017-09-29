@@ -106,7 +106,7 @@ htmlphpkmom05()
 
     viewFileContent "jetty.php" "$METARGET"
     viewFileContent "search.php" "$METARGET"
-    viewFileContent "config.php" "$METARGET"
+    viewFileContent "config.php" "$METARGET" "incl/config.php"
 
     # htmlphpsqllab "sql1"
 
