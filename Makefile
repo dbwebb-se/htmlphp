@@ -355,6 +355,26 @@ composer-update:
 
 # ----------------------------------------------------------------------------
 #
+# Validation tools configuration
+#
+# target: validate-css-upgrade    - Upgrade configuration file for validation of CSS.
+.PHONY: validate-css-upgrade
+validate-css-upgrade: npm-update
+	@$(call HELPTEXT,$@)
+	cp node_modules/@desinax/css-styleguide/.csslintrc .
+
+
+
+# target: validate-js-upgrade     - Upgrade configuration file for validation of JavaScript.
+.PHONY: validate-js-upgrade
+validate-js-upgrade: npm-update
+	@$(call HELPTEXT,$@)
+	cp node_modules/javascript-style-guide/.eslintrc.json .
+
+
+
+# ----------------------------------------------------------------------------
+#
 # docker
 #
 # target: docker-up               - Start all docker container="", or specific, default "latest".

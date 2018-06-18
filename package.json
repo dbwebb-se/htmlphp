@@ -3,16 +3,18 @@
   "version": "1.0.0",
   "private": true,
   "devDependencies": {
-    "clean-css": "^3.4.12",
-    "csslint": "^0.10.0",
-    "html-minifier": "^0.8.0",
-    "htmlhint": "0.9.12",
-    "js-yaml": "^3.6.1",
-    "jscs": "^3.0.7",
-    "jshint": "^2.9.5",
+    "@desinax/css-styleguide": "^1.0.0",
+    "clean-css": "^4.1.9",
+    "clean-css-cli": "^4.1.11",
+    "eslint": "^4.10.0",
+    "eslint-plugin-react": "^7.4.0",
+    "html-minifier": "^3.5.6",
+    "htmlhint": "0.9.13",
+    "javascript-style-guide": "^0.9.10",
+    "js-yaml": "^3.10.0",
     "jsonlint": "^1.6.2",
-    "uglify-js": "^2.6.2",
-    "eslint": "^4.1.1",
-    "eslint-plugin-react": "^7.1.0"
-  }
+    "stylelint": "^9.3.0",
+    "uglify-es": "^3.3.10"
+  },
+  "dependencies": {}
 }
