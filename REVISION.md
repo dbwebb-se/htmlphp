@@ -10,6 +10,7 @@ v2.0.* (2018-06-18)
 * Travis to only use PHP7.1 and PHP7.2.
 * Upgrade Makefile with docker abilities.
 * Upgrade validation tools.
+* Move slide/, tutorial/ to old/.
 
 
 
