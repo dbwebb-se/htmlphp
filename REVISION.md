@@ -7,6 +7,7 @@ v2.0.* (2018-06-18)
 -------------------
 
 * Update CircleCI to v2.
+* Travis to only use PHP7.1 and PHP7.2.
 
 
 
