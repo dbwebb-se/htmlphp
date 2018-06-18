@@ -1,6 +1,15 @@
 Revision history
 ===================
 
+
+
+v1.4.1 (2018-06-18)
+-------------------
+
+* Prepare to upgrade course repo before autumn 2018.
+
+
+
 v1.4.0 (2017-06-09)
 -------------------
 
@@ -9,10 +18,12 @@ v1.4.0 (2017-06-09)
 * Add versioning of labs.
 
 
+
 v1.3.5 (2017-06-09)
 -------------------
 
 * Before moving to dbwebb-cli v2.
+
 
 
 v1.3.4 (2016-10-07)
@@ -21,10 +32,12 @@ v1.3.4 (2016-10-07)
 * Adding `example/bmo/db/bildtexter.md`.
 
 
+
 v1.3.3 (2016-09-25)
 -------------------
 
 * Ignore phpmd `ExitExpression`.
+
 
 
 v1.3.2 (2016-09-13)
@@ -36,6 +49,7 @@ v1.3.2 (2016-09-13)
 * Added lab for sql1.
 
 
+
 v1.3.0 (2016-05-16)
 -------------------
 
@@ -44,6 +58,7 @@ v1.3.0 (2016-05-16)
 * Requires minimum version of dbwebb-cli.
 * Supports working with local development environment.
 * Adding example/video-learn-php with files used in video serie.
+
 
 
 v1.2.0 (2016-05-13)
