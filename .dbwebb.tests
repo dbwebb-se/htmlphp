@@ -142,3 +142,17 @@ dbwebb validate lab6
 #
 # Kmom10
 #
+
+
+
+# --------------------------------------------------------------------------
+#
+# Inspect
+#
+#make inspect options="--yes --no-validate" what=kmom01
+#make inspect options="--yes --no-validate" what=kmom02
+#make inspect options="--yes --no-validate" what=kmom03
+#make inspect options="--yes --no-validate" what=kmom04
+#make inspect options="--yes --no-validate" what=kmom05
+#make inspect options="--yes --no-validate" what=kmom06
+#make inspect options="--yes --no-validate" what=kmom10

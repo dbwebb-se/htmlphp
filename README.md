@@ -1,13 +1,15 @@
-Web technologies - htmlphp
+Course htmlphp (Web technologies)
 ===================
 
-[![Join the chat at https://gitter.im/mosbth/htmlphp](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/mosbth/htmlphp?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+[![Join the chat at https://gitter.im/dbwebb-se/htmlphp](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/dbwebb-se/htmlphp?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 [![Build Status](https://travis-ci.org/dbwebb-se/htmlphp.svg?branch=master)](https://travis-ci.org/dbwebb-se/htmlphp)
 [![CircleCI](https://circleci.com/gh/dbwebb-se/htmlphp.svg?style=svg)](https://circleci.com/gh/dbwebb-se/htmlphp)
 
-Course material for htmlphp-course, aimed at a swedish target audience as an introduction to web programmering for computer science students at University level. 
+Course material for course "htmlphp", aimed at a swedish target audience as an introduction to web programming for computer science students at University level.
 
-Relased as part of a University course at https://dbwebb.se/htmlphp
+Relased as part of a University course: https://dbwebb.se/kurser/htmlphp
+
+The course repo is managed by a [dbwebb command line utility](https://dbwebb.se/dbwebb-cli).
 
 
 
@@ -24,5 +26,5 @@ Feel free to help building up the repository with more content suited for traini
 
 ```                                                            
  .                                                             
-..:  Copyright (c) 2014-2017 dbwebb.se   
+..:  Copyright (c) 2014 - 2018 Mikael Roos, mos@dbwebb.se      
 ```                                                            
