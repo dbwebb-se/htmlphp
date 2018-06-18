@@ -12,6 +12,7 @@ v2.0.* (2018-06-18)
 * Upgrade validation tools.
 * Move slide/, tutorial/ to old/.
 * Remove composer.lock from repo.
+* Clean up older dbwebb config files.
 
 
 
