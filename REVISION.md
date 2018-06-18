@@ -11,6 +11,7 @@ v2.0.* (2018-06-18)
 * Upgrade Makefile with docker abilities.
 * Upgrade validation tools.
 * Move slide/, tutorial/ to old/.
+* Remove composer.lock from repo.
 
 
 
