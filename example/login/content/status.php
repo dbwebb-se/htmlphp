@@ -19,6 +19,4 @@ $hashDetails = password_get_info($details['password']);
 
 <pre><?=var_dump($hashDetails)?></pre>
 
-<?php
-endif;
-?>
+<?php endif; ?>
