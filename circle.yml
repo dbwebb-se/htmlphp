@@ -1,9 +1,0 @@
-machine:
-    php:
-        #version: 5.6.18
-
-
-
-test:
-    pre:
-        - make install
