@@ -1,1 +1,27 @@
---ignore=import,box-model,qualified-headings,unique-headings,box-sizing,universal-selector,bulletproof-font-face,font-sizes,adjoining-classes,overqualified-elements,floats
+{
+    "ignore": [
+        "adjoining-classes",
+        "box-model",
+        "box-sizing",
+        "bulletproof-font-face",
+        "display-property-grouping",
+        "empty-rules",
+        "font-sizes",
+        "overqualified-elements",
+        "order-alphabetical",
+        "universal-selector",
+        "unique-headings",
+        "qualified-headings"
+    ],
+    "warnings": [
+        "ids",
+        "import"
+    ],
+    "errors": [
+    ],
+    "exclude-list": [
+        "node_modules"
+    ],
+    "format": "compact",
+    "quiet": true
+}

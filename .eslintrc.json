@@ -85,7 +85,8 @@
             2,
             {
               "beforeColon": false,
-              "afterColon": true
+              "afterColon": true,
+              "mode": "minimum"
             }
         ],
         "padded-blocks": [
@@ -109,6 +110,6 @@
             "error",
             "any"
         ],
-        "no-console": "off"
+        "no-console": 0
     }
 }
