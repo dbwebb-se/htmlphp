@@ -1,5 +1,5 @@
 html {
-    background-color: #ffffcc;
+    background-color: #ffc;
 }
 
 body {
@@ -73,7 +73,7 @@ body {
 }
 
 .byline p {
-    margin-top: 0px;
+    margin-top: 0;
 }
 
 article {
@@ -89,7 +89,7 @@ article > header {
 }
 
 .author {
-	font-size: 15px;
+    font-size: 15px;
 }
 
 .center {
