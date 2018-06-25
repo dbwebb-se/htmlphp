@@ -1,0 +1,97 @@
+html {
+    background-color: #ffffcc;
+}
+
+body {
+    background-color: #ddd;
+    width: 1000px;
+    margin: 8px auto;
+    border: 1px solid black;
+}
+
+.site-header {
+    background-color: #fff;
+    overflow: auto;
+}
+
+.site-header img {
+    float: left;
+}
+
+.site-title {
+    display: block;
+    padding-top: 1em;
+    padding-left: 50px;
+    font-size: 32px;
+    overflow: auto;
+}
+
+.site-slogan {
+    display: block;
+    padding-left: 50px;
+    font-style: italic;
+    overflow: auto;
+}
+
+.site-footer {
+    height: 70px;
+    margin-top: 10px;
+}
+
+.me {
+    width: 400px;
+    float: left;
+}
+
+.navbar {
+    padding: 1em;
+    background-color: #fff;
+    border-top: 1px solid #9c9;
+}
+
+.navbar a {
+    display: inline-block;
+    padding: 0.5em 1em;
+    border: 1px solid #999;
+    text-decoration: none;
+}
+
+.navbar a:hover {
+    background-color: #eee;
+    text-decoration: underline;
+}
+
+.byline {
+    padding: 5px;
+    border-top: 1px solid black;
+    overflow: auto;
+}
+
+.byline img {
+    float: left;
+    margin-right: 30px;
+}
+
+.byline p {
+    margin-top: 0px;
+}
+
+article {
+    padding: 10px;
+}
+
+article > header {
+    text-align: center;
+}
+
+.me {
+    margin-right: 10px;
+}
+
+.author {
+	font-size: 15px;
+}
+
+.center {
+    text-align: center;
+}

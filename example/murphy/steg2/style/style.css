@@ -1,0 +1,62 @@
+html {
+    background-color: white;
+}
+
+body {
+    background-color: #ddd;
+    width: 1000px;
+    margin: 8px auto;
+    border: 1px solid black;
+}
+
+.site-header {
+    background-color: #fff;
+    overflow: auto; /* clear fix to make div span all elements */
+}
+
+.site-header img {
+    /*width: 1000px;*/
+    float: left;
+}
+
+.site-title {
+    display: block;
+    padding-top: 1em;
+    padding-left: 50px;
+    font-size: 32px;
+    overflow: auto;
+}
+
+.site-slogan {
+    display: block;
+    padding-left: 50px;
+    font-style: italic;
+    overflow: auto;
+}
+
+.site-footer {
+    height: 70px;
+    margin-top: 20px;
+}
+
+.me {
+    width: 400px;
+}
+
+.navbar {
+    padding: 1em;
+    background-color: #fff;
+    border-top: 1px solid #9c9;
+}
+
+.navbar a {
+    display: inline-block;
+    padding: 0.5em 1em;
+    border: 1px solid #999;
+    text-decoration: none;
+}
+
+.navbar a:hover {
+    background-color: #eee;
+    text-decoration: underline;
+}

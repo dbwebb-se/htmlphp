@@ -1,0 +1,17 @@
+body {
+    background-color: #ddd;
+    width: 1000px;
+    margin: 0 auto;
+}
+
+header {
+    width: 1000px;
+    height: 100px;
+    background-color: red;
+}
+
+footer {
+    width: 1000px;
+    height: 70px;
+    background-color: green;
+}
