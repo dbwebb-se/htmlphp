@@ -34,7 +34,7 @@ cd me/kmom01 && wget --no-check-certificate -O me/img/logo.jpg https://dbwebb.se
 # me1 http://dbwebb.se/uppgift/skapa-en-me-sida-i-kursen-htmlphp
 #
 cd me/kmom01 && rsync -a me/ me1/
-cd me/kmom01 && rm -rf me
+# cd me/kmom01 && rm -rf me
 
 # remove style.css to avoid csslint warning for empty file
 cd me/kmom01 && rm me1/css/style.css

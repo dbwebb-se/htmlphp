@@ -69,8 +69,9 @@ SHELL := env PATH='$(PATH)' $(SHELL)
 DBWEBB   		:= bin/dbwebb
 DBWEBB_VALIDATE := bin/dbwebb-validate
 DBWEBB_INSPECT  := bin/dbwebb-inspect
-PHPCS   := bin/phpcs
-PHPMD   := bin/phpmd
+PHPCS   := vendor/bin/phpcs
+PHPMD   := vendor/bin/phpmd
+PHPSTAN := vendor/bin/phpstan
 
 
 
@@ -93,9 +94,9 @@ install: prepare dbwebb-validate-install dbwebb-inspect-install dbwebb-install n
 	@$(call HELPTEXT,$@)
 
 	@# Disable PHP tools with arguments
-	curl -Lso $(PHPCS) https://squizlabs.github.io/PHP_CodeSniffer/phpcs.phar && chmod 755 $(PHPCS)
+	@#curl -Lso $(PHPCS) https://squizlabs.github.io/PHP_CodeSniffer/phpcs.phar && chmod 755 $(PHPCS)
 
-	curl -Lso $(PHPMD) http://static.phpmd.org/php/latest/phpmd.phar && chmod 755 $(PHPMD)
+	@#curl -Lso $(PHPMD) http://static.phpmd.org/php/latest/phpmd.phar && chmod 755 $(PHPMD)
 
 	@# Shellcheck
 	@# tree (inspect)
@@ -479,3 +480,31 @@ docker-check:
 	@$(call HELPTEXT,$@)
 	@$(call CHECK_VERSION, docker, | cut -d" " -f3)
 	@$(call CHECK_VERSION, docker-compose, | cut -d" " -f3)
+
+
+
+# ----------------------------------------------------------------------------
+#
+# Run validation tools
+#
+# target: phpstan                 - Validate with phpstan what="example me".
+.PHONY: phpstan
+phpstan:
+	@$(call HELPTEXT,$@)
+	$(PHPSTAN) analyse --level max -c .phpstan.neon $(what)
+
+
+
+# target: phpmd                   - Validate with phpmd what="example,me".
+.PHONY: phpmd
+phpmd:
+	@$(call HELPTEXT,$@)
+	$(PHPMD) $(what) text .phpmd.xml
+
+
+
+# target: phpcs                   - Validate with phpcs what="example,me".
+.PHONY: phpcs
+phpcs:
+	@$(call HELPTEXT,$@)
+	$(PHPCS) --standard=.phpcs.xml $(what)
