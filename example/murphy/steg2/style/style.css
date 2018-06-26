@@ -1,61 +1,21 @@
 html {
-    background-color: white;
+    background-color: #ffc;
 }
 
 body {
     background-color: #ddd;
     width: 1000px;
     margin: 8px auto;
-    border: 1px solid black;
 }
 
-.site-header {
-    background-color: #fff;
-    overflow: auto;
+header {
+    width: 1000px;
+    height: 100px;
+    background-color: red;
 }
 
-.site-header img {
-    float: left;
-}
-
-.site-title {
-    display: block;
-    padding-top: 1em;
-    padding-left: 50px;
-    font-size: 32px;
-    overflow: auto;
-}
-
-.site-slogan {
-    display: block;
-    padding-left: 50px;
-    font-style: italic;
-    overflow: auto;
-}
-
-.site-footer {
+footer {
+    width: 1000px;
     height: 70px;
-    margin-top: 20px;
-}
-
-.me {
-    width: 400px;
-}
-
-.navbar {
-    padding: 1em;
-    background-color: #fff;
-    border-top: 1px solid #9c9;
-}
-
-.navbar a {
-    display: inline-block;
-    padding: 0.5em 1em;
-    border: 1px solid #999;
-    text-decoration: none;
-}
-
-.navbar a:hover {
-    background-color: #eee;
-    text-decoration: underline;
+    background-color: green;
 }
