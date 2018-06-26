@@ -1,17 +1,15 @@
 body {
-    background-color: #ddd;
+    background-color: #ffc;
     width: 1000px;
     margin: 0 auto;
 }
 
-header {
-    width: 1000px;
-    height: 100px;
-    background-color: red;
+h1 {
+    text-align: center;
+    color: red;
 }
 
-footer {
-    width: 1000px;
-    height: 70px;
-    background-color: green;
+p {
+    border: 1px solid brown;
+    color: #00f;
 }
