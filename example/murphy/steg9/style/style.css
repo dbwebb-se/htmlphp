@@ -1,5 +1,5 @@
 html {
-	background-image: url("../img/background.jpg");
+    background-image: url("../img/background.jpg");
     background-attachment: fixed;
     background-position: bottom right;
     background-color: black;
@@ -7,15 +7,15 @@ html {
     overflow-y: scroll;
 }
 
-html::after{
- 	content: "";
-	background: url("../img/backgroundpattern.png") repeat;
-	background-attachment: fixed;
-	top: 0;
-	width:100%;
-	height:100%;
-	position: fixed;
-	z-index: -1;
+html::after {
+    content: "";
+    background: url("../img/backgroundpattern.png") repeat;
+    background-attachment: fixed;
+    top: 0;
+    width:100%;
+    height:100%;
+    position: fixed;
+    z-index: -1;
     opacity: 0.2;
 }
 
