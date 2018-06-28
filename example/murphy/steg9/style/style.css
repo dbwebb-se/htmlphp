@@ -12,8 +12,8 @@ html::after {
     background: url("../img/backgroundpattern.png") repeat;
     background-attachment: fixed;
     top: 0;
-    width:100%;
-    height:100%;
+    width: 100%;
+    height: 100%;
     position: fixed;
     z-index: -1;
     opacity: 0.2;
