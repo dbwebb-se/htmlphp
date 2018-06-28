@@ -162,11 +162,13 @@ main {
         color: white;
     }
 
-    .site-title, .site-slogan {
+    .site-title,
+    .site-slogan {
         display: none;
     }
 
-    .main-logo, .site-header {
+    .main-logo,
+    .site-header {
         width: auto;
     }
 }
