@@ -44,7 +44,7 @@
 
 <body>
     
-    <p>Visa nuvarande sida i navbaren.</p>
+    <p>Visa nuvarande sida i navbaren. Klicka på navbaren så ser du att nuvarande menyval stylas olika beroende på vilken sida som besöks.</p>
     
     <nav class="navbar">
         <a class="<?= basename($_SERVER['REQUEST_URI']) == "me.php" ? "selected" : ""; ?>" href="me.php">Hem</a>
