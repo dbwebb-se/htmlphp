@@ -133,17 +133,6 @@ main {
 
     .byline {
         font-size: 10px;
-        padding: 10px;
-        border-top: 1px solid white;
-        display: block;
-        overflow: auto;
-        width: 80%;
-    }
-
-    .byline-me {
-        float: left;
-        margin-right: 10px;
-        width: 60px;
     }
 
     .author {
@@ -158,13 +147,10 @@ main {
     }
 
     main {
-        min-height: 30em;
-        background-color: rgb(0, 0, 0);
-        background-color: rgba(0, 0, 0, 0.6);
+        background-color: #000;
         margin-top: 15px;
         color: white;
         display: block;
-        overflow: auto;
         border: 1px solid black;
     }
 
@@ -173,11 +159,8 @@ main {
         width: 90%;
         text-align: left;
         font-size: 18px;
-        background-color: rgb(0, 0, 0);
-        background-color: rgba(0, 0, 0, 0.6);
-        opacity: 1;
+        background-color: #666;
         display: block;
-        padding: 0.5em 1em;
         border: 1px solid #eee;
         text-decoration: none;
         color: white;
