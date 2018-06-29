@@ -57,6 +57,16 @@ body {
     margin-top: 10px;
 }
 
+.site-footer a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.site-footer a:visited {
+    text-decoration: none;
+    color: #aaa;
+}
+
 .me {
     width: 450px;
     margin-right: 20px;
