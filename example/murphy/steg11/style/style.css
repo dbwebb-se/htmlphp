@@ -13,8 +13,8 @@ html::after {
     background: url("../img/backgroundpattern.png") repeat;
     background-attachment: fixed;
     top: 0;
-    width:100%;
-    height:100%;
+    width: 100%;
+    height: 100%;
     position: fixed;
     z-index: -1;
     opacity: 0.1;
@@ -84,13 +84,13 @@ body {
 }
 
 .navbar a:hover {
-    background-color: #25383C;
+    background-color: #25383c;
     text-decoration: none;
     color: white;
 }
 
 .navbar .selected {
-    background-color: #25383C;
+    background-color: #25383c;
 }
 
 .byline {
