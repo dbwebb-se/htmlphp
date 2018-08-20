@@ -3,6 +3,14 @@ Revision history
 
 
 
+v2.0.1 (2018-08-20)
+--------------------
+
+* Change dbwebb-cli min version to support new lab url.
+* Add to packagist.
+
+
+
 v2.0.0 (2018-06-20)
 -------------------
 
