@@ -1,7 +1,20 @@
 {
-    "require-dev": {
-        "phpmd/phpmd": "^2.4",
-        "squizlabs/php_codesniffer": "^2.6",
-        "phpstan/phpstan": "^0.9.2"
+    "name" : "dbwebb/htmlphp",
+    "description": "Course material for htmlphp.",
+    "homepage": "https://github.com/dbwebb-se/htmlphp",
+    "license": "MIT",
+    "keywords": ["dbwebb", "education", "course"],
+    "authors": [
+        {
+            "name": "Mikael Roos",
+            "email": "mos@dbwebb.se"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/dbwebb-se/htmlphp/issues",
+        "source": "https://github.com/dbwebb-se/htmlphp"
+    },
+    "require": {
+        "php": "^7.2"
     }
 }
