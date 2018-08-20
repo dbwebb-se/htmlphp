@@ -1,7 +1,9 @@
-Course htmlphp (Web technologies)
+Web technologies - (htmlphp)
 ===================
 
-[![Join the chat at https://gitter.im/dbwebb-se/htmlphp](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/dbwebb-se/htmlphp?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+[![Latest Stable Version](https://poser.pugx.org/dbwebb/htmlphp/v/stable)](https://packagist.org/packages/dbwebb/htmlphp)
+[![Join the chat at https://gitter.im/mosbth/htmlphp](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/mosbth/htmlphp?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 [![Build Status](https://travis-ci.org/dbwebb-se/htmlphp.svg?branch=master)](https://travis-ci.org/dbwebb-se/htmlphp)
 [![CircleCI](https://circleci.com/gh/dbwebb-se/htmlphp.svg?style=svg)](https://circleci.com/gh/dbwebb-se/htmlphp)
 
