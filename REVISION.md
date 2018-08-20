@@ -3,7 +3,7 @@ Revision history
 
 
 
-v2.0.* (2018-06-18)
+v2.0.0 (2018-06-20)
 -------------------
 
 * Update CircleCI to v2.
