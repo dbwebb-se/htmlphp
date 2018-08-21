@@ -1,0 +1,6 @@
+/**
+ * Style the navbar
+ */
+.navbar .selected {
+    background-color: #ccc;
+}
