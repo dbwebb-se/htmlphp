@@ -3,6 +3,13 @@ Revision history
 
 
 
+v2.0.5 (2018-08-22)
+--------------------
+
+* Code samples for the guide, part 04 with arrays.
+
+
+
 v2.0.4 (2018-08-22)
 --------------------
 
