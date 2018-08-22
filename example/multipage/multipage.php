@@ -1,73 +1,59 @@
 <?php
-$page = "intro";
+/**
+ * This is a page controller for a multipage. You should name this file
+ * as the name of the pagecontroller for this multipage. You should then
+ * add a directory with the same name, excluding the file suffix of ".php".
+ * You then then have several multipages within the same directory, like this.
+ *
+ * multipage.php
+ * multipage/
+ *
+ * some-test-page.php
+ * some-test-page/
+ */
+ // Include the configuration file
+ require __DIR__ . "/config.php";
 
-if (isset($_GET['page'])) {
-    $page = $_GET['page'];
-}
+ // Include essential functions
+ require __DIR__ . "/src/functions.php";
 
-//var_dump($page);
+ // Set common variables, these are exposed to the view template files
+ $title = "Test multipage";
 
+ // Include the page header through the view template file
+ require __DIR__ . "/view/header.php";
 
-$dir  = __DIR__ . "/content";
-$file = null;
+// Get what subpage to show, defaults to index
+$pageReference = $_GET["page"] ?? "index";
 
-if ($page === "intro") {
-    $file = "intro.php";
+// Get the filename of this multipage, exkluding the file suffix of .php
+$base = basename(__FILE__, ".php");
 
-} elseif ($page === "print-server") {
-    $file = "print-server.php";
+// Create the collection of valid sub pages.
+$pages = [
+    "index" => [
+        "title" => "Intro to this multipage.",
+        "file" => __DIR__ . "/$base/index.php",
+    ],
+    "print-get" => [
+        "title" => "Print the content of \$_GET variable.",
+        "file" => __DIR__ . "/$base/print-get.php",
+    ],
+    "get-samples" => [
+        "title" => "Try various links using GET queryparams.",
+        "file" => __DIR__ . "/$base/get-samples.php",
+    ],
+    "print-server" => [
+        "title" => "Print the content of \$_SERVER variable.",
+        "file" => __DIR__ . "/$base/print-server.php",
+    ],
+];
 
-} elseif ($page === "print-get") {
-    $file = "print-get.php";
+// Get the current page from the $pages collection, if it matches
+$page = $pages[$pageReference] ?? null;
 
-} elseif ($page === "get-samples") {
-    $file = "get-samples.php";
+// Include the main multipage content through the view template file
+require __DIR__ . "/view/multipage.php";
 
-} else {
-    die("The value of ?page=" . htmlentities($page) . " is not recognized as a valid page.");
-}
-
-?><!doctype html>
-<html lang="sv">
-<head>
-    <meta charset="utf-8">
-    <title>Exempel multisida</title>
-
-    <style>
-    body {
-        margin: 8px auto;
-        width: 980px;
-        background-color: #fee;
-    }
-    
-    main {
-        width: 70%;
-        float: left;
-        background-color: #ddd;
-    }
-    
-    aside {
-        width: 30%;
-        float: left;
-        background-color: #ccc;
-    }
-    
-    .byline {
-        border-top: 2px dashed #fee;
-    }
-    </style>
-</head>
-
-<body>
-
-    <aside><?php include("aside.php")?></aside>
-
-    <main>
-        <article>
-            <?php include("$dir/$file")?>
-            <footer class="byline"><?php include("footer.php")?></footer>
-        </article>
-    </main>
-
-</body>
-</html>
+// Include the page footer through the view template file
+require __DIR__ . "/view/footer.php";

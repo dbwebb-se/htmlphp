@@ -3,6 +3,13 @@ Revision history
 
 
 
+v2.0.4 (2018-08-22)
+--------------------
+
+* New code structure for example/multipage.
+
+
+
 v2.0.3 (2018-08-21)
 --------------------
 
