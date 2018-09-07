@@ -2,10 +2,10 @@
 
 <p>This form can be posted (method GET) and its result is sent to another multipage that generates the business card. Click this <a href="?page=generate-card-get&amp;name=Mikael+Roos&amp;title=Mega+Vice+President&amp;address=<?= urlencode("Munksjön, Penthouse") ?>&amp;city=<?= urlencode("Jönköping") ?>&amp;image=<?= urlencode("http://dbwebb.se/image/mikael-roos/me-1.jpg&w=100") ?>">link to prefill the form</a> and then press the button "Create".</p>
 
-<form class="form" method="get">
+<form class="form" method="get" action="?page=generate-card">
 <fieldset>
 <legend>Create your own business card</legend>
-    <input id="page" type="hidden" name="page" value="generate-card">
+    <input id="page" type="hidden" name="pasge" value="generate-card">
     <p>
         <label for="title">Title:</label>
         <input id="title" type="text" name="title" value="<?= htmlentities($_GET["title"] ?? null) ?>">
