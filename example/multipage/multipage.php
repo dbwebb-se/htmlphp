@@ -17,12 +17,6 @@
  // Include essential functions
  require __DIR__ . "/src/functions.php";
 
- // Set common variables, these are exposed to the view template files
- $title = "Test multipage";
-
- // Include the page header through the view template file
- require __DIR__ . "/view/header.php";
-
 // Get what subpage to show, defaults to index
 $pageReference = $_GET["page"] ?? "index";
 
@@ -52,8 +46,11 @@ $pages = [
 // Get the current page from the $pages collection, if it matches
 $page = $pages[$pageReference] ?? null;
 
-// Include the main multipage content through the view template file
-require __DIR__ . "/view/multipage.php";
+// Base title for all pages and add title from selected multipage
+$title = $page["title"] ?? "404";
+$title .= " | Test multipage";
 
-// Include the page footer through the view template file
+// Render the page
+require __DIR__ . "/view/header.php";
+require __DIR__ . "/view/multipage.php";
 require __DIR__ . "/view/footer.php";

@@ -69,6 +69,7 @@ body {
     font-family: arial;
     padding: 1em;
     overflow: auto;
+    max-width: 400px;
 }
 
 .businesscard img {
@@ -106,6 +107,7 @@ main {
 
 article {
     padding-left: 1em;
+    padding-right: 1em;
     padding-bottom: 2em;
 }
 
