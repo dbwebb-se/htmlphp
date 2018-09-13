@@ -9,7 +9,7 @@ include(__DIR__ . "/config.php");
 include(__DIR__ . "/src/functions.php");
 
 // Set common variables, these are exposed to the view template files
-$title = "Test page";
+$title = "Show session details";
 
 // Include the page header through the view template file
 include(__DIR__ . "/view/header.php");
