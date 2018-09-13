@@ -59,7 +59,7 @@ help:
 # Specifics for this project.
 #
 # Default values for arguments
-container ?= course
+container ?= cli
 
 # Add local bin path for test tools
 PATH := $(PWD)/bin:$(PWD)/vendor/bin:$(PWD)/node_modules/.bin:$(PATH)
@@ -69,9 +69,8 @@ SHELL := env PATH='$(PATH)' $(SHELL)
 DBWEBB   		:= bin/dbwebb
 DBWEBB_VALIDATE := bin/dbwebb-validate
 DBWEBB_INSPECT  := bin/dbwebb-inspect
-PHPCS   := vendor/bin/phpcs
-PHPMD   := vendor/bin/phpmd
-PHPSTAN := vendor/bin/phpstan
+PHPCS   := bin/phpcs
+PHPMD   := bin/phpmd
 
 
 
@@ -94,9 +93,10 @@ install: prepare dbwebb-validate-install dbwebb-inspect-install dbwebb-install n
 	@$(call HELPTEXT,$@)
 
 	@# Disable PHP tools with arguments
-	@#curl -Lso $(PHPCS) https://squizlabs.github.io/PHP_CodeSniffer/phpcs.phar && chmod 755 $(PHPCS)
+	curl -Lso $(PHPCS) https://squizlabs.github.io/PHP_CodeSniffer/phpcs.phar && chmod 755 $(PHPCS)
 
-	@#curl -Lso $(PHPMD) http://static.phpmd.org/php/latest/phpmd.phar && chmod 755 $(PHPMD)
+	# curl -Lso $(PHPMD) http://static.phpmd.org/php/latest/phpmd.phar && chmod 755 $(PHPMD)
+	curl -Lso $(PHPMD) http://www.student.bth.se/~mosstud/download/phpmd && chmod 755 $(PHPMD)
 
 	@# Shellcheck
 	@# tree (inspect)
@@ -117,7 +117,7 @@ check: dbwebb-validate-check docker-check
 .PHONY: test
 test: dbwebb-publish-example dbwebb-testrepo
 	@$(call HELPTEXT,$@)
-
+	[ -f composer.json ] || composer validate
 
 
 # target: testrepo                - Runs unit tests on course repo.
@@ -356,26 +356,6 @@ composer-update:
 
 # ----------------------------------------------------------------------------
 #
-# Validation tools configuration
-#
-# target: validate-css-upgrade    - Upgrade configuration file for validation of CSS.
-.PHONY: validate-css-upgrade
-validate-css-upgrade: npm-update
-	@$(call HELPTEXT,$@)
-	cp node_modules/@desinax/css-styleguide/.csslintrc .
-
-
-
-# target: validate-js-upgrade     - Upgrade configuration file for validation of JavaScript.
-.PHONY: validate-js-upgrade
-validate-js-upgrade: npm-update
-	@$(call HELPTEXT,$@)
-	cp node_modules/javascript-style-guide/.eslintrc.json .
-
-
-
-# ----------------------------------------------------------------------------
-#
 # docker
 #
 # target: docker-up               - Start all docker container="", or specific, default "latest".
@@ -480,31 +460,3 @@ docker-check:
 	@$(call HELPTEXT,$@)
 	@$(call CHECK_VERSION, docker, | cut -d" " -f3)
 	@$(call CHECK_VERSION, docker-compose, | cut -d" " -f3)
-
-
-
-# ----------------------------------------------------------------------------
-#
-# Run validation tools
-#
-# target: phpstan                 - Validate with phpstan what="example me".
-.PHONY: phpstan
-phpstan:
-	@$(call HELPTEXT,$@)
-	$(PHPSTAN) analyse --level max -c .phpstan.neon $(what)
-
-
-
-# target: phpmd                   - Validate with phpmd what="example,me".
-.PHONY: phpmd
-phpmd:
-	@$(call HELPTEXT,$@)
-	$(PHPMD) $(what) text .phpmd.xml
-
-
-
-# target: phpcs                   - Validate with phpcs what="example,me".
-.PHONY: phpcs
-phpcs:
-	@$(call HELPTEXT,$@)
-	$(PHPCS) --standard=.phpcs.xml $(what)
