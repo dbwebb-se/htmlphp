@@ -1,0 +1,28 @@
+@import "style.css";
+
+body,
+main,
+aside {
+    background-color: black;
+    color: limegreen;
+}
+
+aside {
+    float: right;
+}
+
+a:link {
+    color: limegreen;
+}
+
+a:visited {
+    color: lightgreen;
+}
+
+a:hover {
+    color: greenyellow;
+}
+
+a:active {
+    color: pink;
+}

@@ -1,0 +1,21 @@
+body {
+    margin: 8px auto;
+    width: 980px;
+    background-color: #fee;
+}
+
+main {
+    width: 70%;
+    float: left;
+    background-color: #ddd;
+}
+
+article {
+    padding: 1em;
+}
+
+aside {
+    width: 30%;
+    float: left;
+    background-color: #ccc;
+}

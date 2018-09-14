@@ -7,7 +7,4 @@
 </head>
 
 <body>
-
-<div class="siteheader">
-    <p class="sitetitle">PHP and Sessions</p>
-</div>
+    <?php include __DIR__ . "/flashmessage.php"; ?>

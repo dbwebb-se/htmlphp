@@ -9,5 +9,5 @@
 <body>
 
 <div class="siteheader">
-    <p class="sitetitle">PHP and Sessions</p>
+    <p class="sitetitle">Login using sessions</p>
 </div>
