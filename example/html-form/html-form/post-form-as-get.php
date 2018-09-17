@@ -34,10 +34,10 @@
 </form>
 
 <?php if (isset($_GET["create"])) : ?>
-<output>
-<p>The form was posted and <code>$_GET</code> contains:</p>
-<pre>
-<?= htmlentities(print_r($_GET, 1)) ?>
-</pre>
-</output>
+    <output>
+    <p>The form was posted and <code>$_GET</code> contains:</p>
+    <pre>
+    <?= htmlentities(print_r($_GET, 1)) ?>
+    </pre>
+    </output>
 <?php endif; ?>

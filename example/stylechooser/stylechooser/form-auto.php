@@ -29,8 +29,7 @@ $options = [
                     $selected = null;
                     if ($key === $style) {
                         $selected = "selected=\"selected\"";
-                    }
-                ?>
+                    } ?>
                     <option <?= $selected ?> value="<?= $key ?>"><?= $option ?></option>
                 <?php endforeach; ?>
            </select>

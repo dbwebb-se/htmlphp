@@ -6,8 +6,7 @@
                 $class = null;
                 if ($pageReference === $key) {
                     $class = "class=\"selected\"";
-                }
-            ?>
+                } ?>
             <li><a <?= $class ?> href="?page=<?= $key ?>"><?= $value["title"] ?></a></li>
             <?php endif; ?>
         <?php endforeach; ?>

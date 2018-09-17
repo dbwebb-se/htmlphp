@@ -33,10 +33,10 @@
 </form>
 
 <?php if (isset($_POST["create"])) : ?>
-<output>
-<p>The form was posted and <code>$_POST</code> contains:</p>
-<pre>
-<?= htmlentities(print_r($_POST, 1)) ?>
-</pre>
-</output>
+    <output>
+    <p>The form was posted and <code>$_POST</code> contains:</p>
+    <pre>
+    <?= htmlentities(print_r($_POST, 1)) ?>
+    </pre>
+    </output>
 <?php endif; ?>
