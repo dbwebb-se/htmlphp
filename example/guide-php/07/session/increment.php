@@ -29,5 +29,7 @@ $_SESSION["number"] += 1;
 
 ?>
 
+<p>The current value of <code>$_SESSION["number"]</code> is <b>'<?= $_SESSION["number"] ?>'</b>.</p>
+
 <p>The outgoing content of <code>$_SESSION</code> is:</p>
 <pre><?= var_dump($_SESSION) ?></pre>
