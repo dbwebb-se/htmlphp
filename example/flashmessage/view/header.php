@@ -7,4 +7,7 @@
 </head>
 
 <body>
-    <?php include __DIR__ . "/flashmessage.php"; ?>
+
+<div class="siteheader">
+    <p class="sitetitle">Flash message (session)</p>
+</div>

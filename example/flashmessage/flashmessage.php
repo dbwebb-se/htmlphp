@@ -29,29 +29,17 @@ $pages = [
         "title" => "Introduction",
         "file" => __DIR__ . "/$base/index.php",
     ],
-    "login" => [
-        "title" => "Login",
-        "file" => __DIR__ . "/$base/login.php",
+    "form" => [
+        "title" => "Form",
+        "file" => __DIR__ . "/$base/form.php",
     ],
-    "login-process" => [
+    "form-process" => [
         "title" => null,
-        "file" => __DIR__ . "/$base/login-process.php",
+        "file" => __DIR__ . "/$base/form-process.php",
     ],
-    "logout" => [
-        "title" => "Logout",
-        "file" => __DIR__ . "/$base/logout.php",
-    ],
-    "logout-process" => [
-        "title" => null,
-        "file" => __DIR__ . "/$base/logout-process.php",
-    ],
-    "status" => [
-        "title" => "Status",
-        "file" => __DIR__ . "/$base/status.php",
-    ],
-    "protected" => [
-        "title" => "Protected page",
-        "file" => __DIR__ . "/$base/protected.php",
+    "result" => [
+        "title" => "Result page",
+        "file" => __DIR__ . "/$base/result.php",
     ],
     "session-show" => [
         "title" => "Session show",
@@ -70,7 +58,7 @@ $page = $pages[$pageReference] ?? null;
 
 // Base title for all pages and add title from selected multipage
 $title = $page["title"] ?? "404";
-$title .= " | Demo login";
+$title .= " | Demo flashmessage";
 
 // Render the page
 require __DIR__ . "/view/header.php";
