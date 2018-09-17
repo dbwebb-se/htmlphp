@@ -1,0 +1,34 @@
+@import "light.css";
+
+html,
+.siteheader {
+    background-color: pink;
+}
+
+.wrap-main {
+    background-color: hsl(60, 100%, 86%);
+    border-color: hsl(60, 100%, 76%);
+}
+
+main {
+    background-color: hsl(133, 100%, 86%);
+    border-color: hsl(133, 100%, 76%);
+}
+
+aside {
+    background-color: hsl(206, 100%, 86%);
+    border-color: hsl(206, 100%, 76%);
+}
+
+.sitefooter {
+    border-color: #ffdfba;
+    background-color: #ffb3ba;
+    color: #000;
+}
+
+input,
+select {
+    font-size: 2em;
+    background-color: hsl(60, 100%, 86%);
+    color: #00939a;
+}

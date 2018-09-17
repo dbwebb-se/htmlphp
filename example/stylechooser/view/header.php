@@ -8,3 +8,7 @@
 </head>
 
 <body>
+
+<div class="siteheader">
+    <p class="sitetitle">Stylechooser (session)</p>
+</div>

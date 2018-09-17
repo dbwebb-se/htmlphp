@@ -4,17 +4,10 @@
  * to implement a stylechooser.
  * <link rel="stylesheet" type="text/css" href="css/style.css">
  */
-$style = $_SESSION["style"] ?? "default";
-
-$styles = [
-    "default" => "css/stylesheet.css",
-    "dark" => "css/dark.css",
-    "colorful" => "css/colorful.css",
-];
+// Get the style from session, or set a default style
+$style = $_SESSION["style"] ?? null;
 
 // Map the style towards the available styles, and use a default style
 $stylesheet = $styles[$style] ?? $styles["default"];
-
-
 
 ?><link rel="stylesheet" type="text/css" href="<?= $stylesheet ?>">

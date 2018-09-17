@@ -2,7 +2,14 @@
     <nav>
         <ul>
         <?php foreach ($pages as $key => $value) : ?>
-            <li><a href="?page=<?= $key ?>"><?= $value["title"] ?></a></li>
+            <?php if (isset($value["title"])) :
+                $class = null;
+                if ($pageReference === $key) {
+                    $class = "class=\"selected\"";
+                }
+            ?>
+            <li><a <?= $class ?> href="?page=<?= $key ?>"><?= $value["title"] ?></a></li>
+            <?php endif; ?>
         <?php endforeach; ?>
         </ul>
     </nav>
