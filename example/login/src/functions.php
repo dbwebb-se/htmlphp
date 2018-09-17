@@ -4,97 +4,30 @@
  */
 
 /**
- * Get incoming variable from $_POST or set default value.
+ * Destroy a session, the session must be started.
  *
- * @param $key     use this as key to $_POST.
- * @param $default use this as default it $key is not set in $_POST.
- *
- * @return mixed as either value for $key or $default.
+ * @return void
  */
-function getPostValueFor($key, $default)
+function sessionDestroy()
 {
-    return isset($_POST[$key])
-        ? $_POST[$key]
-        : $default;
-}
+    // Unset all of the session variables.
+    $_SESSION = [];
 
-
-
-/**
- * Check if the user can login with supplied credentials.
- *
- * @param $user     the supplied acronym of the user.
- * @param $password the supplied pasword of the user
- *
- * @return boolean true if user and password matches, else false.
- */
-function checkUserAndPassword($user, $password)
-{
-    global $users;
-
-    $passwordHash = isset($users[$user])
-        ? $users[$user]['password']
-        : false;
-    
-    $res = password_verify($password, $passwordHash);
-    return $res;
-}
-
-
-
-/**
- * Login user and set session if user and password matches.
- *
- * @param $user     the supplied acronym of the user.
- * @param $password the supplied pasword of the user
- *
- * @return boolean true if user and password matches, else false.
- */
-function loginUser($user, $password)
-{
-    $res = checkuserAndPassword($user, $password);
-
-    if ($res === true) {
-        $_SESSION['user'] = $user;
+    // If it's desired to kill the session, also delete the session cookie.
+    // Note: This will destroy the session, and not just the session data!
+    if (ini_get("session.use_cookies")) {
+        $params = session_get_cookie_params();
+        setcookie(
+            session_name(),
+            '',
+            time() - 42000,
+            $params["path"],
+            $params["domain"],
+            $params["secure"],
+            $params["httponly"]
+        );
     }
-    
-    return $res;
-}
 
-
-
-/**
- * Get details of the logged in user, or false if user is not logged in.
- *
- * @return []|boolean array with details or false if user is not logged in.
- */
-function getLoggedInUser()
-{
-    global $users;
-    
-    $user = isset($_SESSION['user'])
-        ? $_SESSION['user']
-        : false;
-    
-    if ($user === false) {
-        return false;
-    }
-    
-    $res['user'] = $user;
-    $res['name'] = $users[$user]['name'];
-    $res['password'] = $users[$user]['password'];
-    
-    return $res;
-}
-
-
-
-/**
- * Logout user and remove details from the session.
- *
- * @return void.
- */
-function logoutUser()
-{
-    unset($_SESSION['user']);
+    // Finally, destroy the session.
+    session_destroy();
 }

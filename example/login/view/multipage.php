@@ -3,6 +3,8 @@
 <?php require __DIR__ . "/multipage-aside.php" ?>
 
     <main>
+        <?php require __DIR__ . "/flashmessage.php"; ?>
+
         <article>
             <?php if ($page) : ?>
                 <?php require $page["file"] ?>

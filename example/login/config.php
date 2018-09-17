@@ -16,12 +16,12 @@ session_start();
 
 // Create an array of the valid users
 $users = [
-    'doe' => [
-        'name'=> "John/Jane Doe",
-        'password' => password_hash("doe", PASSWORD_DEFAULT)
+    "doe" => [
+        "name"=> "John/Jane Doe",
+        "password" => password_hash("doe", PASSWORD_DEFAULT)
     ],
-    'admin' => [
-        'name'=> "Allmight Administrator",
-        'password' => password_hash("admin", PASSWORD_DEFAULT)
+    "admin" => [
+        "name"=> "All Mighty Administrator",
+        "password" => password_hash("admin", PASSWORD_DEFAULT)
     ],
 ];

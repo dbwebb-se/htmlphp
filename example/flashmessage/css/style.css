@@ -1,21 +1,142 @@
+/**
+ * CSS stylesheet
+ */
+html {
+    background-color: #666;
+}
+
 body {
-    margin: 8px auto;
-    width: 980px;
-    background-color: #fee;
+    margin: 0;
+    padding: 0;
+}
+
+/**
+ * Use border-box to inlude padding and border in item width.
+ */
+* {
+    box-sizing: border-box;
+}
+
+
+/**
+ * Site title
+ */
+.sitetitle {
+    font-size: 2.5em;
+    padding-left: 1em;
+    border-bottom: 1px dashed #999;
+}
+
+.siteheader {
+    background-color: #fff;
+    overflow: auto;
+}
+
+
+.sitefooter-above {
+    height: 0.5em;
+    background-image: linear-gradient(to bottom, #fff, #666);
+}
+
+.sitefooter {
+    float: clear-both;
+    padding-top: 1em;
+    padding-bottom: 2em;
+    text-align: center;
+    background-color: #666;
+    color: #fff;
+}
+
+
+
+/**
+ * Form
+ */
+.form label {
+    display: block;
+}
+
+
+
+/**
+ * Form
+ */
+.flashmessage {
+    padding: 1em;
+    border: 4px solid #4682b4;
+    background-color: #f0f8ff;
+}
+
+
+
+/**
+ * Business card
+ */
+.businesscard {
+    border: 1px solid #999;
+    border-radius: 4px;
+    background-color: #eee;
+    font-size: smaller;
+    font-family: arial;
+    padding: 1em;
+    overflow: auto;
+    max-width: 400px;
+}
+
+.businesscard img {
+    float: right;
+    border: 1px solid #ccc;
+    padding: 0.5em;
+    border-radius: 4px;
+}
+
+.businesscard .name {
+    font-size: larger;
+    font-weight: bold;
+}
+
+.businesscard .title {
+    font-style: italic;
+    color: #666;
+}
+
+
+
+/**
+ * Style for page controller multipage
+ */
+.wrap-main {
+    overflow: auto;
+    background-color: #fff;
 }
 
 main {
     width: 70%;
     float: left;
-    background-color: #ddd;
+    min-height: 20em;
 }
 
 article {
-    padding: 1em;
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-bottom: 2em;
+}
+
+pre {
+    white-space: pre-wrap;
 }
 
 aside {
     width: 30%;
     float: left;
-    background-color: #ccc;
+}
+
+aside .selected {
+    background-color: #666;
+    color: #fff;
+    padding: 2px;
+}
+
+h1 {
+    border-bottom: 1px solid #999;
 }

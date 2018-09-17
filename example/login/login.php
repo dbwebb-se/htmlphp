@@ -33,9 +33,17 @@ $pages = [
         "title" => "Login",
         "file" => __DIR__ . "/$base/login.php",
     ],
+    "login-process" => [
+        "title" => null,
+        "file" => __DIR__ . "/$base/login-process.php",
+    ],
     "logout" => [
         "title" => "Logout",
         "file" => __DIR__ . "/$base/logout.php",
+    ],
+    "logout-process" => [
+        "title" => null,
+        "file" => __DIR__ . "/$base/logout-process.php",
     ],
     "status" => [
         "title" => "Status",

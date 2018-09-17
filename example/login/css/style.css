@@ -59,6 +59,17 @@ body {
 
 
 /**
+ * Form
+ */
+.flashmessage {
+    padding: 1em;
+    border: 4px solid #4682b4;
+    background-color: #f0f8ff;
+}
+
+
+
+/**
  * Business card
  */
 .businesscard {
