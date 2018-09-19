@@ -7,7 +7,7 @@
  *
  */
 
-// The demo code is commentet out by default, remove the starting comment
+// The demo code is commentet out by default, remove the comment
 // to make it run.
 
 /*
@@ -17,3 +17,4 @@
 <hr>
 <?= htmlentities($_GET["page"]); ?>
 <p>Demo end.</p>
+*/

@@ -8,7 +8,7 @@
  * ?page=../../../../var/log/php.log
  */
 
- // The demo code is commentet out by default, remove the starting comment
+ // The demo code is commentet out by default, remove the comment
  // to make it run.
 /*
 ?>
@@ -20,3 +20,4 @@
 </pre>
 <hr>
 <p>Demo end.</p>
+*/

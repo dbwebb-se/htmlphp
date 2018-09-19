@@ -9,8 +9,9 @@
  * ?page=../../../../var/log/php.log
  */
 
-// The demo code is commentet out by default, remove the starting comment
+// The demo code is commentet out by default, remove the  comment
 // to make it run.
+
 /*
 ?>
 <p>Demo start: header injection.</p>
@@ -21,3 +22,4 @@
 <?= $_SERVER["HTTP_USER_AGENT"] ?>
 <hr>
 <p>Demo end.</p>
+*/
