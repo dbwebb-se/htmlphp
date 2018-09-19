@@ -38,7 +38,7 @@ $pages = [
 
 $validPage = $pages[$page] ?? null;
 if (!$validPage) {
-  die("Buse. Felaktig page=");
+    die("Buse. Felaktig page=");
 }
 
 
