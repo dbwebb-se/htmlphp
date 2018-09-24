@@ -81,16 +81,10 @@ htmlphpkmom03()
 htmlphpkmom04()
 {
     inspectLab "uppgift/php-lab4-skapa-egna-funktioner" "lab4" "answer.php" "php answer.php"
-    
-    TREE_OPTIONS="-d"
-    
-    inspectExercise "stylechooser" "uppgift/bygg-en-stylevaljare-till-din-webbplats"
-
-    viewFileContent "config.php" "$METARGET" "incl/config.php"
-
-    viewFileContent "stylechooser.php" "$METARGET"
 
     inspectMe "$METARGET" "me.php" "report.php" "uppgift/bygg-ut-din-me-sida-till-version-4"
+    fileIsReadable "$METARGET/config.php"
+    fileIsReadable "$METARGET/src/functions.php"
 }
 
 
