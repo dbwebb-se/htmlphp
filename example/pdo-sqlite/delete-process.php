@@ -1,15 +1,18 @@
 <?php
+// Include common settings
+require __DIR__ . "/config.php";
+
 // Check if form posted and get incoming
 if (isset($_POST['delete'])) {
     // Store posted form in parameter array
-    $jettyPosition  = $_POST['jettyPosition'];
+    $position  = $_POST['position'];
     
-    $params = [$jettyPosition];
+    $params = [$position];
 
 
 
     // Create a DSN for the database using its filename
-    $fileName = __DIR__ . "/db/jetty1.sqlite";
+    $fileName = __DIR__ . "/db/boatclub.sqlite";
     $dsn = "sqlite:$fileName";
 
 
@@ -27,9 +30,9 @@ if (isset($_POST['delete'])) {
 
     // Prepare SQL statement to DELETE a row in the table
     $sql = <<<EOD
-DELETE FROM Jetty 
+DELETE FROM jetty 
     WHERE
-        jettyPosition = ?
+        position = ?
 EOD;
     $stmt = $db->prepare($sql);
 

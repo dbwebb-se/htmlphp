@@ -1,6 +1,9 @@
 <?php
+// Include common settings
+require __DIR__ . "/config.php";
+
 // Create a DSN for the database using its filename
-$fileName = __DIR__ . "/db/jetty1.sqlite";
+$fileName = __DIR__ . "/db/boatclub.sqlite";
 $dsn = "sqlite:$fileName";
 
 
@@ -21,12 +24,10 @@ try {
 
 
 <?php
-//
-// Check if script was accessed using specific jettyPosition
-// as in update?jettyPosition=2
-//
-$jettyPosition = isset($_GET['jettyPosition'])
-    ? $_GET['jettyPosition']
+// Check if script was accessed using specific position
+// as in update?position=2
+$position = isset($_GET['position'])
+    ? $_GET['position']
     : null;
 
 $boatType = null;
@@ -35,22 +36,22 @@ $boatLength = null;
 $boatWidth = null;
 $ownerName = null;
 
-if ($jettyPosition) {
-    // Get details on the boat using specified jettyPosition
-    $sql = "SELECT * FROM Jetty WHERE jettyPosition = ?";
+if ($position) {
+    // Get details on the boat using specified position
+    $sql = "SELECT * FROM jetty WHERE position = ?";
     $stmt = $db->prepare($sql);
-    $params = [$jettyPosition];
+    $params = [$position];
     $stmt->execute($params);
 
     // Get the results as an array with column names as array keys
     $res = $stmt->fetchAll(PDO::FETCH_BOTH);
     
     if (empty($res)) {
-        die("No such jettyPosition.");
+        die("No such position.");
     }
     
     // Move content of array to individual variables, for ease of use.
-    list($jettyPosition, $boatType, $boatEngine, $boatLength, $boatWidth, $ownerName) = $res[0];
+    list($position, $boatType, $boatEngine, $boatLength, $boatWidth, $ownerName) = $res[0];
 }
 
 ?>
@@ -58,7 +59,7 @@ if ($jettyPosition) {
 <form method="post" action="update-process.php">
     <fieldset>
         <legend>Update boat</legend>
-        <p><label>jettyPosition<br><input type="number" name="jettyPosition" value="<?=$jettyPosition?>" readonly></label></p>
+        <p><label>position<br><input type="number" name="position" value="<?=$position?>" readonly></label></p>
         <p><label>boatType<br><input type="text" name="boatType" value="<?=$boatType?>"></label></p>
         <p><label>boatEngine<br><input type="text" name="boatEngine" value="<?=$boatEngine?>"></label></p>
         <p><label>boatLength<br><input type="number" name="boatLength" value="<?=$boatLength?>"></label></p>
@@ -71,7 +72,7 @@ if ($jettyPosition) {
 
 <?php
 // Check whats in the database
-$sql = "SELECT * FROM Jetty";
+$sql = "SELECT * FROM jetty";
 $stmt = $db->prepare($sql);
 
 echo "<p>Execute the SQL-statement:<br><code>$sql</code><p>";
@@ -88,9 +89,9 @@ echo "<p>The result contains " . count($res) . " rows.</p>";
 // Loop through the array and gather the data into table rows
 $rows = null;
 foreach ($res as $row) {
-    $jettyPosition = htmlentities($row['jettyPosition']);
+    $position = htmlentities($row['position']);
     $rows .= "<tr>";
-    $rows .= "<td><a href='?jettyPosition=$jettyPosition'>$jettyPosition</a></td>";
+    $rows .= "<td><a href='?position=$position'>$position</a></td>";
     $rows .= "<td>" . htmlentities($row['boatType']) . "</td>";
     $rows .= "<td>" . htmlentities($row['boatEngine']) . "</td>";
     $rows .= "<td>" . htmlentities($row['boatLength']) . "</td>";
@@ -105,7 +106,7 @@ foreach ($res as $row) {
 echo <<<EOD
 <table>
 <tr>
-    <th>jettyPostion</th>
+    <th>postion</th>
     <th>boatType</th>
     <th>boatEngine</th>
     <th>boatLength</th>

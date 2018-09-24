@@ -5,7 +5,7 @@
 <form method="post" action="insert-process.php">
     <fieldset>
         <legend>Add boat</legend>
-        <p><label>jettyPosition<br><input type="number" name="jettyPosition"></label></p>
+        <p><label>position<br><input type="number" name="position"></label></p>
         <p><label>boatType<br><input type="text" name="boatType"></label></p>
         <p><label>boatEngine<br><input type="text" name="boatEngine"></label></p>
         <p><label>boatLength<br><input type="number" name="boatLength"></label></p>
@@ -17,8 +17,11 @@
 
 
 <?php
+// Include common settings
+require __DIR__ . "/config.php";
+
 // Create a DSN for the database using its filename
-$fileName = __DIR__ . "/db/jetty1.sqlite";
+$fileName = __DIR__ . "/db/boatclub.sqlite";
 $dsn = "sqlite:$fileName";
 
 
@@ -35,7 +38,7 @@ try {
 
 
 // Check whats in the database
-$sql = "SELECT * FROM Jetty";
+$sql = "SELECT * FROM jetty";
 $stmt = $db->prepare($sql);
 
 echo "<p>Execute the SQL-statement:<br><code>$sql</code><p>";
@@ -53,7 +56,7 @@ echo "<p>The result contains " . count($res) . " rows.</p>";
 $rows = null;
 foreach ($res as $row) {
     $rows .= "<tr>";
-    $rows .= "<td>" . htmlentities($row['jettyPosition']) . "</td>";
+    $rows .= "<td>" . htmlentities($row['position']) . "</td>";
     $rows .= "<td>" . htmlentities($row['boatType']) . "</td>";
     $rows .= "<td>" . htmlentities($row['boatEngine']) . "</td>";
     $rows .= "<td>" . htmlentities($row['boatLength']) . "</td>";
@@ -68,7 +71,7 @@ foreach ($res as $row) {
 echo <<<EOD
 <table>
 <tr>
-    <th>jettyPostion</th>
+    <th>postion</th>
     <th>boatType</th>
     <th>boatEngine</th>
     <th>boatLength</th>

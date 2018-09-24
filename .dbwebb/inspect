@@ -100,6 +100,9 @@ htmlphpkmom04()
 #
 htmlphpkmom05()
 {
+    # The exercise fo sqlite, check that boatclub.sqlite and boatclub.sql is
+    # in dir kmom05/sqlite?
+
     inspectLab "uppgift/php-lab5-utforska-inbyggda-funktioner" "lab5" "answer.php" "php answer.php"
     
     TREE_OPTIONS="-d"

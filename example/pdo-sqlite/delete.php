@@ -4,20 +4,21 @@
 
 
 <?php
-//
-// Check if script was accessed using specific jettyPosition
-// as in ?jettyPosition=2
-//
-$jettyPosition = isset($_GET['jettyPosition'])
-    ? $_GET['jettyPosition']
+// Include common settings
+require __DIR__ . "/config.php";
+
+// Check if script was accessed using specific position
+// as in ?position=2
+$position = isset($_GET['position'])
+    ? $_GET['position']
     : null;
 
-if ($jettyPosition) {
+if ($position) {
     echo <<<EOD
 <form method="post" action="delete-process.php">
     <fieldset>
         <legend>Delete boat</legend>
-        <p><label>jettyPosition<br><input type="number" name="jettyPosition" value="$jettyPosition" readonly></label></p>
+        <p><label>position<br><input type="number" name="position" value="$position" readonly></label></p>
         <p><input type="submit" name="delete" value="Delete"></p>
     </fieldset>
 </form>
@@ -29,7 +30,7 @@ EOD;
 
 
 // Create a DSN for the database using its filename
-$fileName = __DIR__ . "/db/jetty1.sqlite";
+$fileName = __DIR__ . "/db/boatclub.sqlite";
 $dsn = "sqlite:$fileName";
 
 
@@ -46,7 +47,7 @@ try {
 
 
 // Check whats in the database
-$sql = "SELECT * FROM Jetty";
+$sql = "SELECT * FROM jetty";
 $stmt = $db->prepare($sql);
 
 echo "<p>Execute the SQL-statement:<br><code>$sql</code><p>";
@@ -63,9 +64,9 @@ echo "<p>The result contains " . count($res) . " rows.</p>";
 // Loop through the array and gather the data into table rows
 $rows = null;
 foreach ($res as $row) {
-    $jettyPosition = htmlentities($row['jettyPosition']);
+    $position = htmlentities($row['position']);
     $rows .= "<tr>";
-    $rows .= "<td><a href='?jettyPosition=$jettyPosition'>$jettyPosition</a></td>";
+    $rows .= "<td><a href='?position=$position'>$position</a></td>";
     $rows .= "<td>" . htmlentities($row['boatType']) . "</td>";
     $rows .= "<td>" . htmlentities($row['boatEngine']) . "</td>";
     $rows .= "<td>" . htmlentities($row['boatLength']) . "</td>";
@@ -80,7 +81,7 @@ foreach ($res as $row) {
 echo <<<EOD
 <table>
 <tr>
-    <th>jettyPostion</th>
+    <th>postion</th>
     <th>boatType</th>
     <th>boatEngine</th>
     <th>boatLength</th>

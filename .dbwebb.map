@@ -24,6 +24,8 @@ me/kmom04/me4
 me/kmom04/stylechooser
 
 # kmom05
+me/kmom05/sqlite
+me/kmom05/pdo
 me/kmom05/lab5
 me/kmom05/sql1
 me/kmom05/jetty

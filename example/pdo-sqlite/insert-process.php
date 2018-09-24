@@ -1,20 +1,23 @@
 <?php
+// Include common settings
+require __DIR__ . "/config.php";
+
 // Check if form posted and get incoming
 if (isset($_POST['add'])) {
     // Store posted form in parameter array
-    $jettyPosition  = $_POST['jettyPosition'];
-    $boatType       = $_POST['boatType'];
-    $boatEngine     = $_POST['boatEngine'];
-    $boatLength     = $_POST['boatLength'];
-    $boatWidth      = $_POST['boatWidth'];
-    $ownerName      = $_POST['ownerName'];
+    $position    = $_POST['position'];
+    $boatType    = $_POST['boatType'];
+    $boatEngine  = $_POST['boatEngine'];
+    $boatLength  = $_POST['boatLength'];
+    $boatWidth   = $_POST['boatWidth'];
+    $ownerName   = $_POST['ownerName'];
     
-    $params = [$jettyPosition, $boatType, $boatEngine, $boatLength, $boatWidth, $ownerName];
+    $params = [$position, $boatType, $boatEngine, $boatLength, $boatWidth, $ownerName];
 
 
 
     // Create a DSN for the database using its filename
-    $fileName = __DIR__ . "/db/jetty1.sqlite";
+    $fileName = __DIR__ . "/db/boatclub.sqlite";
     $dsn = "sqlite:$fileName";
 
 
@@ -31,7 +34,7 @@ if (isset($_POST['add'])) {
 
 
     // Prepare SQL statement to INSERT new rows into table
-    $sql = "INSERT INTO Jetty VALUES(?, ?, ?, ?, ?, ?)";
+    $sql = "INSERT INTO jetty VALUES(?, ?, ?, ?, ?, ?)";
     $stmt = $db->prepare($sql);
 
 

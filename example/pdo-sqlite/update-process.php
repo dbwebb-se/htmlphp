@@ -2,19 +2,19 @@
 // Check if form posted and get incoming
 if (isset($_POST['save'])) {
     // Store posted form in parameter array
-    $jettyPosition  = $_POST['jettyPosition'];
-    $boatType       = $_POST['boatType'];
-    $boatEngine     = $_POST['boatEngine'];
-    $boatLength     = $_POST['boatLength'];
-    $boatWidth      = $_POST['boatWidth'];
-    $ownerName      = $_POST['ownerName'];
+    $position   = $_POST['position'];
+    $boatType   = $_POST['boatType'];
+    $boatEngine = $_POST['boatEngine'];
+    $boatLength = $_POST['boatLength'];
+    $boatWidth  = $_POST['boatWidth'];
+    $ownerName  = $_POST['ownerName'];
     
-    $params = [$boatType, $boatEngine, $boatLength, $boatWidth, $ownerName, $jettyPosition];
+    $params = [$boatType, $boatEngine, $boatLength, $boatWidth, $ownerName, $position];
 
 
 
     // Create a DSN for the database using its filename
-    $fileName = __DIR__ . "/db/jetty1.sqlite";
+    $fileName = __DIR__ . "/db/boatclub.sqlite";
     $dsn = "sqlite:$fileName";
 
 
@@ -32,7 +32,7 @@ if (isset($_POST['save'])) {
 
     // Prepare SQL statement to UPDATE a row in the table
     $sql = <<<EOD
-UPDATE Jetty 
+UPDATE jetty 
     SET
         boatType = ?,
         boatEngine = ?,
@@ -40,7 +40,7 @@ UPDATE Jetty
         boatWidth = ?,
         ownerName = ?
     WHERE
-        jettyPosition = ?
+        position = ?
 EOD;
     $stmt = $db->prepare($sql);
 

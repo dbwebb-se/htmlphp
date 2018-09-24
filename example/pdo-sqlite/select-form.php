@@ -1,4 +1,7 @@
 <?php
+// Include common settings
+require __DIR__ . "/config.php";
+
 // Get incoming from search form
 $search = isset($_GET['search'])
     ? $_GET['search']
@@ -21,7 +24,7 @@ if (is_null($search)) {
 }
 
 // Create a DSN for the database using its filename
-$fileName = __DIR__ . "/db/jetty.sqlite";
+$fileName = __DIR__ . "/db/boatclub.sqlite";
 $dsn = "sqlite:$fileName";
 
 // Open the database file and catch the exception it it fails.
@@ -51,7 +54,7 @@ echo "<p>The result contains " . count($res) . " rows.</p>";
 $rows = null;
 foreach ($res as $row) {
     $rows .= "<tr>";
-    $rows .= "<td>{$row['jettyPosition']}</td>";
+    $rows .= "<td>{$row['position']}</td>";
     $rows .= "<td>{$row['boatType']}</td>";
     $rows .= "<td>{$row['boatEngine']}</td>";
     $rows .= "<td>{$row['boatLength']}</td>";
@@ -64,7 +67,7 @@ foreach ($res as $row) {
 echo <<<EOD
 <table>
 <tr>
-    <th>jettyPostion</th>
+    <th>postion</th>
     <th>boatType</th>
     <th>boatEngine</th>
     <th>boatLength</th>

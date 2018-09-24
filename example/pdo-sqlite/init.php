@@ -3,8 +3,11 @@
 <link href="style.css" rel="stylesheet">
 
 <?php
+// Include common settings
+require __DIR__ . "/config.php";
+
 // Create a DSN for the database using its filename
-$fileName = __DIR__ . "/db/jetty1.sqlite";
+$fileName = __DIR__ . "/db/boatclub.sqlite";
 $dsn = "sqlite:$fileName";
 
 
@@ -23,7 +26,7 @@ try {
 // Prepare the SQL statement to drop the table
 echo "<p>Prepare to drop the table, if it exists.<p>";
 $sql = <<<EOD
-DROP TABLE IF EXISTS "Jetty";
+DROP TABLE IF EXISTS "jetty";
 EOD;
 $stmt = $db->prepare($sql);
 $stmt->execute();
@@ -33,14 +36,15 @@ $stmt->execute();
 // Prepare the SQL statement to create the table
 echo "<p>Prepare to create the table.<p>";
 $sql = <<<EOD
-CREATE TABLE "main"."Jetty" (
-    "jettyPosition" INTEGER PRIMARY KEY  NOT NULL  UNIQUE, 
-    "boatType" VARCHAR(20) NOT NULL, 
-    "boatEngine" VARCHAR(20) NOT NULL, 
-    "boatLength" INTEGER, 
-    "boatWidth" INTEGER, 
-    "ownerName" VARCHAR(20)
-)
+CREATE TABLE `jetty` (
+    `position`  INTEGER,
+    `boatType`  TEXT,
+    `boatEngine`    TEXT,
+    `boatLength`    INTEGER,
+    `boatWidth` INTEGER,
+    `ownerName` TEXT,
+    PRIMARY KEY(`position`)
+);
 EOD;
 $stmt = $db->prepare($sql);
 $stmt->execute();
@@ -50,7 +54,7 @@ $stmt->execute();
 // Prepare SQL statement to INSERT new rows into table
 echo "<p>Prepare to insert into the table.<p>";
 $sql = <<<EOD
-INSERT INTO "Jetty" VALUES(?, ?, ?, ?, ?, ?);
+INSERT INTO "jetty" VALUES(?, ?, ?, ?, ?, ?);
 EOD;
 $stmt = $db->prepare($sql);
 
@@ -70,7 +74,7 @@ $stmt->execute($params);
 
 
 // Check whats in the database
-$sql = "SELECT * FROM Jetty";
+$sql = "SELECT * FROM jetty";
 $stmt = $db->prepare($sql);
 
 echo "<p>Execute the SQL-statement:<br><code>$sql</code><p>";
@@ -86,7 +90,7 @@ echo "<p>The result contains " . count($res) . " rows.</p>";
 $rows = null;
 foreach ($res as $row) {
     $rows .= "<tr>";
-    $rows .= "<td>{$row['jettyPosition']}</td>";
+    $rows .= "<td>{$row['position']}</td>";
     $rows .= "<td>{$row['boatType']}</td>";
     $rows .= "<td>{$row['boatEngine']}</td>";
     $rows .= "<td>{$row['boatLength']}</td>";
@@ -101,7 +105,7 @@ foreach ($res as $row) {
 echo <<<EOD
 <table>
 <tr>
-    <th>jettyPostion</th>
+    <th>postion</th>
     <th>boatType</th>
     <th>boatEngine</th>
     <th>boatLength</th>
