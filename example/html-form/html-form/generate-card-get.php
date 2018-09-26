@@ -5,7 +5,7 @@
 <form class="form" method="get" action="?page=generate-card">
 <fieldset>
 <legend>Create your own business card</legend>
-    <input id="page" type="hidden" name="pasge" value="generate-card">
+    <input id="page" type="hidden" name="page" value="generate-card">
     <p>
         <label for="title">Title:</label>
         <input id="title" type="text" name="title" value="<?= htmlentities($_GET["title"] ?? null) ?>">
