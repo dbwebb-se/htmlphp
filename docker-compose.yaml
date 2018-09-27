@@ -1,25 +1,31 @@
 version: "3"
 services:
-    course-any: &course-any
-        image: dbwebb/courserepo:course # Should be a fully installed course repo
-        volumes:
-            - ".:/home/dbwebb/repo"
-            - "/home/dbwebb/repo/bin/"
-            - "/home/dbwebb/repo/node_modules/"
-        ports: [ "10042:80" ]
-    course-htmlphp:
-        <<: *course-any
-        image: dbwebb/courserepo:htmlphp
-    course-oophp:
-        <<: *course-any
-        image: dbwebb/courserepo:oophp
+    # Complete course repos
     course-databas:
-        <<: *course-any
         image: dbwebb/courserepo:databas
+        ports: [ "10042:80" ]
+    course-oophp:
+        image: dbwebb/courserepo:oophp
+        ports: [ "10042:80" ]
+
+    # Course repo
+    cli:
+        image: dbwebb/courserepo:cli
+        volumes: [ ".:/home/dbwebb/repo" ]
     course:
         image: dbwebb/courserepo
         volumes: [ ".:/home/dbwebb/repo" ]
         ports: [ "10042:80" ]
+    web:
+        image: dbwebb/courserepo:web
+        volumes: [ ".:/home/dbwebb/repo" ]
+        ports: [ "10042:80" ]
+    apache:
+        image: dbwebb/courserepo:apache
+        volumes: [ ".:/home/dbwebb/repo" ]
+        ports: [ "10042:80" ]
+
+    # Base images
     base-all:
         image: dbwebb/courserepo:base-all
         volumes: [ ".:/home/dbwebb/repo" ]
@@ -40,6 +46,8 @@ services:
     base:
         image: dbwebb/courserepo:base
         volumes: [ ".:/home/dbwebb/repo" ]
+
+    # Debian installations
     jessie:
         image: dbwebb/courserepo:jessie
         volumes: [ ".:/home/dbwebb/repo" ]

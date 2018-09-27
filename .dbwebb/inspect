@@ -54,7 +54,8 @@ htmlphpkmom02()
 {
     inspectLab "uppgift/php-lab2-villkor-loopar-och-inbyggda-funktioner" "lab2" "answer.php" "php answer.php"
     
-    inspectMe "$METARGET" "me.php" "report.php" "uppgift/bygg-ut-din-htmlphp-me-sida-till-version-2"
+    #inspectMe "$METARGET" "me.php" "report.php" "uppgift/bygg-ut-din-htmlphp-me-sida-till-version-2"
+    inspectMe "$METARGET" "" "" "uppgift/bygg-ut-din-htmlphp-me-sida-till-version-2"
 }
 
 
@@ -65,12 +66,11 @@ htmlphpkmom02()
 htmlphpkmom03()
 {
     inspectLab "uppgift/php-lab3-arrayer" "lab3" "answer.php" "php answer.php"
-    
-    viewFileContent "multipage.php" "$METARGET"
-    
-    inspectExercise "multi" "uppgift/bygg-en-multisida-och-testa-arrayer"
-    
-    inspectMe "$METARGET" "me.php" "report.php" "uppgift/bygg-ut-din-htmlphp-me-sida-till-version-3"
+
+    inspectExercise "multi" "uppgift/bygg-en-multisida-och-testa-arrayer-v2"
+    #viewFileContent "multipage.php" "$METARGET"
+
+    inspectMe "$METARGET" "" "" "uppgift/bygg-ut-din-htmlphp-me-sida-till-version-3-v2"
 }
 
 
