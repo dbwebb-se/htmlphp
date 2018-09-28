@@ -42,7 +42,8 @@ htmlphpkmom01()
 {
     inspectLab "uppgift/php-lab1-uttryck-datatyper-och-variabler" "lab1" "answer.php" "php answer.php"
 
-    inspectMe "$METARGET" "me.php" "report.php" "uppgift/skapa-en-me-sida-i-kursen-htmlphp"
+    #inspectMe "$METARGET" "me.php" "report.php" "uppgift/skapa-en-me-sida-i-kursen-htmlphp"
+    inspectMe "$METARGET" "" "" "uppgift/skapa-en-me-sida-i-kursen-htmlphp"
 }
 
 
@@ -99,17 +100,13 @@ htmlphpkmom05()
 
     inspectLab "uppgift/php-lab5-utforska-inbyggda-funktioner" "lab5" "answer.php" "php answer.php"
     
-    TREE_OPTIONS="-d"
-
     viewFileContent "jetty.php" "$METARGET"
     viewFileContent "search.php" "$METARGET"
     viewFileContent "config.php" "$METARGET" "incl/config.php"
 
-    # htmlphpsqllab "sql1"
-
     inspectExercise "jetty" "uppgift/bygg-en-multisida-for-att-soka-i-en-databas"
 
-    inspectMe "$METARGET" "me.php" "report.php" "uppgift/htmlphp-projekt-5"
+    inspectMe "$METARGET" "" "" "uppgift/htmlphp-projekt-5"
 }
 
 
@@ -121,11 +118,9 @@ htmlphpkmom06()
 {
     inspectLab "uppgift/php-lab6-php-pdo-och-databasen-sqlite" "lab6" "answer.php" "php answer.php"
     
-    TREE_OPTIONS="-d"
-    
     viewFileContent "admin.php" "$METARGET"
     
-    inspectMe "$METARGET" "me.php" "report.php" "uppgift/bygg-ut-din-htmlphp-me-sida-till-version-6"
+    inspectMe "$METARGET" "" "" "uppgift/bygg-ut-din-htmlphp-me-sida-till-version-6"
 }
 
 
@@ -135,44 +130,7 @@ htmlphpkmom06()
 #
 htmlphpkmom10()
 {
-    TREE_OPTIONS="-d"
     inspectExercise "bmo" "htmlphp/kmom10" "" "" "-"
     
-    TREE_OPTIONS="-d"
-    inspectMe "me/kmom06/me6" "me.php" "report.php" ""
-}
-
-
-
-# ---------------------- CLEAN AWAY ------------------------------------------
-#
-# REPLACE with inspectLab
-#
-htmlphplab()
-{
-    local lab="$1"
-    local target="me/$KMOM/$lab"
-    
-    headerForTest "-- Lab" "-- ${DBW_WWW}$DBW_COURSE/$lab" 
-    openFilesInEditor "$target"
-    checkKmomDir "$target"
-    printUrl "" "$target"  
-    inspectCommand "answer.php" "$EXEC_DIR/$KMOM/$lab" "php answer.php"
-}
-
-
-
-#
-# REPLACE with inspectLab
-#
-htmlphpsqllab()
-{
-    local lab="$1"
-    local target="me/$KMOM/$lab"
-    
-    headerForTest "-- Lab" "-- ${DBW_WWW}$DBW_COURSE/$lab" 
-    openFilesInEditor "$target"
-    checkKmomDir "$target"
-    printUrl "" "$target"  
-    inspectCommand "answer.bash" "$EXEC_DIR/$KMOM/$lab" "./answer.bash"
+    inspectMe "me/kmom06/me6" "" "" ""
 }
