@@ -12,12 +12,14 @@ SELECT name, points FROM course WHERE code = 'PA1439';
 SELECT name, points FROM course WHERE term = 1;
 
 SELECT
-    rowid,
+    rowid AS 'Id',
     *
 FROM course
 WHERE
     name IN ('htmlphp', 'design')
 ;
+
+SELECT * FROm course WHERE name IN ('htmlphp', 'python');
 
 SELECT
     *
