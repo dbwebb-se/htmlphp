@@ -14,7 +14,7 @@
         <exclude name="BooleanArgumentFlag" />
         <exclude name="ElseExpression" />
     </rule>
-    
+
     <rule ref="rulesets/codesize.xml" />
 
     <rule ref="rulesets/controversial.xml">
@@ -23,6 +23,7 @@
 
     <rule ref="rulesets/design.xml">
         <exclude name="ExitExpression" />
+        <exclude name="DevelopmentCodeFragment" />
     </rule>
 
     <rule ref="rulesets/naming.xml">
