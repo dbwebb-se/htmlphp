@@ -126,7 +126,7 @@ main()
                 acronym=$( gui-read-acronym $acronym )
                 kmom=$( gui-read-kmom $kmom )
                 [[ acronym && kmom ]] \
-                    && unbuffer dbwebb --yes inspect $COURSE $kmom  $acronym | tee inspect.output
+                    && dbwebb --yes inspect $COURSE $kmom  $acronym | tee inspect.output
                 pressEnterToContinue
                 ;;
             d)
