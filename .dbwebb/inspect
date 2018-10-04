@@ -100,9 +100,9 @@ htmlphpkmom05()
 
     inspectLab "uppgift/php-lab5-utforska-inbyggda-funktioner" "lab5" "answer.php" "php answer.php"
     
-    viewFileContent "jetty.php" "$METARGET"
-    viewFileContent "search.php" "$METARGET"
-    viewFileContent "config.php" "$METARGET" "incl/config.php"
+    #viewFileContent "jetty.php" "$METARGET"
+    #viewFileContent "search.php" "$METARGET"
+    #viewFileContent "config.php" "$METARGET" "incl/config.php"
 
     inspectExercise "jetty" "uppgift/bygg-en-multisida-for-att-soka-i-en-databas"
 
@@ -118,7 +118,7 @@ htmlphpkmom06()
 {
     inspectLab "uppgift/php-lab6-php-pdo-och-databasen-sqlite" "lab6" "answer.php" "php answer.php"
     
-    viewFileContent "admin.php" "$METARGET"
+    #viewFileContent "admin.php" "$METARGET"
     
     inspectMe "$METARGET" "" "" "uppgift/bygg-ut-din-htmlphp-me-sida-till-version-6"
 }
