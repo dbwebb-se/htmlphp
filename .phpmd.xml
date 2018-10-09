@@ -13,6 +13,7 @@
     <rule ref="rulesets/cleancode.xml">
         <exclude name="BooleanArgumentFlag" />
         <exclude name="ElseExpression" />
+        <exclude name="StaticAccess" />
     </rule>
 
     <rule ref="rulesets/codesize.xml" />
