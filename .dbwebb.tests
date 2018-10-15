@@ -115,13 +115,6 @@ cd me/kmom05 && dbwebb recreate lab5
 cd me/kmom05/lab5 && php answer.php; [[ $? = 42 ]]
 dbwebb validate lab5
 
-#
-# sql1
-#
-cd me/kmom05 && dbwebb recreate sql1
-cd me/kmom05/sql1 && ./answer.bash; [[ $? = 42 ]]
-dbwebb validate sql1
-
 
 
 # --------------------------------------------------------------------------
