@@ -23,6 +23,7 @@
 - vendor/**/docs
 - vendor/**/test
 - node_modules/
+- **/.vscode
 /me/**
 
 - */
