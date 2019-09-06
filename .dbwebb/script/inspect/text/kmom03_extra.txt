@@ -1,0 +1,17 @@
+KOMMENTAR. Du har en del valideringsfel, se om du kan laga några av dem.
+
+KOMMENTAR. Lite svårspelat när man hade så många tärningar, men det såg bra ut.
+
+KOMMENTAR. Snygg med spelet där man valde antal tärningar och spelarens namn och med grafiska tärningar.
+
+KOMMENTAR. Ja, jag kan se att spelet är lite mer "amitiöst" än många inlämningar, snyggt gjort med omgångar och sånt.
+
+FIX. Du har missat att skriva commits/taggar? Har du missat det? Vad sägs om bättring till nästa kmom?
+
+PS. Glöm inte stänga av felutskrifter när du lämnar in, det ser mycket snyggare ut utan dem.
+
+FIX. Länken till ditt GitHub-repo funkade inte, uppdatera den i me/redovisa/github.txt
+
+PS. Glöm inte att ha en hyffsad omfattning på din redovisningstext, du kan lite mer än du visar i detta kmom.
+
+FIX. Dina enhetstester fungerade inte, det gick inte att köra "make phpunit" i terminalen.

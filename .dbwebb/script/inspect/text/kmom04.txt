@@ -1,0 +1,15 @@
+Låt se hur kmom04 föll ut.
+
+Som vanligt kollar jag utskriften från din "dbwebb inspect". Jag vill se att allt validerar, mer eller mindre.
+
+Redovisningstexten läses igenom för att se hur du upplevde kursmomentet och för att se att texten "håller måttet".
+
+Jag kikar som vanligt på dina committs och taggar på GitHub. Kom ihåg att göra små committs och göra dem ofta efter varje relevant ändring med tydliga meddelanden.
+
+Jag spelade en runda på ditt 100-spel i me/redovisa och såg att histogrammet fanns på plats och jag kikade snabbt på din kontroller-klass.
+
+Avslutningsvis så gör jag "make phpunit" och tittar på din kodtäckning för att få en känsla för hur du lyckas med enhetstestning.
+
+Kämpa på, gott jobbat så här långt. Nu är det slut med spelen och kmom05 erbjuder andra saker.
+
+$TEACHER_SIGNATURE

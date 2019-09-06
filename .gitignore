@@ -5,3 +5,5 @@ vendor/
 package-lock.json
 composer.lock
 inspect.output
+log-gui-inspect.ansi
+log-gui-main.ansi

@@ -30,6 +30,21 @@ input()
 
 
 #
+# Read input from user replying with yY or nN.
+#
+# @arg1 string the message to display.
+# @arg2 string the default value, y or n.
+#
+yesNo()
+{
+    
+    read -r -p "$1 (y/n) [$2]: "
+    echo "${REPLY:-$2}"
+}
+
+
+
+#
 # Display information message and wait for user input to continue, exit if
 # user presses 'q'.
 #
@@ -73,9 +88,42 @@ die()
 potatoe()
 {
     local acronym
-    
+    local course="$COURSE"
+
+    if [[ $2 = "false" ]]; then
+        course=
+    fi
+
     acronym=$( input "Akronym att uppdatera rättigheter för?" "$1" )
-    dbwebb run "sudo /usr/local/sbin/setpre-dbwebb-kurser.bash $acronym"
+    dbwebb run "sudo /usr/local/sbin/setpre-dbwebb-kurser.bash $acronym $course"
+    #dbwebb run "sudo /usr/local/sbin/setpre-dbwebb-kurser.bash $acronym"
+}
+
+
+
+#
+# Create a config file that are sourced each time the application starts.
+#
+createConfigFile()
+{
+    local source="$DIR/gui_config.bash"
+    local reply=
+
+    if [[ -f $DBWEBB_GUI_CONFIG_FILE ]]; then
+        reply=$( yesNo "Du har redan en konfigurationsfil, vill du skriva över den?" "n" )
+        case "$reply" in
+            [yY]) ;;
+            *) printf "Ignoring..." && return ;;
+        esac
+    fi
+
+    install -d "$( dirname $DBWEBB_GUI_CONFIG_FILE )"
+    cp "$source" "$DBWEBB_GUI_CONFIG_FILE" \
+        && printf "Konfigurationsfilen är nu skapad, redigera den i en texteditor.\n" \
+        && ls -l "$DBWEBB_GUI_CONFIG_FILE"
+
+    # shellcheck source=$HOME/.dbwebb.gui_config.bash
+    [[ -f $DBWEBB_GUI_CONFIG_FILE ]] && source "$DBWEBB_GUI_CONFIG_FILE"
 }
 
 

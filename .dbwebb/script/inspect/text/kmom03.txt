@@ -1,0 +1,15 @@
+Vi kör på med kmom03...
+
+Jag kikar på "dbwebb inspect" så att allt ligger på plats och validerar.
+
+Jag läser igenom redovisningstexten för att få en uppfattning om hur du upplever kmomet.
+
+Jag tittar på dina committs och taggar på GitHub.
+
+Jag spelade en runda på ditt 100-spel i me/redovisa.
+
+Avslutningsvis så kör jag igenom dina enhetstester med "make phpunit" och tittar på din kodtäckning.
+
+Kämpa på.
+
+$TEACHER_SIGNATURE

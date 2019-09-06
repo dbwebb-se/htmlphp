@@ -1,0 +1,13 @@
+AH, UPS. Din databasdump saknar lagrade procedurer, se https://dbwebb.se/t/8371. Uppdatera din backup.sql så kör vi igen.
+
+FIX. Dina databas-funktioner har inte karaktäristik angiven så de går inte att ladda från backup-filen. Se forumet: https://dbwebb.se/t/8419. Uppdatera dina funktioner med karaktäristik och skapa en ny backupfil.
+
+KOMMENTAR. Länken eshop/index fungerade inte (enligt uppgiften), men det löste sig. Tänk dock att ibland är det väldigt viktigt att följa uppgiftens spec.
+
+FIX. Du har mixat små och stora bokstäver i din SQL-kod. Vår kodstandard säger bara små bokstäver, se forumet: https://dbwebb.se/t/8379. Uppdatera din kod, var konsistent i användandet av små och stora bokstäver och undvik stora bokstäver.
+
+FIX. Du har valideringsfel som gör att det inte går att rätta din inlämning. Kör "dbwebb update" följt av "dbwebb inspect" och laga felen.
+
+FIX. Jag skapade en ny produkt i webbklienten men jag kan inte lägga till den i terminalklienten via invadd. Pröva själv att lägga till en produkt i webbklient och sedan göra invadd på den klienten till en befintlig lagerhylla. Du kan se exempel på hur du själv kan testa detta i uppgiften under https://dbwebb.se/uppgift/bygg-databasen-till-en-eshop-del-1#test
+
+FIX. Jag får ett felmeddelande, "Error: ER_WRONG_FIELD_WITH_GROUP: Expression #1 of SELECT list is not in GROUP BY clause and contains nonaggregated column 'eshop.p.id' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by". Du kan läsa om hur du kan fixa det här: https://dbwebb.se/t/8420

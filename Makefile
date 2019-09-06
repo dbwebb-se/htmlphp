@@ -98,6 +98,9 @@ install: prepare dbwebb-validate-install dbwebb-inspect-install dbwebb-install n
 	# curl -Lso $(PHPMD) http://static.phpmd.org/php/latest/phpmd.phar && chmod 755 $(PHPMD)
 	curl -Lso $(PHPMD) http://www.student.bth.se/~mosstud/download/phpmd && chmod 755 $(PHPMD)
 
+	# Shellcheck
+	curl -s https://storage.googleapis.com/shellcheck/shellcheck-latest.linux.x86_64.tar.xz | tar -xJ -C build/ && rm -f bin/shellcheck && ln build/shellcheck-latest/shellcheck bin/
+
 	@# Shellcheck
 	@# tree (inspect)
 	@# python through reqs and venv
@@ -117,7 +120,7 @@ check: dbwebb-validate-check docker-check
 .PHONY: test
 test: dbwebb-publish-example dbwebb-testrepo
 	@$(call HELPTEXT,$@)
-	[ -f composer.json ] || composer validate
+	[ ! -f composer.json ] || composer validate
 
 
 # target: testrepo                - Runs unit tests on course repo.
@@ -378,15 +381,23 @@ docker-stop:
 .PHONY: docker-run
 docker-run:
 	@$(call HELPTEXT,$@)
-	[ ! -f docker-compose.yaml ] || docker-compose -f docker-compose.yaml run $(container) $(what)
+ifeq ($(what),)
+	[ ! -f docker-compose.yaml ] || docker-compose -f docker-compose.yaml run  $(container) bash
+else
+	[ ! -f docker-compose.yaml ] || docker-compose -f docker-compose.yaml run  $(container) $(what)
+endif
 
 
 
-# target: docker-bash             - Run container="" with what="bash" one off command.
-.PHONY: docker-bash
-docker-bash:
+# target: docker-run-server       - Run --service-ports container="" with what="" one off command.
+.PHONY: docker-run-server
+docker-run-server:
 	@$(call HELPTEXT,$@)
-	[ ! -f docker-compose.yaml ] || docker-compose -f docker-compose.yaml run $(container) bash
+ifeq ($(what),)
+	[ ! -f docker-compose.yaml ] || docker-compose -f docker-compose.yaml run --service-ports $(container) bash
+else
+	[ ! -f docker-compose.yaml ] || docker-compose -f docker-compose.yaml run --service-ports $(container) $(what)
+endif
 
 
 

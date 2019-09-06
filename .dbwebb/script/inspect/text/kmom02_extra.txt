@@ -1,0 +1,11 @@
+PS. Glöm inte stänga av felutskrifter när du lämnar in, det ser mycket snyggare ut utan dem.
+
+KOMMENTAR. Jag fick inte din "cheat" att fungera, inget syntes när jag klickade på den, men vi låter det vara så.
+
+KOMMENTAR. Glöm inte att göra flera och små commits med tydliga meddelanden, det ser bra ut i historiken när man gör det, det blir enklare att följa de ändringar som gjorts.
+
+KOMMENTAR. Det såg bra ut med dina commits och meddelanden, fin historik.
+
+FIX. Länken till ditt GitHub-repo funkade inte, uppdatera den i me/redovisa/github.txt
+
+PS. Glöm inte att ha en hyffsad omfattning på din redovisningstext, du kan lite mer än du visar i detta kmom.

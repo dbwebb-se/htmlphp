@@ -1,0 +1,5 @@
+FIX. "Skriv mer redovisningstext", se instruktionen i https://dbwebb.se/kurser/htmlphp-v3/redovisa#text
+
+FIX. Du har valideringsfel. Kör "dbwebb update" följt av "dbwebb inspect" och laga felen.
+
+PS. Snygg me-sida och bra redovisningstext.

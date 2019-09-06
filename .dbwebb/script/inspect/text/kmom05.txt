@@ -1,0 +1,9 @@
+Då tar kursen en liten ny vändning med kmom05 och databaser.
+
+Jag kör en "dbwebb inspect", läser igenom redovisningstexten och slänger ett öga på dina taggar och commit-historik på GitHub.
+
+Jag tittar på uppgiften om "movie" så att den ser okey ut i förhållande till specen.
+
+Databaser blir det mer av i kmom06 så kör på.
+
+$TEACHER_SIGNATURE
