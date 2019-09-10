@@ -24,6 +24,7 @@
 - vendor/**/test
 - node_modules/
 - **/.vscode
+- **/.idea
 /me/**
 
 - */
