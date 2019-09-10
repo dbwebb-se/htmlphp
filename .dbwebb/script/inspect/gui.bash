@@ -550,9 +550,9 @@ openRedovisaInBrowser()
 {
     local acronym="$1"
 
-    printf "$REDOVISA_HTTP_PREFIX/~$acronym/dbwebb-kurser/$COURSE/$REDOVISA_HTTP_POSTFIX\n" 2>&1 | tee -a "$LOGFILE"
+    #printf "$REDOVISA_HTTP_PREFIX/~$acronym/dbwebb-kurser/$COURSE/$REDOVISA_HTTP_POSTFIX\n" 2>&1 | tee -a "$LOGFILE"
 
-    eval "$BROWSER" "$REDOVISA_HTTP_PREFIX/~$acronym/dbwebb-kurser/$COURSE/$REDOVISA_HTTP_POSTFIX" &
+    #eval "$BROWSER" "$REDOVISA_HTTP_PREFIX/~$acronym/dbwebb-kurser/$COURSE/$REDOVISA_HTTP_POSTFIX" &
 }
 
 
