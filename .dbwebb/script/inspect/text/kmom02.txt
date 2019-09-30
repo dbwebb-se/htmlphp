@@ -1,15 +1,11 @@
-Då tar vi kmom02.
+Då tittar vi kmom02.
 
-Som vanligt kollar jag igenom din inlämning med "dbwebb inspect" så att allt ligger på plats och validerar.
+Jag kollar igenom din inlämning med "dbwebb inspect" så att allt ligger på plats och validerar och att labben är utförd.
 
-Jag kollar igenom din redovisningstext så att allt ser bra ut.
+Jag läser igenom din redovisningstext så att den ser rimlig ut.
 
-Jag kikade på din GitHub och såg att sakerna fanns på plats och titta en extra gång på dina commits och taggar.
+Sedan tittar jag runt på din me2-sida så att den uppfyller uppgiftens krav.
 
-Jag kollade in ditt spel så att det fanns integrerat i me-sidan.
-
-Gott kämpat, kör på.
+Gott kämpat så här långt, kör på.
 
 $TEACHER_SIGNATURE
-
-PS. Jag tar tillfället i akt att åter påminna om möjligheten att ställa frågor i forumet om du söker mer utförliga svar på funderingar eller för feedback på kod och lösningar.
