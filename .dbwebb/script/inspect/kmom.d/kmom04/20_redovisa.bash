@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # Move to directory
-cd me/redovisa || exit
-make phpunit
+cd me/kmom04/me4 || exit
+ls -l
 
 echo
