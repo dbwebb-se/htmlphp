@@ -1,0 +1,5 @@
+KOMMENTAR. När jag gör postar på din sida för flash-meddelanden och sedan gör reload på resultatsidan så skall flash-meddelandet som visas försvinna. Det skall bara visas en gång. Ditt meddelande var kvar så du ska egentligen tömma det efter första sidvisningen. Men jag låter det vara.
+
+FIX. Din resultatsida för flashmeddelandet skall vara en del av resten av din me4-sida. Nu ligger resultatsidan "utanför" din me4 och har inte samma stil och layout. Flytta resultatsidan så att den delar resten av layout och utseende på me4.
+
+KOMMENTAR. Stiligt med olika styles på flash-meddelandet.

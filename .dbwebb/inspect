@@ -83,9 +83,9 @@ htmlphpkmom04()
 {
     inspectLab "uppgift/php-lab4-skapa-egna-funktioner" "lab4" "answer.php" "php answer.php"
 
-    inspectMe "$METARGET" "me.php" "report.php" "uppgift/bygg-ut-din-me-sida-till-version-4"
-    fileIsReadable "$METARGET/config.php"
-    fileIsReadable "$METARGET/src/functions.php"
+    inspectMe "$METARGET" "" "" "uppgift/bygg-ut-din-me-sida-till-version-4"
+    #fileIsReadable "$METARGET/config.php"
+    #fileIsReadable "$METARGET/src/functions.php"
 }
 
 
