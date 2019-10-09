@@ -1,9 +1,0 @@
-   Säkerhet skydda dig
-   ----------------------------
-   
-   * Lita aldrig på inkommande värden
-   * Validera inkommande värden på serversidan
-   * Skriv ut data i webbsidan med htmlentities (städa utskriften)
-   * Använd alltid === vid jämförelser
-   * Använd prepared statements
-   * Stäng av felutskrifter i produktionsmiljö (men logga dem)

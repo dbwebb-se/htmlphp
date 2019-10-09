@@ -13,18 +13,19 @@ Inledning
     * https://dbwebb.se/t/8783
 * Om krav 5/6 i kmom05 multisida jetty (samt uppbyggnad av URL).
     * https://dbwebb.se/t/8779
+    * Se Niklas genomgång i går
 
 
 
 Säkerhet skydda dig
 ----------------------------
 
-* Lita aldrig på inkommande värden
-* Validera inkommande värden på serversidan
-* Skriv ut data i webbsidan med htmlentities (städa utskriften)
-* Använd alltid === vid jämförelser
-* Använd prepared statements
-* Stäng av felutskrifter i produktionsmiljö (men logga dem)
+1. Lita aldrig på inkommande värden
+2. Validera inkommande värden på serversidan
+3. Skriv ut data i webbsidan med htmlentities (städa utskriften)
+4. Använd alltid === vid jämförelser
+5. Använd prepared statements
+6. Stäng av felutskrifter i produktionsmiljö (men logga dem)
 
 
 
@@ -79,9 +80,9 @@ Säkerhet stäng av felmeddelanden
 Säkerhet skydda dig (summering)
 ----------------------------
 
-* Lita aldrig på inkommande värden
-* Validera inkommande värden på serversidan
-* Skriv ut data i webbsidan med htmlentities (städa utskriften)
-* Använd alltid === vid jämförelser
-* Använd prepared statements
-* Stäng av felutskrifter i produktionsmiljö (men logga dem)
+1. Lita aldrig på inkommande värden
+2. Validera inkommande värden på serversidan
+3. Skriv ut data i webbsidan med htmlentities (städa utskriften)
+4. Använd alltid === vid jämförelser
+5. Använd prepared statements
+6. Stäng av felutskrifter i produktionsmiljö (men logga dem)

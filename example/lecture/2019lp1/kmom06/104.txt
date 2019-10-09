@@ -1,6 +1,0 @@
-   Säkerhet XSS
-   ----------------------------
-   
-   * Cross-Site Scripting
-   * Användaren kan spara ett JavaScript på din webbsida som körs av andra användare
-   * Löses med städa utskriften via htmlentites

@@ -1,5 +1,0 @@
-Säkerhet stäng av felmeddelanden
-----------------------------
-
-* Stressade system ger tydliga felmeddelanden
-* https://dbwebb.se/repo/slides/img/max-connections.png
