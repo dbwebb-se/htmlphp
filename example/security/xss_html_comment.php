@@ -15,8 +15,12 @@ $page = $_GET["page"] ?? null;
 
 /*
 ?>
-<p>Demo start: XSS.</p>
+<p>Demo start: XSS through HTML comment.</p>
+<!--
 <?= $page ?>
+
+<?= htmlentities($page) ?>
+-->
 <hr>
 <?= htmlentities($page) ?>
 <p>Demo end.</p>

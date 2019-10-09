@@ -3,3 +3,9 @@ KOMMENTAR. När jag gör postar på din sida för flash-meddelanden och sedan g�
 FIX. Din resultatsida för flashmeddelandet skall vara en del av resten av din me4-sida. Nu ligger resultatsidan "utanför" din me4 och har inte samma stil och layout. Flytta resultatsidan så att den delar resten av layout och utseende på me4.
 
 KOMMENTAR. Stiligt med olika styles på flash-meddelandet.
+
+FIX. Det ser inte ut som du löst hela labben, dubbelkolla så att labben är godkänd.
+
+FIX. Jag kan inte se att din me4-sida innehåller kraven för Session. De delarna skall vara inkluderade i me-sidan och finnas i navbaren.
+
+KOMMENTAR. Din redovisningstext är i kortaste laget och inte helt okey. Den lever inte upp till mini-kravet. Dubbelkolla hur du skall skriva redovisningstexten https://dbwebb.se/kurser/htmlphp-v3/kmom04#resultat_redovisning

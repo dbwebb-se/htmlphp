@@ -1,0 +1,10 @@
+   Inledning
+   ----------------------------
+   
+   * Om fusk
+       * https://dbwebb.se/kurser/faq/fusk-och-disciplinarende
+   * Om PHP 7.2 versus 7.3 array_key_first och EOD
+       * https://dbwebb.se/t/8761
+       * https://dbwebb.se/t/8783
+   * Om krav 5/6 i kmom05 multisida jetty (samt uppbyggnad av URL).
+       * https://dbwebb.se/t/8779

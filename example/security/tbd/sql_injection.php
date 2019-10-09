@@ -1,7 +1,6 @@
 <?php
 /**
- * Example to show off how security works with header injection through
- * $_SERVER.
+ * Example to show off how security works with SQL injection.
  *
  * Access this page using this url (modify to your environment):
  * ?page=../../composer.json
