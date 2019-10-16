@@ -26,3 +26,5 @@ $content = $_GET["content"] ?? null;
     <textarea><?= htmlentities($content) ?></textarea>
 </form>
 <p>Demo end.</p>
+
+/* */

@@ -20,3 +20,5 @@ $page = $_GET["page"] ?? null;
 <hr>
 <?= htmlentities($page) ?>
 <p>Demo end.</p>
+
+/* */
