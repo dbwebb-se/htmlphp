@@ -1,8 +1,8 @@
 Då tar vi kmom06, sedan är det bara projektet kvar.
 
-Jag kör en "dbwebb inspect", läser igenom redovisningstexten och slänger ett öga på dina taggar och commit-historik på GitHub.
+Jag kör en dbwebb inspect, läser igenom redovisningstexten och kollar att labben är utförd.
 
-Jag tittar på uppgiften om "innehåll i databasen" så att den ser okey ut i förhållande till specen.
+Jag tittar på uppgiften admin.php så den ser okey ut i förhållande till specen.
 
 Gott kämpat så här långt.
 
