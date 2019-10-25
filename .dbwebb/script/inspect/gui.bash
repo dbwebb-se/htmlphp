@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-VERSION="v1.4.3 (2019-09-06)"
+VERSION="v1.4.4 (2019-10-22)"
 
 # Include ./functions.bash
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
@@ -589,8 +589,13 @@ makeInspectDocker()
         DBWEBB_INSPECT_PID=
     fi
 
-    setsid make docker-run what="make inspect what=$kmom options='--yes'" > "$LOGFILE_INSPECT" 2>&1 &
-    DBWEBB_INSPECT_PID="$!"
+    if [ $OS_TERMINAL == "linux" ]; then
+        setsid make docker-run what="make inspect what=$kmom options='--yes'" > "$LOGFILE_INSPECT" 2>&1 &
+        DBWEBB_INSPECT_PID="$!"
+    else
+        make docker-run what="make inspect what=$kmom options='--yes'" > "$LOGFILE_INSPECT" 2>&1 &
+        DBWEBB_INSPECT_PID="$!"
+    fi
 
     #make docker-run what="make inspect what=$kmom options='--yes'" 2>&1  | tee -a "$LOGFILE"
 }
@@ -603,11 +608,12 @@ makeInspectDocker()
 makeDockerRunExtras()
 {
     local kmom="$1"
+    local acronym="$2"
 
     header "Docker Run Extra" | tee -a "$LOGFILE"
 
-    echo 'make docker-run-server container="server" what="bash .dbwebb/script/inspect/kmom.d/run.bash $kmom"' | tee -a "$LOGFILE"
-    make docker-run-server container="server" what="bash .dbwebb/script/inspect/kmom.d/run.bash $kmom" 2>&1 | tee -a "$LOGFILE"
+    echo 'make docker-run-server container="server" what="bash .dbwebb/script/inspect/kmom.d/run.bash $kmom $acronym"' | tee -a "$LOGFILE"
+    make docker-run-server container="server" what="bash .dbwebb/script/inspect/kmom.d/run.bash $kmom $acronym" 2>&1 | tee -a "$LOGFILE"
 }
 
 
@@ -714,7 +720,7 @@ main()
                 feedback "$kmom"
                 runPreExtras "$kmom"
                 makeInspectDocker "$kmom"
-                makeDockerRunExtras "$kmom"
+                makeDockerRunExtras "$kmom" "$acronym"
                 runPostExtras "$kmom"
                 pressEnterToContinue
                 ;;
@@ -734,7 +740,7 @@ main()
                 fi
                 runPreExtras "$kmom"
                 makeInspectDocker "$kmom"
-                makeDockerRunExtras "$kmom"
+                makeDockerRunExtras "$kmom" "$acronym"
                 runPostExtras "$kmom"
                 pressEnterToContinue
                 ;;

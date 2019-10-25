@@ -4,14 +4,15 @@
 #
 
 # Usage
-if (( $# != 1 )); then
-    printf "Usage: run.bash <kmom_number>\n"
+if (( $# != 2 )); then
+    printf "Usage: run.bash <kmom_number> <acronym>\n"
     exit 1
 fi
 
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
-KMOM=$1
+export KMOM="$1"
 export COURSE_REPO="$PWD"
+export ACRONYM="$2"
 
 if [[ ! -d "$DIR/$KMOM" ]]; then
     printf "No such directory '%s'\n" "$DIR/$KMOM"

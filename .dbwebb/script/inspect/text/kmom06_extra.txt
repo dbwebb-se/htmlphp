@@ -1,2 +1,3 @@
+FIX. Din admin fungerar inte och det kan bero på https://dbwebb.se/forum/viewtopic.php?f=12&t=8783.
 
-Jag tittade på din kmom05 inlämning i samband med att jag tittade på kmom06. Allt var i sin ordning.
+KOMMENTAR. Du gör DELETE via en GET form, det bborde varit ett POST form. Lägg det på minnet.
