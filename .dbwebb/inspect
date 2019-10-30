@@ -130,7 +130,7 @@ htmlphpkmom06()
 #
 htmlphpkmom10()
 {
-    inspectExercise "bmo" "htmlphp/kmom10" "" "" "-"
+    #inspectExercise "bmo" "htmlphp/kmom10" "" "" "-"
     
     inspectMe "me/kmom06/me6" "" "" ""
 }
