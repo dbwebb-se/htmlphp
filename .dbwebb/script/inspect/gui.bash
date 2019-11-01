@@ -669,17 +669,17 @@ feedback()
     local kmom="$1"
     local output
 
-    header "Feedback" | tee -a "$LOGFILE_TEXT"
+    header "Feedback" | tee "$LOGFILE_TEXT"
 
     output=$( eval echo "\"$( cat "$DIR/text/$kmom.txt" )"\" )
     #output=$(< "$DIR/text/$kmom.txt" )
-    printf "\n%s\n\n" "$output" | tee "$LOGFILE_TEXT"
+    printf "\n%s\n\n" "$output" | tee -a "$LOGFILE_TEXT"
     printf "%s" "$output" | eval $TO_CLIPBOARD
 
     if [[ -f "$DIR/text/${kmom}_extra.txt" ]]; then
         #output=$( eval echo "\"$( cat "$DIR/text/${kmom}_extra.txt" )"\" )
         output=$(< "$DIR/text/${kmom}_extra.txt" )
-        printf "\n\033[32;01m---> Vanliga feedbacksvar\033[0m\n\n%s\n\n" "$output" | tee "$LOGFILE_TEXT"
+        printf "\n\033[32;01m---> Vanliga feedbacksvar\033[0m\n\n%s\n\n" "$output" | tee -a "$LOGFILE_TEXT"
     fi
 }
 
