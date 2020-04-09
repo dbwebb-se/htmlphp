@@ -142,10 +142,41 @@ dbwebb validate lab6
 #
 # Inspect
 #
-#make inspect options="--yes --no-validate" what=kmom01
-#make inspect options="--yes --no-validate" what=kmom02
-#make inspect options="--yes --no-validate" what=kmom03
-#make inspect options="--yes --no-validate" what=kmom04
-#make inspect options="--yes --no-validate" what=kmom05
-#make inspect options="--yes --no-validate" what=kmom06
-#make inspect options="--yes --no-validate" what=kmom10
+# kmom01
+cp me/kmom01/lab1/answer.php /tmp/answer.php
+cp .dbwebb/lab/answer.php me/kmom01/lab1
+make inspect options="--yes --no-validate" what=kmom01
+mv /tmp/answer.php me/kmom01/lab1
+
+#kmom02
+cp me/kmom02/lab2/answer.php /tmp/answer.php
+cp .dbwebb/lab/answer.php me/kmom02/lab2
+make inspect options="--yes --no-validate" what=kmom02
+mv /tmp/answer.php me/kmom02/lab2
+
+# kmom03
+cp me/kmom03/lab3/answer.php /tmp/answer.php
+cp .dbwebb/lab/answer.php me/kmom03/lab3
+make inspect options="--yes --no-validate" what=kmom03
+mv /tmp/answer.php me/kmom03/lab3
+
+# kmom04
+cp me/kmom04/lab4/answer.php /tmp/answer.php
+cp .dbwebb/lab/answer.php me/kmom04/lab4
+make inspect options="--yes --no-validate" what=kmom04
+mv /tmp/answer.php me/kmom04/lab4
+
+# kmom05
+cp me/kmom05/lab5/answer.php /tmp/answer.php
+cp .dbwebb/lab/answer.php me/kmom05/lab5
+make inspect options="--yes --no-validate" what=kmom05
+mv /tmp/answer.php me/kmom05/lab5
+
+# kmom06
+cp me/kmom06/lab6/answer.php /tmp/answer.php
+cp .dbwebb/lab/answer.php me/kmom06/lab6
+make inspect options="--yes --no-validate" what=kmom06
+mv /tmp/answer.php me/kmom06/lab6
+
+# kmom10
+make inspect options="--yes --no-validate" what=kmom10
