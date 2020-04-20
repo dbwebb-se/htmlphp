@@ -3,6 +3,13 @@ Revision history
 
 
 
+v2.1.0 (2020-04-20)
+--------------------
+
+* Tag content of course repo from ht19, before making changes to ht20.
+
+
+
 v2.0.5 (2018-08-22)
 --------------------
 
