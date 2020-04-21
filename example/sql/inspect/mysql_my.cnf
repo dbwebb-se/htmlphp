@@ -1,0 +1,10 @@
+[client]
+#host = 127.0.0.1
+#host = mariadb
+host = mysql
+protocol = tcp
+#port = 13306
+
+[mysql]
+loose-local-infile = 1
+password = pass

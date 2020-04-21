@@ -3,6 +3,16 @@ Revision history
 
 
 
+v3.0.0 (2020-04-20)
+--------------------
+
+* Upgrade to latest version of gui.bash.
+* Update Makefile.
+* Update docker-compose.yaml.
+* Enable to work with MySQL, but do not use it.
+
+
+
 v2.1.0 (2020-04-20)
 --------------------
 
