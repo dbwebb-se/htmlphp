@@ -8,4 +8,4 @@ Allt är väl, så här långt. Kör på.
 
 $TEACHER_SIGNATURE
 
-PS. Glöm inte att fråga i forumet för mer utförliga svar på funderingar eller för feedback på kod och lösningar.
+PS. Glöm inte att fråga i Discord-chatten eller i GitHub issues (forum) för mer utförliga svar på funderingar eller för feedback på kod och lösningar.

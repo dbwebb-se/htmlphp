@@ -65,5 +65,3 @@ case $KMOM in
         eval "$BROWSER" "$url" &
     ;;
 esac
-
-echo
