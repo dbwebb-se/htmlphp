@@ -1,0 +1,158 @@
+/*
+ *ELEMENTS
+ **/
+
+main {
+    min-height: 30em;
+}
+
+html {
+    background-color: #181818;
+    overflow-y: scroll;
+}
+
+body {
+    margin: 8px auto;
+    padding: 8px;
+    width: 980px;
+    background-color: #202020;
+    border-radius: 10px;
+    border: #303030;
+}
+
+h1 {
+    color: #fff;
+}
+
+p {
+    color: #fff;
+}
+
+hr {
+    color: #303030;
+}
+
+ul {
+    color: #fff;
+}
+
+/*
+ * RESPONSIVE
+ **/
+
+@media (max-width: 980px) {
+    body {
+        width: auto;
+        background-color: yellow;
+    }
+}
+
+/*
+ *CLASSES
+ **/
+
+.me {
+    width: 400px;
+    float: left;
+}
+
+.me2 {
+    width: 400px;
+    float: right;
+}
+
+.site-header {
+    background-color: #181818;
+    overflow: auto; /* clear fix to make div span all elements */
+    border-radius: 10px;
+    margin-bottom: 8px;
+}
+
+.site-header img {
+    float: left;
+    border-radius: 8px;
+}
+
+.site-title {
+    display: block;
+    padding-top: 1em;
+    padding-left: 50px;
+    font-size: 32px;
+    overflow: auto;
+    color: #fff;
+}
+
+.site-slogan {
+    display: block;
+    padding-left: 50px;
+    font-style: italic;
+    overflow: auto;
+    color: #fff;
+}
+
+.navbar {
+    padding: 1em;
+    background-color: #181818;
+    border-radius: 8px;
+}
+
+.navbar a {
+    display: inline-block;
+    padding: 0.5em 1em;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #fff;
+}
+
+.navbar a:hover {
+    background-color: #eee;
+    text-decoration: underline;
+    color: #000;
+}
+
+.navbar .selected {
+    background-color: #ccc;
+}
+
+.site-footer {
+    clear: both;
+}
+
+.site-footer a {
+    display: inline-block;
+    padding: 0.2em 0.5em;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #fff;
+}
+
+.site-footer a:hover {
+    background-color: #eee;
+    text-decoration: underline;
+    color: #000;
+}
+
+.site-byline {
+    display: inline-block;
+    padding: 0.2em 0.5em;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #fff;
+}
+
+.site-byline a {
+    color: #fff;
+}
+
+.site-byline a:hover {
+    color: #000;
+    text-decoration: underline;
+}
+
+.me-small {
+    float: left;
+    padding: 0 20px 20px 0;
+}

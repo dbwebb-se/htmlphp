@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Lab 2 - htmlphp</title>
+<style>
+html {
+    overflow-y: scroll;
+}
+
+body {
+    margin: 8px auto;
+    max-width: 700px;
+}
+
+h2 {
+    line-height: 2.5em;
+    border-bottom: 1px solid #aaa;
+}
+
+h3 {
+    line-height: 2.5em;
+    border-bottom: 1px solid #ccc;
+}
+
+p {
+    margin-bottom: 22px;
+}
+
+div.answer {
+  font-family: "Courier New", monospace;
+  white-space: pre;
+  margin-bottom: 1em;
+}
+
+.fail {
+    color: red;
+}
+
+.success {
+    color: green;
+}
+
+.nopass {
+    color: olive;
+}
+
+.pass {
+    color: green;
+}
+
+.passdistinct {
+    color: DarkGoldenRod;
+}
+table, th, td {
+    border: 1px solid #666;
+}
+
+code {
+    background-color: #eee;
+    border: 1px solid #999;
+    padding: 1px;
+    font-size: larger;
+}
+
+pre code {
+    display: block;
+    background-color: #eee;
+    border: none;
+    border-left: 2px solid #999;
+    padding: 0.5em;
+    margin-bottom: 22px;
+}
+</style>
+</head>
+<body>
+
+<pre>
+18e881ac7345a2e1eaad8ab578f845ed
+htmlphp
+lab2
+v2
+makb20
+2020-09-13 13:57:35
+v4.0.0 (2019-03-05)
+</pre>
+
+<p><i>Generated 2020-09-13 15:57:35 by <a href="https://github.com/dbwebb-se/lab">dbwebb lab-utility</a> v4.0.0 (2019-03-05).</i></p>
+<hr>
+
+<h1>Lab 2 - htmlphp</h1>
+<p>If you need to peek at examples or just want to know more, take a look at the <a href="http://php.net/manual/en/langref.php">PHP manual</a>.</p>
+
+<p>Here you will find everything this lab will go through and much more.</p>
+
+
+<h2>1. Strings and basic string operations</h2>
+<p>The foundation for strings.</p>
+
+
+<h3>Exercise 1.1 (1 points)</h3>
+<p>Create a variable called <code>wordOne</code> and assign the word <code>"wind"</code> to it.</p>
+
+<p>Create another variable called <code>wordTwo</code> and assign the word <code>"kitten"</code> to it.</p>
+
+<p>Concatenate the two strings, and separate them by a hyphen <code>-</code>, into a new variable called <code>result</code>.</p>
+
+<p>Answer with the result-variable.</p>
+
+
+
+
+
+
+<h3>Exercise 1.2 (1 points)</h3>
+<p>Create a variable, <code>floatNumber</code>, and assign the value 89.14. Concatenate your variable <code>wordOne</code> with your variable <code>floatNumber</code>, separate the words with a <code>=</code>. Answer with the result.</p>
+
+
+
+
+
+
+<h3>Exercise 1.3 (1 points)</h3>
+<p>Create a variable, <code>intNumber</code>, and assign the value 286. Concatenate your variable <code>intNumber</code> with your variable <code>wordTwo</code>, separate the words with a space. Answer with the result.</p>
+
+
+
+
+
+
+<h3>Exercise 1.4 (1 points)</h3>
+<p>Create the string: <code>"There are 286 kitten's doing some wind."</code> by combining pure text with the values of your variables <code>wordOne</code>, <code>wordTwo</code> and <code>intNumber</code>. Store the resulting text in a variable <code>sentence</code>. Answer with the variable.</p>
+
+
+
+
+
+
+<h3>Exercise 1.5 (1 points)</h3>
+<p>Use <code>strlen()</code> to find the length of the variable <code>sentence</code>. Answer with the result.</p>
+
+
+
+
+
+
+<h3>Exercise 1.6 (1 points)</h3>
+<p>Use <code>substr()</code> to find the character at index 1 in the word <code>"pound"</code>. Answer with the result.</p>
+
+
+
+
+
+
+<h3>Exercise 1.7 (1 points)</h3>
+<p>Use <code>substr()</code> to find the two characters at index 3 and 4 in the word <code>"camel"</code>. Answer with the result.</p>
+
+
+
+
+
+
+<h3>Exercise 1.8 (1 points)</h3>
+<p>Use <code>strpos()</code> to find the first matching index of the character <code>l</code> in the word <code>"dolphin"</code>. Answer with the result.</p>
+
+
+
+
+
+
+<h3>Exercise 1.9 (1 points)</h3>
+<p>Use <code>strpos()</code> to find the first matching, (if any), index of the characters <code>xyz</code> in the word <code>"dolphin"</code>. Answer with the result.</p>
+
+
+
+
+
+
+
+<h2>2. Conditions, booleans, if, else and else if</h2>
+
+
+
+<h3>Exercise 2.1 (1 points)</h3>
+<p>Store the boolean result of the test: <code>389 is less than 259</code> in a variable. Answer with the variable.</p>
+
+
+
+
+
+
+<h3>Exercise 2.2 (1 points)</h3>
+<p>Answer with the boolean value of: <code>147 is larger than 148</code>.</p>
+
+
+
+
+
+
+<h3>Exercise 2.3 (1 points)</h3>
+<p>Sum up the numbers: 10, 10, 7, 2 and 10. Save the result in a variable called <code>totalSum</code>.</p>
+
+<p>Create an if/elseif-statement to see if <code>totalSum</code> is higher, lower or equal to 22.</p>
+
+<p>Answer with the corresponding result as a string: <code>"higher"</code>, <code>"lower"</code>, <code>"equal"</code>.</p>
+
+
+
+
+
+
+<h3>Exercise 2.4 (1 points)</h3>
+<p>Create an if-statement that checks if a value is between (or equal to) 25 and  38. Use the variable <code>totalSum</code> from last exercise to test the if-statement. Answer with a boolean <code>true</code> if the value is between the values, otherwise respond with <code>false</code>.</p>
+
+
+
+
+
+
+
+<h2>3. Iteration and loops</h2>
+<p>For-loops and while-loops.</p>
+
+
+<h3>Exercise 3.1 (1 points)</h3>
+<p>Create a while-loop that adds 6 to the number 29, 76 times. Use variables to store the numbers. Answer with the result.</p>
+
+
+
+
+
+
+<h3>Exercise 3.2 (1 points)</h3>
+<p>Create a while-loop that subtracts 5.64 from the number 629 until the number is between (not equal to) 40 and 50. Answer with the final result as a float, rounded to 2 decimals.</p>
+
+
+
+
+
+
+<h3>Exercise 3.3 (1 points)</h3>
+<p>Create a for-loop that iterates from 0 to (including) 17. Add the integer value for each iteration to a string and separate each item with a <code>,</code> (comma). Answer with the final string without an ending <code>,</code>.</p>
+
+
+
+
+
+
+
+<h2>4. Extra assignments</h2>
+<p>These questions are worth 3 points each. Solve them for extra points.</p>
+
+
+<h3>Exercise 4.1 (3 points)</h3>
+<p>Create a for-loop that goes through (and including) the numbers 40 to 50. If the current number is even, you should multiply it with PI and add it to a variable <code>res</code>. If the current number is odd, you should subtract the square root of it, from the variable <code>res</code>. If the current number ends with a zero, then ignore it. Answer with the final result of <code>res</code> and round it to the nearest higher integer value.</p>
+
+
+
+
+
+
+
+<hr>
+<code>18e881ac7345a2e1eaad8ab578f845ed</code>
+
+</body>
+</html>

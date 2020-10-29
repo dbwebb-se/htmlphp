@@ -1,0 +1,316 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Lab 3 - Htmlphp</title>
+<style>
+html {
+    overflow-y: scroll;
+}
+
+body {
+    margin: 8px auto;
+    max-width: 700px;
+}
+
+h2 {
+    line-height: 2.5em;
+    border-bottom: 1px solid #aaa;
+}
+
+h3 {
+    line-height: 2.5em;
+    border-bottom: 1px solid #ccc;
+}
+
+p {
+    margin-bottom: 22px;
+}
+
+div.answer {
+  font-family: "Courier New", monospace;
+  white-space: pre;
+  margin-bottom: 1em;
+}
+
+.fail {
+    color: red;
+}
+
+.success {
+    color: green;
+}
+
+.nopass {
+    color: olive;
+}
+
+.pass {
+    color: green;
+}
+
+.passdistinct {
+    color: DarkGoldenRod;
+}
+table, th, td {
+    border: 1px solid #666;
+}
+
+code {
+    background-color: #eee;
+    border: 1px solid #999;
+    padding: 1px;
+    font-size: larger;
+}
+
+pre code {
+    display: block;
+    background-color: #eee;
+    border: none;
+    border-left: 2px solid #999;
+    padding: 0.5em;
+    margin-bottom: 22px;
+}
+</style>
+</head>
+<body>
+
+<pre>
+d67da3abdc2ba6eafff341aaf4a5bdb9
+htmlphp
+lab3
+v2
+makb20
+2020-09-18 07:43:29
+v4.0.0 (2019-03-05)
+</pre>
+
+<p><i>Generated 2020-09-18 09:43:29 by <a href="https://github.com/dbwebb-se/lab">dbwebb lab-utility</a> v4.0.0 (2019-03-05).</i></p>
+<hr>
+
+<h1>Lab 3 - Htmlphp</h1>
+<p>If you need to peek at examples or just want to know more, take a look at the <a href="http://php.net/manual/en/langref.php">PHP Manual</a>.</p>
+
+<p>There you will find everything this lab will go through and much more.</p>
+
+
+<h2>1. Arrays - with numeric index</h2>
+
+
+
+<h3>Exercise 1.1 (1 points)</h3>
+<p>Create an array, called <code>countries</code> with the items: <code>[Russia, France, Norway]</code>.</p>
+
+<p>Answer with the second item in the array.</p>
+
+
+
+
+
+
+<h3>Exercise 1.2 (1 points)</h3>
+<p>Create a new array called <code>capitals</code> with the items: <code>[Moscow, Paris, Oslo]</code>.</p>
+
+<p>Answer with a string containing each country from the <code>countries</code>-array followed by the corresponding capital. Use the format <code>"country = capital, country = capital..."</code></p>
+
+
+
+
+
+
+<h3>Exercise 1.3 (1 points)</h3>
+<p>Create an array, called <code>numbers1</code> with the items: <code>[285, 11, 9.75, 9, 2216]</code>. Answer with the sum of the first two items.</p>
+
+
+
+
+
+
+<h3>Exercise 1.4 (1 points)</h3>
+<p>Use your arrays <code>numbers1</code> and <code>capitals</code> to change item at index 2 in <code>numbers1</code> to the item at index 0 in <code>capitals</code>. Answer with the array <code>numbers1</code>.</p>
+
+
+
+
+
+
+<h3>Exercise 1.5 (1 points)</h3>
+<p>Use your array <code>countries</code> and concatenate the first and the last item as a string. Separate the items with a hyphen <code>-</code> and answer with the result.</p>
+
+
+
+
+
+
+
+<h2>2. Arrays - with keys</h2>
+
+
+
+<h3>Exercise 2.1 (1 points)</h3>
+<p>Use your <code>countries</code> and <code>capitals</code> arrays and create another array called <code>keyArray</code>. The country should be the key and the capital should be the value. Answer with the new array. (hint: <code>"country" =&gt; "capital"</code>)</p>
+
+
+
+
+
+
+<h3>Exercise 2.2 (1 points)</h3>
+<p>Add the key <code>"Canada"</code> with the value <code>"Ottawa"</code> to your <code>keyArray</code>. Answer with the updated array.</p>
+
+
+
+
+
+
+<h3>Exercise 2.3 (1 points)</h3>
+<p>Answer with the value for the key <code>"France"</code>.</p>
+
+
+
+
+
+
+
+<h2>3. Arrays - built-in functions</h2>
+
+
+
+<h3>Exercise 3.1 (1 points)</h3>
+<p>Find the number of items in the array <code>[285, 11, 9.75, 9, 2216]</code>. Answer with the result as an integer.</p>
+
+
+
+
+
+
+<h3>Exercise 3.2 (1 points)</h3>
+<p>Sort the array <code>[285, 11, 9.75, 9, 2216]</code> in decending order. Make sure that it does maintain the key association. Answer with the sorted array.</p>
+
+
+
+
+
+
+<h3>Exercise 3.3 (1 points)</h3>
+<p>Use <code>pop()</code> on the array <code>[285, 11, 9.75, 9, 2216]</code> and answer with the popped item.</p>
+
+
+
+
+
+
+<h3>Exercise 3.4 (1 points)</h3>
+<p>Use <code>push()</code> on the array <code>[123, 25, 87.55, 2, 5466]</code> and insert the number 56. Answer with the resulting array.</p>
+
+
+
+
+
+
+<h3>Exercise 3.5 (1 points)</h3>
+<p>Copy your array <code>countries</code> to a new array called <code>newArray</code>. Use <code>shift()</code> on the new array and answer with the shifted item.</p>
+
+
+
+
+
+
+<h3>Exercise 3.6 (1 points)</h3>
+<p>Use <code>unshift()</code> on your <code>newArray</code> add the items <code>"North Dakota"</code> and <code>"Montana"</code> in the beginning of the array. Answer with the modified array.</p>
+
+
+
+
+
+
+<h3>Exercise 3.7 (1 points)</h3>
+<p>Reverse the order of the array <code>[285, 11, 9.75, 9, 2216]</code>. Answer with the modified array.</p>
+
+
+
+
+
+
+<h3>Exercise 3.8 (1 points)</h3>
+<p>Use <code>implode()</code> on your <code>capital</code>-array and answer with a string where each item is separated by a hyphen <code>-</code>.</p>
+
+
+
+
+
+
+
+<h2>4. Arrays - for-each loop</h2>
+
+
+
+<h3>Exercise 4.1 (1 points)</h3>
+<p>Create an array, called <code>numbers1</code> with the items: <code>[11, 4, 41, 67, 99, 22, 8, 83, 5, 16]</code>. Use a for-each loop to sum each item with 14 and put them in a new array called <code>summedNumbers1</code>. Answer with the new array.</p>
+
+
+
+
+
+
+<h3>Exercise 4.2 (1 points)</h3>
+<p>Create a new array called <code>numbers2</code> with the items <code>[10, 3, 45, 98, 4, 7, 56, 23, 3, 1]</code>. Use at least a for-each loop to add all numbers larger than 20 to a new array called <code>largeNumbers</code>. Answer with the new array.</p>
+
+
+
+
+
+
+<h3>Exercise 4.3 (1 points)</h3>
+<p>Create an array with the keys: <code>"one"</code>, <code>"two"</code>, <code>"three"</code>, <code>"four"</code> and <code>"five"</code> and the values: 1, 2, 3, 4, 5. Use a foreach-loop to add all keys and values to an array in the format: <code>["key"=value, "key"=value, etc]</code>. Use <code>implode()</code> to make the answer a string with all items separated by a comma <code>,</code>.</p>
+
+
+
+
+
+
+
+<h2>5. Switch-case</h2>
+<p><a href="http://se1.php.net/manual/en/control-structures.switch.php">PHP Manual about switch</a></p>
+
+
+<h3>Exercise 5.1 (1 points)</h3>
+<p>Create a switch-case statement to decide which continent a certain country resides in. Use the countries: <code>"Sweden, Brazil, China, Australia, Canada"</code> and the continents:<br />
+    <code>"Europe, South America, Asia, Oceania, North America"</code>.</p>
+
+<p>Answer with a test on the country: <code>"Canada"</code>.</p>
+
+
+
+
+
+
+
+<h2>6. Extra assignments</h2>
+<p>These questions are worth 3 points each. Solve them for extra points.</p>
+
+
+<h3>Exercise 6.1 (3 points)</h3>
+<p>A switch-case statement can handle multiple cases with the same result. Create a new switch-case statement that decides which is the corresponding continent. Use the countries: <code>"Sweden, Denmark, Finland, Brazil, China, Australia, Canada"</code> and the continents: <code>"Europe, South America, Asia, Oceania, North America"</code>.</p>
+
+<p>Answer with a test on the country: <code>"Finland"</code>.</p>
+
+
+
+
+
+
+<h3>Exercise 6.2 (3 points)</h3>
+<p>Sort the array <code>[123, 25, 87.55, 2, 5466]</code> in ascending order. Make sure that it does not maintain the key association. Answer with the sorted array.</p>
+
+
+
+
+
+
+
+<hr>
+<code>d67da3abdc2ba6eafff341aaf4a5bdb9</code>
+
+</body>
+</html>
