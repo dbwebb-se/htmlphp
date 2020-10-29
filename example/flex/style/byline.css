@@ -1,0 +1,28 @@
+/* Default */
+
+.byline {
+    margin: 1em;
+    padding: 1em;
+    width: 600px;
+    border: 1px solid black;
+}
+
+.byline img {
+    padding: 1em;
+}
+
+/* Float */
+
+.byline-float {
+    overflow: auto;
+}
+
+.byline-float a {
+    float: left;
+}
+
+/* Flex */
+
+.byline-flex {
+    display: flex;
+}

@@ -1,0 +1,44 @@
+/* Default style */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    max-width: 920px;
+}
+
+.navbar {
+    border: 1px solid black;
+    padding: 1em;
+    margin: 1em;
+}
+
+.navbar a {
+    padding: 0.5em 0;
+    margin: 0.5em 0;
+    border: 1px solid black;
+    text-align: center;
+}
+
+/* Float */
+
+.navbar-float {
+    overflow: auto;
+}
+
+.navbar-float a {
+    width: 33%;
+    float: left;
+}
+
+/* Flex */
+
+.navbar-flex {
+    display: flex;
+    justify-content: space-around;
+}
+
+.navbar-flex a {
+    width: 33%;
+}
