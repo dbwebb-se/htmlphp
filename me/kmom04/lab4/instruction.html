@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Lab 4 - Htmlphp</title>
+<style>
+html {
+    overflow-y: scroll;
+}
+
+body {
+    margin: 8px auto;
+    max-width: 700px;
+}
+
+h2 {
+    line-height: 2.5em;
+    border-bottom: 1px solid #aaa;
+}
+
+h3 {
+    line-height: 2.5em;
+    border-bottom: 1px solid #ccc;
+}
+
+p {
+    margin-bottom: 22px;
+}
+
+div.answer {
+  font-family: "Courier New", monospace;
+  white-space: pre;
+  margin-bottom: 1em;
+}
+
+.fail {
+    color: red;
+}
+
+.success {
+    color: green;
+}
+
+.nopass {
+    color: olive;
+}
+
+.pass {
+    color: green;
+}
+
+.passdistinct {
+    color: DarkGoldenRod;
+}
+table, th, td {
+    border: 1px solid #666;
+}
+
+code {
+    background-color: #eee;
+    border: 1px solid #999;
+    padding: 1px;
+    font-size: larger;
+}
+
+pre code {
+    display: block;
+    background-color: #eee;
+    border: none;
+    border-left: 2px solid #999;
+    padding: 0.5em;
+    margin-bottom: 22px;
+}
+</style>
+</head>
+<body>
+
+<pre>
+8bc75a290f173ac0503f5e6c48cb0667
+htmlphp
+lab4
+v2
+makb20
+2020-10-30 10:34:37
+v4.0.0 (2019-03-05)
+</pre>
+
+<p><i>Generated 2020-10-30 11:34:37 by <a href="https://github.com/dbwebb-se/lab">dbwebb lab-utility</a> v4.0.0 (2019-03-05).</i></p>
+<hr>
+
+<h1>Lab 4 - Htmlphp</h1>
+<p>If you need to peek at examples or just want to know more, take a look at the <a href="http://php.net/manual/en/langref.php">PHP Manual</a>.</p>
+
+<p>There you will find everything this lab will go through and much more.</p>
+
+
+<h2>1. Basic functions</h2>
+
+
+
+<h3>Exercise 1.1 (1 points)</h3>
+<p>Create a function called <code>sumNumbers()</code> that should take 2 numbers as arguments and return the sum of them.</p>
+
+<p>Answer with a call to the function using the numbers 318 and 485.</p>
+
+
+
+
+
+
+<h3>Exercise 1.2 (1 points)</h3>
+<p>Create a function called <code>sumArray()</code> that should take an array as argument and return the sum of all items in the array.</p>
+
+<p>Answer with a call to the function using the array: <code>[5,946,2,86,9]</code>.</p>
+
+
+
+
+
+
+<h3>Exercise 1.3 (1 points)</h3>
+<p>Create a function called <code>modArray()</code> that should take 2 arguments, an array and a string. Replace the first item in the array with the string and return the array.</p>
+
+<p>Answer with a call to the function using the arguments: <code>[4,256,5,13,1]</code> and <code>"leek"</code>.</p>
+
+
+
+
+
+
+<h3>Exercise 1.4 (1 points)</h3>
+<p>Create a function called <code>printRange()</code> that should take 2 numbers as arguments, start and stop. The function should add all even numbers between start and stop (not including) to an array and return it.</p>
+
+<p>Answer with a call to the function using the arguments: 20 and 44.</p>
+
+
+
+
+
+
+<h3>Exercise 1.5 (1 points)</h3>
+<p>Create a function called <code>combineArrays()</code> that takes two arrays as arguments. The function should combine the arrays to one associative array and return it. The first argument is the key and the second argument is the value.</p>
+
+<p>Answer with a call to the function using the arguments: <code>["green","brown","pink","white","gray","blue"]</code> and <code>["frog","bear","pig","lion","wolf","whale"]</code>.</p>
+
+
+
+
+
+
+<h3>Exercise 1.6 (1 points)</h3>
+<p>Create a function called <code>euroToDollar()</code> that takes one argument, the euro amount to convert to dollars. Count 1 Euro as 1.261215 dollars. Return the dollar amount of 541 Euros.</p>
+
+<p>Answer with the result as a double with 4 decimals.</p>
+
+
+
+
+
+
+<h3>Exercise 1.7 (1 points)</h3>
+<p>Create a function called <code>inRange()</code> that takes one argument. The function should return <code>true</code> if the argument is higher than 50 and lower than 100. If the number is out of range, the function should return <code>false</code>. The return type should be boolean.</p>
+
+<p>Use the argument 85 and answer with a call to the function.</p>
+
+
+
+
+
+
+<h3>Exercise 1.8 (1 points)</h3>
+<p>Create a function called <code>calculateArea()</code> that takes one argument, the diameter of a circle. The function should return the area of the circle, with 4 decimals.</p>
+
+<p>Answer with the result if the diameter is 20. ( hint: <code>pi()</code> )</p>
+
+
+
+
+
+
+<h3>Exercise 1.9 (1 points)</h3>
+<p>Create a function called <code>fibonacci()</code>. The function should use the <a href="http://en.wikipedia.org/wiki/Fibonacci_number">Fibbonacci Sequence</a>, starting with <code>1, 1, 2</code>. Return the sum of all odd numbers in the sequence, when the sequence value dont exceed 1.000.000.</p>
+
+<p>Answer with a call of the function. A Fibonacci-sequence can look like this: 1, 1, 2, 3, 5, 8, 13, 21, 34, 55 etc. You add the current value with the last, i.e. <code>1+2=3, 3+2=5, 5+3=8 etc</code>.</p>
+
+
+
+
+
+
+
+<h2>2. Extra assignments</h2>
+<p>These questions are worth 3 points each. Solve them for extra points.</p>
+
+
+<h3>Exercise 2.1 (3 points)</h3>
+<p>In this exercises you should use the former functions <code>sumArray()</code> and <code>calculateArea()</code>. Create a new function called <code>calculateMany()</code> that takes an array with numbers as argument. For every number in the array, call <code>calculateArea()</code> and store the result in a new array. The last position in your new array should hold the result of a call to the function <code>calculateArea()</code> where you pass the sum of the whole array, you passed as argument. All numbers in the resulting array should be rounded up to nearest integer. Loop through the array and convert all values to nearest higher integer value.</p>
+
+<p>Tip: <code>intval()</code>.
+Note: If your result seems correct but still fails, make sure your values are of the type Integer and not Float.</p>
+
+<p>Answer with a call to <code>calculateMany()</code> with the array <code>7, 47, 19, 46, 14</code>.</p>
+
+
+
+
+
+
+
+<hr>
+<code>8bc75a290f173ac0503f5e6c48cb0667</code>
+
+</body>
+</html>
