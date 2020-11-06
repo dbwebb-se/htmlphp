@@ -2,10 +2,15 @@
  * ELEMENTS
  **/
 
-main {
+* {
+    box-sizing: border-box;
+}
+
+.multipage {
     min-height: 30em;
-    width: 70%;
     float: left;
+    width: 70%;
+    padding-left: 8px;
 }
 
 html {
@@ -20,6 +25,11 @@ body {
     background-color: #202020;
     border-radius: 10px;
     border: #303030;
+}
+
+main {
+    min-height: 30em;
+    float: left;
 }
 
 h1,
@@ -45,26 +55,20 @@ pre {
     color: lime;
 }
 
-aside {
-    width: 29%;
-    float: left;
-    margin-right: 1%;
-    background-color: #181818;
-    border-radius: 8px;
-}
-
 /*
  * CLASSES
  **/
 
 .me {
-    width: 400px;
+    width: 200px;
     float: left;
+    margin: 0.2em 0.5em;
 }
 
 .me2 {
-    width: 400px;
+    width: 200px;
     float: right;
+    margin: 0.5em;
 }
 
 .list-link-lime {
@@ -145,16 +149,55 @@ aside {
     color: #000;
 }
 
+.site-byline {
+    float: inline-end;
+}
+
 .site-byline a {
     color: #fff;
 }
 
 .site-byline a:hover {
-    color: #000;
+    color: lime;
     text-decoration: underline;
 }
 
 .me-small {
     float: left;
     padding: 0 20px 20px 0;
+}
+
+aside.multipage-nav {
+    width: 30%;
+    float: left;
+    background-color: #181818;
+    padding: 0.5em 1em;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #fff;
+    margin-top: 8px;
+}
+
+aside.multipage-nav a {
+    display: inline-block;
+    padding: 0.5em 1em;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #fff;
+}
+
+aside.multipage-nav a:hover {
+    background-color: #eee;
+    text-decoration: underline;
+    color: #000;
+}
+
+aside.multipage-nav a.selected {
+    background-color: #ccc;
+}
+
+.debug {
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    hyphens: auto;
 }

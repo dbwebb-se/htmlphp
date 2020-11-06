@@ -7,6 +7,3 @@
     <li><a class="list-link-lime" href="?page=print-get&amp;parameter1=value1&amp;parameter2=value2">parameter1=value1, parameter2=value2</a></li>
     <li><a class="list-link-lime" href="?page=print-get&amp;parameter1=value1&amp;parameter3">parameter1=value1, parameter3 (without value)</a></li>
 </ul>
-<?php
-include(__DIR__ . "/../debug.php");
-?>

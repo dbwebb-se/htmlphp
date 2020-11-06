@@ -1,6 +1,7 @@
 <?php
 
 $page = null;
+$pages = null;
 $pageReference = null;
 $defaultPage = "me.php";
 

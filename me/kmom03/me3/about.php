@@ -1,11 +1,11 @@
 <?php
-include(__DIR__ . "/view/layout/multipage.php");
+include(__DIR__ . "/view/layout/multipage-top.php");
 ?>
 <main>
     <article>
         <header>
             <h1>Marcus Klingborg</h1>
-            <p class="author">Uppdaterad <time datetime="2020-09-13 19:22:46">13:e september 2020</time> av Marcus Klingborg</p>
+            <p class="author">Uppdaterad <time datetime="2020-10-29 14:58:46">13:e september 2020</time> av Marcus Klingborg</p>
         </header>
         <p>
             <a href="http://jigsaw.w3.org/css-validator/check/referer">
@@ -20,3 +20,7 @@ include(__DIR__ . "/view/layout/multipage.php");
             som på något magiskt vis alltid har svar på alla olika möljiga tech-relaterade problem, ooch uppskatta  mitt numera rena tangentbord
             som innehöll långt mer katthår än vad jag trodde var möjligt.</p>
         <p>Funderar på vilken information jag egentligen ska ha här...</p>
+
+<?php
+include(__DIR__ . "/view/byline.php");
+include(__DIR__ . "/view/layout/multipage-bottom.php");

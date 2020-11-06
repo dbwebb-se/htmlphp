@@ -56,13 +56,22 @@ $dbwebb = new Dbwebb();
  *
  * Write your code below and put the answer into the variable ANSWER.
  */
+$number1 = 318;
+$number2 = 485;
+
+function sumNumbers($number1, $number2)
+{
+    $correct = $number1 + $number2;
+    return $correct;
+};
+
+$correct = sumNumbers($number1, $number2);
 
 
 
 
 
-
-$ANSWER = "Replace this text with the variable holding the answer.";
+$ANSWER = $correct;
 
 // I will now test your answer - change false to true to get a hint.
 echo $dbwebb->assertEqual("1.1", $ANSWER, false);
@@ -78,12 +87,17 @@ echo $dbwebb->assertEqual("1.1", $ANSWER, false);
  * Write your code below and put the answer into the variable ANSWER.
  */
 
+$myArray = [5, 946, 2, 86, 9];
 
+function sumArray($myArray)
+{
+    $correct = array_sum($myArray);
+    return $correct;
+};
 
+$correct = sumArray($myArray);
 
-
-
-$ANSWER = "Replace this text with the variable holding the answer.";
+$ANSWER = $correct;
 
 // I will now test your answer - change false to true to get a hint.
 echo $dbwebb->assertEqual("1.2", $ANSWER, false);
@@ -100,13 +114,19 @@ echo $dbwebb->assertEqual("1.2", $ANSWER, false);
  *
  * Write your code below and put the answer into the variable ANSWER.
  */
+$myArray = [4, 256, 5, 13, 1];
+$myString = "leek";
 
+function modArray($myArray, $myString)
+{
+    $myArray[0] = $myString;
+    $correct = $myArray;
+    return $correct;
+};
 
+$correct = modArray($myArray, $myString);
 
-
-
-
-$ANSWER = "Replace this text with the variable holding the answer.";
+$ANSWER = $correct;
 
 // I will now test your answer - change false to true to get a hint.
 echo $dbwebb->assertEqual("1.3", $ANSWER, false);
@@ -123,12 +143,24 @@ echo $dbwebb->assertEqual("1.3", $ANSWER, false);
  * Write your code below and put the answer into the variable ANSWER.
  */
 
+$number1 = 20;
+$number2 = 44;
 
+function printRange($start, $stop)
+{
+    $myArray = [];
+    while ($start < ($stop -1)) {
+        $start = $start + 1;
+        if ($start % 2 === 0) {
+            array_push($myArray, $start);
+        }
+    };
+    return $myArray;
+}
 
+$correct = printRange($number1, $number2);
 
-
-
-$ANSWER = "Replace this text with the variable holding the answer.";
+$ANSWER = $correct;
 
 // I will now test your answer - change false to true to get a hint.
 echo $dbwebb->assertEqual("1.4", $ANSWER, false);
@@ -148,12 +180,18 @@ echo $dbwebb->assertEqual("1.4", $ANSWER, false);
  * Write your code below and put the answer into the variable ANSWER.
  */
 
+$myColours = ["green","brown","pink","white","gray","blue"];
+$myAnimals = ["frog","bear","pig","lion","wolf","whale"];
 
+function combineArrays($myColours, $myAnimals)
+{
+    $correct = array_combine($myColours, $myAnimals);
+    return $correct;
+};
 
+$correct = combineArrays($myColours, $myAnimals);
 
-
-
-$ANSWER = "Replace this text with the variable holding the answer.";
+$ANSWER = $correct;
 
 // I will now test your answer - change false to true to get a hint.
 echo $dbwebb->assertEqual("1.5", $ANSWER, false);
@@ -169,13 +207,19 @@ echo $dbwebb->assertEqual("1.5", $ANSWER, false);
  *
  * Write your code below and put the answer into the variable ANSWER.
  */
+$euro = 541;
+
+function euroToDollar($euro)
+{
+    $exchangeRate = 1.261215;
+    $dollar = round($euro * $exchangeRate, 4);
+    return $dollar;
+};
+
+$correct = euroToDollar($euro);
 
 
-
-
-
-
-$ANSWER = "Replace this text with the variable holding the answer.";
+$ANSWER = $correct;
 
 // I will now test your answer - change false to true to get a hint.
 echo $dbwebb->assertEqual("1.6", $ANSWER, false);
@@ -193,12 +237,19 @@ echo $dbwebb->assertEqual("1.6", $ANSWER, false);
  * Write your code below and put the answer into the variable ANSWER.
  */
 
+$testArgument = 85;
 
+function inRange($arg)
+{
+    if ($arg > 50 and $arg < 100) {
+        return true;
+    };
+    return false;
+};
 
+$correct = inRange($testArgument);
 
-
-
-$ANSWER = "Replace this text with the variable holding the answer.";
+$ANSWER = $correct;
 
 // I will now test your answer - change false to true to get a hint.
 echo $dbwebb->assertEqual("1.7", $ANSWER, false);
@@ -215,12 +266,19 @@ echo $dbwebb->assertEqual("1.7", $ANSWER, false);
  * Write your code below and put the answer into the variable ANSWER.
  */
 
+$circleDiameter = 20;
+
+function calculateArea($circleDiameter)
+{
+    $radius = $circleDiameter / 2;
+    $area = round(($radius * $radius) * pi(), 4);
+    return $area;
+};
+
+$correct = calculateArea($circleDiameter);
 
 
-
-
-
-$ANSWER = "Replace this text with the variable holding the answer.";
+$ANSWER = $correct;
 
 // I will now test your answer - change false to true to get a hint.
 echo $dbwebb->assertEqual("1.8", $ANSWER, false);
@@ -240,12 +298,28 @@ echo $dbwebb->assertEqual("1.8", $ANSWER, false);
  * Write your code below and put the answer into the variable ANSWER.
  */
 
+function fibonacci()
+{
+    $myArray = [];
+    $numberBefore = 0;
+    $currentNumber = 1;
+    $nextNumber = 0;
+    while ($currentNumber <= 1000000) {
+        if ($currentNumber % 2 === 1) {
+            array_push($myArray, $currentNumber);
+        };
+        $nextNumber = $numberBefore + $currentNumber;
+        $numberBefore = $currentNumber;
+        $currentNumber = $nextNumber;
+    };
+    $correct = array_sum($myArray);
+    return $correct;
+};
+
+$correct = fibonacci();
 
 
-
-
-
-$ANSWER = "Replace this text with the variable holding the answer.";
+$ANSWER = $correct;
 
 // I will now test your answer - change false to true to get a hint.
 echo $dbwebb->assertEqual("1.9", $ANSWER, false);
@@ -280,16 +354,35 @@ echo $dbwebb->assertEqual("1.9", $ANSWER, false);
  *
  * Write your code below and put the answer into the variable ANSWER.
  */
+$testArray = [7, 47, 19, 46, 14];
+
+function calculateMany($numberArray)
+{
+    $returnArray = [];
+    foreach ($numberArray as $value) {
+        $area = calculateArea($value);
+        array_push($returnArray, $area);
+    };
+    $lastItem = array_sum($numberArray);
+    $area = calculateArea($lastItem);
+    array_push($returnArray, $area);
+
+    $counter = 0;
+    foreach ($returnArray as $value) {
+        $roundValue = ceil($value);
+        $returnArray[$counter] = intval($roundValue);
+        $counter = $counter + 1;
+    };
+    return $returnArray;
+};
+
+$correct = calculateMany($testArray);
 
 
-
-
-
-
-$ANSWER = "Replace this text with the variable holding the answer.";
+$ANSWER = $correct;
 
 // I will now test your answer - change false to true to get a hint.
-echo $dbwebb->assertEqual("2.1", $ANSWER, false);
+echo $dbwebb->assertEqual("2.1", $ANSWER, true);
 
 
 // Wrap it up
