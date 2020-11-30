@@ -11,7 +11,7 @@
 #   $REDOVISA_HTTP_POSTFIX
 #   eval "$BROWSER" "$url" &
 #
-printf ">>> -------------- Post (all kmoms) ---------------------\n"
+#printf ">>> -------------- Post (all kmoms) ---------------------\n"
 
 # # Open localhost:1337 in browser
 # printf "Open localhost:1337/eshop/index in browser\n"
