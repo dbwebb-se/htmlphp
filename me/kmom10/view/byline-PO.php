@@ -3,8 +3,7 @@
 $db = connectToDb($_SESSION["dsn"]);
 
 // Prepare SQL statement
-
-$sql = "SELECT data FROM object WHERE id LIKE 8";
+$sql = "SELECT data FROM article WHERE id LIKE 27";
 $stmt = $db->prepare($sql);
 
 
@@ -13,4 +12,3 @@ $stmt->execute();
 
 // Get result and print it.
 $res = $stmt->fetchColumn();
-print_r($res);

@@ -4,7 +4,7 @@ $db = connectToDb($_SESSION["dsn"]);
 
 // Prepare SQL statement
 
-$sql = "SELECT * FROM object WHERE id LIKE 12";
+$sql = "SELECT data FROM object WHERE id LIKE 12";
 $stmt = $db->prepare($sql);
 
 
@@ -12,5 +12,5 @@ $stmt = $db->prepare($sql);
 $stmt->execute();
 
 // Get result and print it.
-$res = $stmt->fetchAll();
+$res = $stmt->fetchColumn();
 print_r($res);

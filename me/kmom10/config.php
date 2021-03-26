@@ -14,6 +14,11 @@ $filename = __DIR__ . "/db/nvm2.sqlite";
 $dsn = "sqlite:$filename";
 $_SESSION["dsn"] = $dsn;
 
+// Create a DSN for the database using its filename.
+$filename = __DIR__ . "/db/nvm.sqlite";
+$dsn = "sqlite:$filename";
+$_SESSION["dsn"] = $dsn;
+
 $siteNavbar = [
     ["controller" => "index.php",       "text" => "Hem"],
     ["controller" => "nvm.php",         "text" => "Om Museét"],
@@ -64,4 +69,11 @@ $meNavbar = [
     "kmom05" => "kmom05",
     "kmom06" => "kmom06",
     "kmom07" => "kmom10",
+];
+
+$mediaNavbar = [
+    "media"         => "media",
+    "press20100912" => "press20100912",
+    "nvm-online"    => "nvm-online",
+    "nvm"           => "nvm"
 ];
