@@ -1,0 +1,49 @@
+{
+    "details": "Generated for makb20 at 2021-03-18 21:53:30.",
+    "key": "e51afa8e1284c645048bf21ad0478c13",
+    "summary": {
+        "questions": 8,
+        "points": 10,
+        "pass": 7,
+        "passdistinct": 10
+    },
+    "points": {
+        "1.1": 1,
+        "1.2": 1,
+        "1.3": 1,
+        "1.4": 1,
+        "1.5": 1,
+        "1.6": 1,
+        "1.7": 1,
+        "2.1": 3
+    },
+    "answers": {
+        "1.1": [
+            "Orlando",
+            "Emilia"
+        ],
+        "1.2": "Nicolas Cage",
+        "1.3": 3932,
+        "1.4": 15,
+        "1.5": "Sweden",
+        "1.6": 1954,
+        "1.7": "New York City",
+        "2.1": [
+            "Aniston Jennifer",
+            "Blanchett Cate",
+            "Bloom Orlando",
+            "Cage Nicolas",
+            "Carrey Jim",
+            "Clarke Emilia",
+            "Connery Sean",
+            "De Niro Robert",
+            "Depp Johnny",
+            "Garbo Greta",
+            "Hanks Tom",
+            "Hepburn Audrey",
+            "Johansson Scarlett",
+            "Loren Sophia",
+            "Nicholson Jack"
+        ]
+    }
+}
