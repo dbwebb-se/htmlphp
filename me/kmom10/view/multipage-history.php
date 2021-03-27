@@ -15,8 +15,6 @@ if (is_readable($file)) {
 }
 
 ?>
-<p> multi väg</p>
-
 <div class="wrap-main">
     <aside class="multipage-nav">
         <nav>

@@ -10,7 +10,8 @@
 }
 
 html {
-    background-color: #181818;
+    background-color: rgb(210, 241, 220);
+    background-image: url(/../img/orig/);
     overflow-y: scroll;
 }
 

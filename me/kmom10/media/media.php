@@ -1,3 +1,3 @@
 <?php
 
-printArticle('article', 28);
+printArticle('article', 26);
