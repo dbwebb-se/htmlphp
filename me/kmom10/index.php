@@ -6,4 +6,4 @@ include(__DIR__ . "/view/index.php");
 include(__DIR__ . "/view/layout/multipage-bot.php");
 
 // Set page Title.
-$title = "Hem";
+$title = "Hem | Nättraby Vägmuseum";

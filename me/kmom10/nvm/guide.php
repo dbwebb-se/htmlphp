@@ -1,2 +1,3 @@
-?>
-<p>Guide</p>
+<?php
+
+printArticle('article', 29);

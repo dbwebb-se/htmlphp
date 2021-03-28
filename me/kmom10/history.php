@@ -5,4 +5,4 @@ include(__DIR__ . "/view/multipage-history.php");
 include(__DIR__ . "/view/layout/multipage-bot.php");
 
 // Set page Title.
-$title = "Historia";
+$title = "Historia | Nättraby Vägmuseum";

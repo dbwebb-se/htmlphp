@@ -1,1 +1,3 @@
-<p>mep</p>
+<?php
+
+printArticle('article', 34);

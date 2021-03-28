@@ -1,3 +1,3 @@
 <?php
 
-printArticle('article', 99999);
+printArticle('article', 33);

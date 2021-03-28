@@ -5,4 +5,4 @@ include(__DIR__ . "/view/multipage-media.php");
 include(__DIR__ . "/view/layout/multipage-bot.php");
 
 // Set page Title.
-$title = "Media";
+$title = "Media | Nättraby Vägmuseum";

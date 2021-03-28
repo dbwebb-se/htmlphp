@@ -1,7 +1,5 @@
 <?php
 
-$siteTitle = " | Nättraby Vägmuseum";
-
 // Create a Session.
 $name_mcvk = preg_replace("/[^a-z\d]/i", "", __DIR__);
 
@@ -57,13 +55,9 @@ $nvmNavbar = [
 ];
 
 $meNavbar = [
-    "kmom01" => "kmom01",
-    "kmom02" => "kmom02",
-    "kmom03" => "kmom03",
-    "kmom04" => "kmom04",
-    "kmom05" => "kmom05",
-    "kmom06" => "kmom06",
-    "kmom07" => "kmom10",
+    "me" => "me",
+    "kodstruktur" => "kodstruktur",
+    "redovisning" => "redovisning"
 ];
 
 $mediaNavbar = [

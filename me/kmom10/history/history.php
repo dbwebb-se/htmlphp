@@ -1,2 +1,3 @@
-?>
-<p>historia</p>
+<?php
+
+printArticle('article', 23);

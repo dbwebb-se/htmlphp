@@ -1,1 +1,3 @@
-<p>roadrail</p>
+<?php
+
+printArticle('article', 20);

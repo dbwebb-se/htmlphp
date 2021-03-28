@@ -4,7 +4,6 @@ $uri = $_SERVER["REQUEST_URI"];
 $uriFile = basename($uri);
 
 $navbar = $siteNavbar ?? [];
-
 ?>
 
 <nav class="navbar">

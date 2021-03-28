@@ -5,4 +5,4 @@ include(__DIR__ . "/view/multipage-road-rail.php");
 include(__DIR__ . "/view/layout/multipage-bot.php");
 
 // Set page Title.
-$title = "Vägar";
+$title = "Vägar | Nättraby Vägmuseum";

@@ -32,43 +32,44 @@ function printArticle($article, $id)
     $res = $stmt->fetchColumn();
     print_r($res);
 
-    // Prepare SQL statement
-    $sql2 = "SELECT author FROM $article WHERE id LIKE $id";
-    $stmt2 = $db->prepare($sql2);
+    if ($id !== 32) {
+        // Prepare SQL statement
+        $sql2 = "SELECT author FROM $article WHERE id LIKE $id";
+        $stmt2 = $db->prepare($sql2);
 
-    // Execute SQL statement.
-    $stmt2->execute();
+        // Execute SQL statement.
+        $stmt2->execute();
 
-    // Get result and print it.
-    $res2 = $stmt2->fetchColumn();
+        // Get result and print it.
+        $res2 = $stmt2->fetchColumn();
 
-    // Determines which byline to insert.
-    switch ($res2) {
-        case "Peter Öjerskog":
-            // Prepare SQL statement
-            $sql = "SELECT data FROM article WHERE id LIKE 27";
-            $stmt = $db->prepare($sql);
+        // Determines which byline to insert.
+        switch ($res2) {
+            case "Peter Öjerskog":
+                // Prepare SQL statement
+                $sql = "SELECT data FROM article WHERE id LIKE 27";
+                $stmt = $db->prepare($sql);
 
-            // Execute SQL statement.
-            $stmt->execute();
+                // Execute SQL statement.
+                $stmt->execute();
 
-            // Get result and print it.
-            $res = $stmt->fetchColumn();
-            echo "<hr>";
-            print_r($res);
-            break;
-        case "Marcus Klingborg":
-            // Prepare SQL statement
-            $sql = "SELECT data FROM article WHERE id LIKE 28";
-            $stmt = $db->prepare($sql);
+                // Get result and print it.
+                $res = $stmt->fetchColumn();
+                echo "<br>";
+                print_r($res);
+                break;
+            case "Marcus Klingborg":
+                // Prepare SQL statement
+                $sql = "SELECT data FROM article WHERE id LIKE 28";
+                $stmt = $db->prepare($sql);
 
-            // Execute SQL statement.
-            $stmt->execute();
+                // Execute SQL statement.
+                $stmt->execute();
 
-            // Get result and print it.
-            $res = $stmt->fetchColumn();
-            echo "<hr>";
-            print_r($res);
-            break;
+                // Get result and print it.
+                $res = $stmt->fetchColumn();
+                echo "<hr>";
+                print_r("<div class='byline'>" . $res . "</div>");
+        }
     }
 }
