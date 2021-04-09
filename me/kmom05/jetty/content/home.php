@@ -1,6 +1,6 @@
 <?php
 
-if (is_null($_SESSION["db_chk"])) {
+if (is_null($_SESSION["dbChk"])) {
     echo '<p>Please connect to make anything happen.</p>';
 } else {
 

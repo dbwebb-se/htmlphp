@@ -7,11 +7,11 @@ if (is_null($_SESSION["dbChk"])) {
                 <p>Du är inte uppkopplad till Databasen!</p>';
 } else {
     $pages = [
-        "admin" => "Admin",
-        "create" => "Create",
-        "update" => "Update",
-        "delete" => "Delete",
-        "init" => "Init"
+        "admin" => "admin",
+        "create" => "create",
+        "update" => "update",
+        "delete" => "delete",
+        "init" => "init"
     ];
     $text = "";
 

@@ -6,7 +6,7 @@ $pages = [
 ];
 $text = "";
 
-$page = $_GET["page"] ?? "404";
+$page = $_GET["page"] ?? "session-information";
 $page = $pages[$page] ?? null;
 
 $file = $page["file"] ?? null;

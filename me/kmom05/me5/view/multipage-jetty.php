@@ -9,19 +9,19 @@ if (is_null($_SESSION["dbChk"])) {
                 <p>Du är inte uppkopplad till Databasen!</p>';
 } else {
     $pages = [
-        "index" => "Home",
-        "a" => "A",
-        "b" => "B",
+        "home" => "home",
+        "a" => "a",
+        "b" => "b",
     ];
     $text = "";
 
-    $page = $_GET["page"] ?? "index";
+    $page = $_GET["page"] ?? "404";
     $page = $pages[$page] ?? null;
 
     $file = $page["file"] ?? null;
     $request = $page["request"] ?? null;
 
-    $file = __DIR__ . "/../content/${page}.php";
+    $file = __DIR__ . "/../jetty/${page}.php";
 
     if (is_readable($file)) {
         $text = file_get_contents($file);
@@ -37,8 +37,7 @@ if (is_null($_SESSION["dbChk"])) {
                         $selected = $page === $key ?
                         "selected": null;
                         ?>
-                        <a href="?page=<?= $key ?>"
-                        class="<?= $selected ?? null ?>"><?=
+                        <a href="?page=<?= $key ?>" class="<?= $selected ?? null ?>"><?=
                         $value ?></a>
                     <?php endforeach; ?>
                 </ul>
@@ -53,7 +52,7 @@ if (is_null($_SESSION["dbChk"])) {
                     if (is_readable($file)) {
                         include($file);
                     } else {
-                        echo "Multipage view: 404";
+                        include(__DIR__ . "/../jetty/home.php");
                     }
                     ?>
                 </article>

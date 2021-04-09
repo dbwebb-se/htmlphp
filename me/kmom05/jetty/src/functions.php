@@ -45,11 +45,6 @@ function sessionDestroy()
             $params["httponly"]
         );
     }
-
-    session_destroy($dsn);
-
-    $db = new PDO($dsn);
-    $db->close();
 };
 
 function printJettyResultsetToHTMLTable($res)

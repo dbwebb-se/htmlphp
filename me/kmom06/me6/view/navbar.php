@@ -1,5 +1,8 @@
 <?php
-    $navbar = $siteNavbar ?? [];
+
+$uri = $_SERVER["REQUEST_URI"];
+$uriFile = basename($uri);
+$navbar = $siteNavbar ?? [];
 
 ?>
 

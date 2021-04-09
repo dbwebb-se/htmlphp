@@ -1,7 +1,7 @@
 <?php
 
 // Checks if connected
-if (is_null($_SESSION["db_chk"])) {
+if (is_null($_SESSION["dbChk"])) {
     echo '<div id="content">
                 <button onclick="window.location.href=\'\connect.php\'">
                     Connect
@@ -9,13 +9,13 @@ if (is_null($_SESSION["db_chk"])) {
                 <p>Du är inte uppkopplad till Databasen!</p>';
 } else {
     $pages = [
-        "index" => "Home",
-        "a" => "A",
-        "b" => "B",
+        "home" => "home",
+        "a" => "a",
+        "b" => "b",
     ];
     $text = "";
 
-    $page = $_GET["page"] ?? "index";
+    $page = $_GET["page"] ?? "home";
     $page = $pages[$page] ?? null;
 
     $file = $page["file"] ?? null;

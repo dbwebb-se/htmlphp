@@ -1,0 +1,141 @@
+{
+    "soklista": {
+        "listnamn": "lan",
+        "sokdata": [
+            {
+                "antal_ledigajobb": 740,
+                "antal_platsannonser": 423,
+                "id": 10,
+                "namn": "Blekinge l\u00e4n"
+            },
+            {
+                "antal_ledigajobb": 1628,
+                "antal_platsannonser": 816,
+                "id": 20,
+                "namn": "Dalarnas l\u00e4n"
+            },
+            {
+                "antal_ledigajobb": 178,
+                "antal_platsannonser": 104,
+                "id": 9,
+                "namn": "Gotlands l\u00e4n"
+            },
+            {
+                "antal_ledigajobb": 1135,
+                "antal_platsannonser": 694,
+                "id": 21,
+                "namn": "G\u00e4vleborgs l\u00e4n"
+            },
+            {
+                "antal_ledigajobb": 1714,
+                "antal_platsannonser": 873,
+                "id": 13,
+                "namn": "Hallands l\u00e4n"
+            },
+            {
+                "antal_ledigajobb": 934,
+                "antal_platsannonser": 437,
+                "id": 23,
+                "namn": "J\u00e4mtlands l\u00e4n"
+            },
+            {
+                "antal_ledigajobb": 2556,
+                "antal_platsannonser": 1396,
+                "id": 6,
+                "namn": "J\u00f6nk\u00f6pings l\u00e4n"
+            },
+            {
+                "antal_ledigajobb": 1096,
+                "antal_platsannonser": 699,
+                "id": 8,
+                "namn": "Kalmar l\u00e4n"
+            },
+            {
+                "antal_ledigajobb": 1360,
+                "antal_platsannonser": 786,
+                "id": 7,
+                "namn": "Kronobergs l\u00e4n"
+            },
+            {
+                "antal_ledigajobb": 1561,
+                "antal_platsannonser": 683,
+                "id": 25,
+                "namn": "Norrbottens l\u00e4n"
+            },
+            {
+                "antal_ledigajobb": 7471,
+                "antal_platsannonser": 4179,
+                "id": 12,
+                "namn": "Sk\u00e5ne l\u00e4n"
+            },
+            {
+                "antal_ledigajobb": 19872,
+                "antal_platsannonser": 11411,
+                "id": 1,
+                "namn": "Stockholms l\u00e4n"
+            },
+            {
+                "antal_ledigajobb": 1523,
+                "antal_platsannonser": 806,
+                "id": 4,
+                "namn": "S\u00f6dermanlands l\u00e4n"
+            },
+            {
+                "antal_ledigajobb": 2230,
+                "antal_platsannonser": 1338,
+                "id": 3,
+                "namn": "Uppsala l\u00e4n"
+            },
+            {
+                "antal_ledigajobb": 1332,
+                "antal_platsannonser": 691,
+                "id": 17,
+                "namn": "V\u00e4rmlands l\u00e4n"
+            },
+            {
+                "antal_ledigajobb": 1263,
+                "antal_platsannonser": 687,
+                "id": 24,
+                "namn": "V\u00e4sterbottens l\u00e4n"
+            },
+            {
+                "antal_ledigajobb": 1078,
+                "antal_platsannonser": 654,
+                "id": 22,
+                "namn": "V\u00e4sternorrlands l\u00e4n"
+            },
+            {
+                "antal_ledigajobb": 1636,
+                "antal_platsannonser": 855,
+                "id": 19,
+                "namn": "V\u00e4stmanlands l\u00e4n"
+            },
+            {
+                "antal_ledigajobb": 11550,
+                "antal_platsannonser": 6471,
+                "id": 14,
+                "namn": "V\u00e4stra G\u00f6talands l\u00e4n"
+            },
+            {
+                "antal_ledigajobb": 1539,
+                "antal_platsannonser": 861,
+                "id": 18,
+                "namn": "\u00d6rebro l\u00e4n"
+            },
+            {
+                "antal_ledigajobb": 2751,
+                "antal_platsannonser": 1521,
+                "id": 5,
+                "namn": "\u00d6sterg\u00f6tlands l\u00e4n"
+            },
+            {
+                "antal_ledigajobb": 1040,
+                "antal_platsannonser": 293,
+                "id": 90,
+                "namn": "Ospecificerad arbetsort"
+            }
+        ],
+        "totalt_antal_ledigajobb": 66187,
+        "totalt_antal_platsannonser": 36678
+    }
+}

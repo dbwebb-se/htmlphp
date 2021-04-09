@@ -40,7 +40,7 @@ if (is_readable($file)) {
 
         <main class="multipage">
             <article>
-                <?php 
+                <?php
                 if (is_readable($file)) {
                     include($file);
                 } else {

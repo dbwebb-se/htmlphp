@@ -130,12 +130,12 @@ function printJettySearch()
     $connectedDB = connectToDatabase($_SESSION["dsnJetty"]);
 
     // Prepare the SQL statement
-    $sql = "SELECT * FROM jetty WHERE position LIKE ?";
+    $sql = "SELECT * FROM jetty WHERE position LIKE ? OR boatType LIKE ? OR boatEngine LIKE ? OR boatLength LIKE ? OR boatWidth LIKE ? or ownerName LIKE ?";
     $stmt = $connectedDB->prepare($sql);
     echo "<p>Preparing the SQL-statement:<br><code>$sql</code><p>";
 
     // Execute the SQL statement using parameters to replace the ?
-    $params = [$search];
+    $params = [$search, $search, $search, $search, $search, $search];
     $stmt->execute($params);
     echo "<p>Executing using parameters:<br><pre>" . htmlentities(print_r($params, true)) . "</pre>";
 
