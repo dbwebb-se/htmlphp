@@ -7,7 +7,7 @@
 require __DIR__ . "/config.php";
 
 // Create a DSN for the database using its filename
-$fileName = __DIR__ . "/db/boatclub.sqlite";
+$fileName = __DIR__ . "/../../db/boatclub.sqlite";
 $dsn = "sqlite:$fileName";
 
 // Open the database file and catch the exception it it fails.

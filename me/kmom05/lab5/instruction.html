@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Lab 5 - Htmlphp</title>
+<style>
+html {
+    overflow-y: scroll;
+}
+
+body {
+    margin: 8px auto;
+    max-width: 700px;
+}
+
+h2 {
+    line-height: 2.5em;
+    border-bottom: 1px solid #aaa;
+}
+
+h3 {
+    line-height: 2.5em;
+    border-bottom: 1px solid #ccc;
+}
+
+p {
+    margin-bottom: 22px;
+}
+
+div.answer {
+  font-family: "Courier New", monospace;
+  white-space: pre;
+  margin-bottom: 1em;
+}
+
+.fail {
+    color: red;
+}
+
+.success {
+    color: green;
+}
+
+.nopass {
+    color: olive;
+}
+
+.pass {
+    color: green;
+}
+
+.passdistinct {
+    color: DarkGoldenRod;
+}
+table, th, td {
+    border: 1px solid #666;
+}
+
+code {
+    background-color: #eee;
+    border: 1px solid #999;
+    padding: 1px;
+    font-size: larger;
+}
+
+pre code {
+    display: block;
+    background-color: #eee;
+    border: none;
+    border-left: 2px solid #999;
+    padding: 0.5em;
+    margin-bottom: 22px;
+}
+</style>
+</head>
+<body>
+
+<pre>
+70a8284cffc4749d1e2dfe048b0cd29c
+htmlphp
+lab5
+v2
+makb20
+2021-02-27 12:47:18
+v4.0.0 (2019-03-05)
+</pre>
+
+<p><i>Generated 2021-02-27 13:47:18 by <a href="https://github.com/dbwebb-se/lab">dbwebb lab-utility</a> v4.0.0 (2019-03-05).</i></p>
+<hr>
+
+<h1>Lab 5 - Htmlphp</h1>
+<p>This lab pretty much deals with getting youreself acquainted with the PHP Manual. Search, find and read. It will be fun.</p>
+
+
+<h2>1. Date and time</h2>
+<p>In this section you will be working with the DateTime-object. If you manipulate the object, such as add or subtract, the original object will be changed, hence you will create new objects from the same date in these exercises.</p>
+
+<p>Read more on <a href="http://php.net/manual/en/class.datetime.php">datetime in the manual</a>.</p>
+
+
+<h3>Exercise 1.1 (1 points)</h3>
+<p>Use <code>new DateTime()</code> to create a new DateTime-object from the date: <code>1992-11-09 12:06:44</code>. Format the object to present the year-month-day, <code>Y-m-d</code> and answer with the result.</p>
+
+
+
+
+
+
+<h3>Exercise 1.2 (1 points)</h3>
+<p>Create a new DateTime-object with the same parameters and add 3 months to it. Answer with the result, presented in the format: <code>Y-m-d</code>.</p>
+
+
+
+
+
+
+<h3>Exercise 1.3 (1 points)</h3>
+<p>Use one of your DateTime-objects and answer with the time, presented in the format: <code>hours:minutes:seconds</code>.</p>
+
+
+
+
+
+
+
+<h2>2. Working with files</h2>
+<p>In this section, you will be working with the file: <code>Frankenstein.txt</code>. It contains a paragraph from a book and can be found in the lab folder.</p>
+
+
+<h3>Exercise 2.1 (1 points)</h3>
+<p>Use <code>file_get_contents()</code> to get the file as a string. Save it to a variable called <code>fileAsString</code>. Answer with the variable.</p>
+
+
+
+
+
+
+<h3>Exercise 2.2 (1 points)</h3>
+<p>Use <code>file_get_contents()</code> to get 25 characters, starting on the 17th character.</p>
+
+
+
+
+
+
+
+<h2>3. Serialize</h2>
+
+
+
+<h3>Exercise 3.1 (1 points)</h3>
+<p>Use the file <code>serialized.txt</code> in your lab folder and read it, unserialize it and put the result in your answer.</p>
+
+<p>(Tips: Take a peek into your &#8216;serialized.txt&#8217; to see how a serialized array looks)</p>
+
+
+
+
+
+
+
+<h2>4. Cryptography</h2>
+<p>Reference to <a href="http://php.net/manual/en/function.password-hash.php">password_hash</a> and <a href="http://php.net/manual/en/function.str-rot13.php">rot13</a>.</p>
+
+
+<h3>Exercise 4.1 (1 points)</h3>
+<p>Use <code>password_hash()</code> with the DEFAULT algorithm to create a hash of the password: <code>"lollipop"</code>. Test <code>password_verify()</code> with different passwords to see what it returns. Answer with the result, using <code>"lollipop"</code>.</p>
+
+
+
+
+
+
+<h3>Exercise 4.2 (1 points)</h3>
+<p>Use <code>ROT13</code> encoding on your password: <code>"lollipop"</code>. Answer with the result.</p>
+
+
+
+
+
+
+<h3>Exercise 4.3 (1 points)</h3>
+<p>Use <code>ROT13</code> decoding to find which movies hides in the string:</p>
+
+<blockquote>
+  <p>&#8220;Pvaqreryyn, Ynql naq gur Genzc, Byq Lryyre, Gernfher Vfynaq, Gur Whatyr Obbx&#8221;</p>
+</blockquote>
+
+<p>Each movie is comma-separated in the string above.</p>
+
+<p>Answer with an array containing all answers.</p>
+
+
+
+
+
+
+<h3>Exercise 4.4 (1 points)</h3>
+<p>Calculate the hash of the password <code>"lollipop"</code> with <code>md5</code>. Answer with the hash.</p>
+
+
+
+
+
+
+
+<h2>5. Multibyte strings</h2>
+
+
+
+<h3>Exercise 5.1 (1 points)</h3>
+<p>Set the internal encoding to <code>ISO-8859-1</code>. Answer with the result of <code>mb_internal_encoding()</code>.</p>
+
+
+
+
+
+
+<h3>Exercise 5.2 (1 points)</h3>
+<p>Check the <code>strlen()</code> and <code>mb_strlen()</code> of the word <code>"skärgårdsö"</code>. Answer with the two results as a comma and space-separated string.</p>
+
+
+
+
+
+
+<h3>Exercise 5.3 (1 points)</h3>
+<p>Set the internal encoding to <code>UTF-8</code> and check the <code>strlen()</code> and <code>mb_strlen()</code> of the word <code>"skärgårdsö"</code>. Answer with the two results as a comma-separated string.</p>
+
+
+
+
+
+
+
+<h2>6. Extra assignments</h2>
+<p>These questions are worth 3 points each. Solve them for extra points.</p>
+
+
+<h3>Exercise 6.1 (3 points)</h3>
+<p>Create a new DateTime-object based on the same date and time and subtract 5 days and 3 hours from it. Answer with the whole date, presented in the format: <code>Y-m-d hours:minutes:seconds</code>.</p>
+
+
+
+
+
+
+<h3>Exercise 6.2 (3 points)</h3>
+<p>Use a combination of <code>implode()</code> with a space as a delimiter and <code>explode()</code> to format the content of the file <code>Frankenstein.txt</code> and remove newline characters. Answer with the result.</p>
+
+
+
+
+
+
+
+<hr>
+<code>70a8284cffc4749d1e2dfe048b0cd29c</code>
+
+</body>
+</html>

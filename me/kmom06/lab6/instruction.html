@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Lab 6 - Htmlphp</title>
+<style>
+html {
+    overflow-y: scroll;
+}
+
+body {
+    margin: 8px auto;
+    max-width: 700px;
+}
+
+h2 {
+    line-height: 2.5em;
+    border-bottom: 1px solid #aaa;
+}
+
+h3 {
+    line-height: 2.5em;
+    border-bottom: 1px solid #ccc;
+}
+
+p {
+    margin-bottom: 22px;
+}
+
+div.answer {
+  font-family: "Courier New", monospace;
+  white-space: pre;
+  margin-bottom: 1em;
+}
+
+.fail {
+    color: red;
+}
+
+.success {
+    color: green;
+}
+
+.nopass {
+    color: olive;
+}
+
+.pass {
+    color: green;
+}
+
+.passdistinct {
+    color: DarkGoldenRod;
+}
+table, th, td {
+    border: 1px solid #666;
+}
+
+code {
+    background-color: #eee;
+    border: 1px solid #999;
+    padding: 1px;
+    font-size: larger;
+}
+
+pre code {
+    display: block;
+    background-color: #eee;
+    border: none;
+    border-left: 2px solid #999;
+    padding: 0.5em;
+    margin-bottom: 22px;
+}
+</style>
+</head>
+<body>
+
+<pre>
+e51afa8e1284c645048bf21ad0478c13
+htmlphp
+lab6
+v2
+makb20
+2021-03-18 21:53:30
+v4.0.0 (2019-03-05)
+</pre>
+
+<p><i>Generated 2021-03-18 22:53:30 by <a href="https://github.com/dbwebb-se/lab">dbwebb lab-utility</a> v4.0.0 (2019-03-05).</i></p>
+<hr>
+
+<h1>Lab 6 - Htmlphp</h1>
+<p>In this lab you will be working with a SQLite database file: <code>myDB.sqlite</code> and PDO.</p>
+
+<p>Do not forget to check the <a href="http://php.net/manual/en/book.pdo.php">PHP Manual on PDO</a></p>
+
+
+<h2>1. Working with SQLite and PDO</h2>
+<p>The database has one table called <code>people</code>.</p>
+
+<p>The table &#8216;people&#8217; has six columns:</p>
+
+<blockquote>
+  <p><code>id</code>, <code>firstName</code>, <code>lastName</code>, <code>born</code>, <code>cityOfBirth</code>, <code>countryOfBirth</code>.</p>
+</blockquote>
+
+
+<h3>Exercise 1.1 (1 points)</h3>
+<p>Find the firstnames of the people born in England. Answer with an array containing their names.</p>
+
+
+
+
+
+
+<h3>Exercise 1.2 (1 points)</h3>
+<p>Find the first name and last name of the person born 1964.<br />
+Answer with a string in the format: <code>"Firstname Lastname"</code>.</p>
+
+
+
+
+
+
+<h3>Exercise 1.3 (1 points)</h3>
+<p>Sum the years the persons with the lastnames <code>Blanchett</code> and <code>Depp</code> were born. Answer with an integer.</p>
+
+
+
+
+
+
+<h3>Exercise 1.4 (1 points)</h3>
+<p>Count the number of entries in the table <code>people</code>. Answer with an integer.</p>
+
+
+
+
+
+
+<h3>Exercise 1.5 (1 points)</h3>
+<p>Find which country <code>(countryOfBirth)</code> the oldest person was born in. Answer with a string.</p>
+
+
+
+
+
+
+<h3>Exercise 1.6 (1 points)</h3>
+<p>What is the average value of the column <code>born</code>? Round the value and answer with an integer.</p>
+
+
+
+
+
+
+<h3>Exercise 1.7 (1 points)</h3>
+<p>Find the youngest person born in USA. Which city is he/she born in? Answer with a string.</p>
+
+
+
+
+
+
+
+<h2>2. Extra assignments</h2>
+<p>These questions are worth 3 points each. Solve them for extra points.</p>
+
+
+<h3>Exercise 2.1 (3 points)</h3>
+<p>Get the first name and lastname of all persons in the database. Order them by their last name, alphabetically and ascending.</p>
+
+<p>Answer with an array of strings, like this:</p>
+
+<blockquote>
+  <p><code>["lastName firstName", "lastName firstName"]</code>.</p>
+</blockquote>
+
+
+
+
+
+
+
+<hr>
+<code>e51afa8e1284c645048bf21ad0478c13</code>
+
+</body>
+</html>

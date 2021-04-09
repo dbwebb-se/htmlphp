@@ -1,0 +1,195 @@
+/*
+ * ELEMENTS
+ **/
+
+html {
+    overflow-y: scroll;
+    overflow-x: hidden;
+    background-color: burlywood;
+}
+
+body {
+    margin: 8px auto;
+    padding: 8px;
+    width: 960px;
+    background-color: whitesmoke;
+    border-radius: 10px;
+    border: #303030;
+}
+
+h1,
+h2,
+p,
+ul {
+    color: black;
+}
+
+hr {
+    color: #303030;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+/*
+ * ID
+ **/
+
+/*
+ * CLASSES
+ **/
+
+.site-header {
+    background-image: url(../img/bg/byån.jpg);
+    border-radius: 10px;
+    height: 200px;
+}
+
+.site-title {
+    display: block;
+    padding-top: 2em;
+    padding-left: 50px;
+    font-size: 32px;
+    overflow: auto;
+    color: whitesmoke;
+    font-style: italic;
+}
+
+.navbar {
+    padding: 0.5em;
+    margin-top: 40px;
+    margin-left: 142.5px;
+    background-color: rgba(245, 245, 245, 0.5);
+    border-radius: 15px;
+    border: 2px solid black;
+    width: 675px;
+}
+
+.navbar a {
+    display: inline-block;
+    padding: 0.5em 1em;
+    border: 2px solid black;
+    border-radius: 10px;
+    text-decoration: none;
+    color: black;
+}
+
+.navbar a:hover {
+    background-color: #eee;
+    text-decoration: underline;
+    color: #000;
+}
+
+.navbar .selected {
+    background-color: whitesmoke;
+}
+
+.site-footer {
+    clear: both;
+    text-align: center;
+    background-color: whitesmoke;
+}
+
+.site-footer a {
+    display: inline-block;
+    padding: 0.2em 0.5em;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #fff;
+}
+
+.site-footer a:hover {
+    background-color: #eee;
+    text-decoration: underline;
+    color: #000;
+}
+
+.byline {
+    text-align: right;
+    float: inherit;
+    background-color: whitesmoke;
+}
+
+aside.multipage-nav {
+    width: 20%;
+    float: left;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    text-decoration: none;
+    color: black;
+    margin-top: 8px;
+}
+
+aside.multipage-nav a {
+    display: inline-block;
+    margin: 0.3em;
+    padding: 0.2em;
+    border-radius: 5px;
+    text-decoration: none;
+    color: black;
+}
+
+aside.multipage-nav a:hover {
+    background-color: whitesmoke;
+    text-decoration: underline;
+    color: black;
+}
+
+aside.multipage-nav a.selected {
+    background-color: whitesmoke;
+}
+
+.multipage {
+    min-height: 35em;
+    float: inherit;
+    background-color: whitesmoke;
+    padding-left: 8px;
+    text-align: left;
+    margin-left: 20%;
+}
+
+.footer {
+    text-align: center;
+}
+
+/*
+ * VIEWPORT
+ **/
+
+/* Use a media query to add a breakpoint at 960px: */
+@media screen and (max-width: 960px) {
+    .site-header, .navbar, aside.multipage-nav, .multipage, body {
+        width: 100%; /* The width is 100%, when the viewport is 800px or smaller */
+        margin: 0%;
+        padding: 0%;
+        border-radius: 0px;
+    }
+}
+
+@media screen and (max-width: 960px) {
+    .navbar {
+        margin-top: 58px;
+        padding: 0%;
+    }
+}
+
+@media screen and (max-width: 960px) {
+    .navbar a {
+        padding: 0.5em 0em;
+    }
+}
+
+@media screen and (max-width: 960px) {
+    html {
+        background-color: whitesmoke;
+    }
+}
+
+@media screen and (max-width: 689px) {
+    .navbar {
+        margin-left: 0%;
+        margin-top: 18px;
+    }
+}

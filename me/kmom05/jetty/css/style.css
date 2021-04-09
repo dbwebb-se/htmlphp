@@ -1,0 +1,232 @@
+/*
+ * ELEMENTS
+ **/
+
+* {
+    box-sizing: border-box;
+}
+
+.multipage {
+    min-height: 30em;
+    float: left;
+    width: 70%;
+    padding-left: 8px;
+}
+
+html {
+    background-color: #181818;
+    overflow-y: scroll;
+}
+
+body {
+    margin: 8px auto;
+    padding: 8px;
+    width: 980px;
+    background-color: #202020;
+    border-radius: 10px;
+    border: #303030;
+}
+
+main {
+    min-height: 30em;
+    float: left;
+}
+
+h1,
+p,
+ul {
+    color: #fff;
+}
+
+hr {
+    color: #303030;
+}
+
+code,
+pre {
+    color: lime;
+}
+
+th {
+    background-color: #5165ff;
+    border: 1px solid #ccd2ff;
+    padding: 5px;
+}
+
+a {
+    color: #5165ff;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+td {
+    border: 2px solid #ccd2ff;
+    position: relative;
+}
+
+tr:hover,
+tr:focus-within {
+    background: #f2f3ff;
+    cursor: pointer;
+}
+
+/*
+ * ID
+ **/
+
+#list-lime {
+    color: lime;
+}
+
+#content {
+    padding: 8px;
+}
+
+/*
+ * CLASSES
+ **/
+
+.me {
+    width: 200px;
+    float: left;
+    margin: 0.2em 0.5em;
+}
+
+.me2 {
+    width: 200px;
+    float: right;
+    margin: 0.5em;
+}
+
+.list-link-lime {
+    color: lime;
+}
+
+.site-header {
+    background-color: #181818;
+    overflow: auto; /* clear fix to make div span all elements */
+    border-radius: 10px;
+    margin-bottom: 8px;
+}
+
+.site-header img {
+    float: left;
+    border-radius: 8px;
+}
+
+.site-title {
+    display: block;
+    padding-top: 1em;
+    padding-left: 50px;
+    font-size: 32px;
+    overflow: auto;
+    color: #fff;
+}
+
+.site-slogan {
+    display: block;
+    padding-left: 50px;
+    font-style: italic;
+    overflow: auto;
+    color: #fff;
+}
+
+.navbar {
+    padding: 1em;
+    background-color: #181818;
+    border-radius: 8px;
+}
+
+.navbar a {
+    display: inline-block;
+    padding: 0.5em 1em;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #fff;
+}
+
+.navbar a:hover {
+    background-color: #eee;
+    text-decoration: underline;
+    color: #000;
+}
+
+.navbar .selected {
+    background-color: #ccc;
+}
+
+.site-footer {
+    clear: both;
+    text-align: center;
+}
+
+.site-footer a {
+    display: inline-block;
+    padding: 0.2em 0.5em;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #fff;
+}
+
+.site-footer a:hover {
+    background-color: #eee;
+    text-decoration: underline;
+    color: #000;
+}
+
+.site-byline {
+    float: inline-end;
+}
+
+.site-byline a {
+    color: #fff;
+}
+
+.site-byline a:hover {
+    color: lime;
+    text-decoration: underline;
+}
+
+.me-small {
+    float: left;
+    padding: 0 20px 20px 0;
+}
+
+aside.multipage-nav {
+    width: 30%;
+    float: left;
+    background-color: #181818;
+    padding: 0.5em 1em;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #fff;
+    margin-top: 8px;
+}
+
+aside.multipage-nav a {
+    display: inline-block;
+    padding: 0.5em 1em;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #fff;
+}
+
+aside.multipage-nav a:hover {
+    background-color: #eee;
+    text-decoration: underline;
+    color: #000;
+}
+
+aside.multipage-nav a.selected {
+    background-color: #ccc;
+}
+
+.debug {
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    hyphens: auto;
+}
